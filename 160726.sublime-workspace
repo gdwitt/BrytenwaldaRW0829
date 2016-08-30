@@ -1,0 +1,872 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/module_constants.py",
+			"settings":
+			{
+				"buffer_size": 123410,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/module_dialogs.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/companions/rejoin.py",
+			"settings":
+			{
+				"buffer_size": 18112,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/companions/__init__.py",
+			"settings":
+			{
+				"buffer_size": 49446,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/module_scripts.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/module_game_menus.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/module_troops.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/module_troops (3).py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_troops.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 114.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaSeptember016"
+	],
+	"file_history":
+	[
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaSeptember016/source/module_dialogs 121515.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaSeptember016/source/COMPARISONFORMODDELETE072616",
+		"/C/Steam/steamapps/common/MountBlade Warband/rgl_log725.txt",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_dialogs.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_constants411toconTML.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_game_menus.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_scripts.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/game_start/game_start_script.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_constantsTML.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_dialogs090315 - Copy.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/gamemenusforwinomerge.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_game_menusOIRIG.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_presentations72713.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/villages/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_itemsforversion25.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_scripts141ORIG.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_simple_triggers.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_scenes.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/game_start/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/diplomacy/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_presentations72713nomultiplay.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/game_start/tutorial.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/game_start/initialization_scripts.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/game_start/game_quick_start_script.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_strings.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/enterprise/troops.py",
+		"/C/Steam/steamapps/common/MountBlade Warband/rgl_log.txt",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_troops.py",
+		"/C/Steam/steamapps/common/MountBlade Warband/rgl_log72416b.txt",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_constants.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_game_menus72713.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_dialogsorig.py",
+		"/C/Steam/steamapps/common/MountBlade Warband/rgl_log72416.txt",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_items.py",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/header_operations.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/constable/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/enterprise/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_itemsflaltrigs.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_itemsflaltrigsremov.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_items530noflailtrig.py",
+		"/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/game_start/introduction.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/villages/hostile_actions/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/enterprise/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_simple_triggers.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_dialogs.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_troops (2).py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_dialogs532015.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_troops.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_scripts141ORIG.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_scripts 61315.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_scripts72713.py",
+		"/D/MountBlade Warband/MODULESYSTEM1157GDWBWWORKINGLATEST!jan6/module_scripts.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_constantsLOG.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_constants72713.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_constantsTML.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_dialogs2mercspre40916.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_game_menus72713.py",
+		"/D/My Documents/GitHub/Brytenwalda/MODULESYSTEM1157GDWBWWORKINGLATEST!/module_game_menus.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/header_operations.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/compile.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/mission_template_triggers/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_presentations.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_troops (3).py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/companions/rejoin.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_game_menus.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda21416/source/module_dialogs.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/game_start/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/game_start/character_creationLG.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/game_start/character_creation.py",
+		"/D/My Documents/GitHub/Brytenwalda/sourceSomebodydiplomacy/module_constants.py",
+		"/D/My Documents/GitHub/Brytenwalda/sourceSomebodydiplomacy/module_dialogs.py",
+		"/D/My Documents/GitHub/Brytenwalda/MODULESYSTEM1157GDWBWWORKINGLATEST!/module_dialogs.py",
+		"/D/My Documents/GitHub/Brytenwalda/sourceSomebodydiplomacy/module_scripts.py",
+		"/D/My Documents/GitHub/Brytenwalda/MODULESYSTEM1157GDWBWWORKINGLATEST!/module_game_menusOIRIG.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_constants122015.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/companions/questions.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/companions/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_skills.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_dialogs 121515.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda21416c/source/module_dialogs.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_dialogsorig.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_items.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/villages/recruit.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_itemsflaltrigs.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/enterprise/troops.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_map_icons.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_party_templates.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/mission_template_triggers/ai_weapons.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/battle/orders.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/battle/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/constable/recruit.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda21416/source/module_mission_templates.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_strings.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_strings922version.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/header_mission_templates.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_presentationsfeb06LG.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_mission_templates.py",
+		"/D/My Documents/GitHub/Brytenwalda/MODULESYSTEM1157GDWBWWORKINGLATEST!/module_scripts.py",
+		"/D/My Documents/GitHub/Brytenwalda/MODULESYSTEM1157GDWBWWORKINGLATEST!/module_mission_templates.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/loans/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_presentations72713nomultiplay.py",
+		"/G/AndroidStudioProjects/JH5_SEllwoodhangman_try1/build/intermediates/dex-cache/cache.xml",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/villages/__init__.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_scripts.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_itemsforversion25.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_constantsmostlyGoliasfromJanuary.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_constants.py",
+		"/D/My Documents/GitHub/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/D/My Documents/GitHub/frontend-nanodegree-resume/index3.html",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_parties.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_scenes.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda21416/source/module_game_menus.py",
+		"/D/My Documents/GitHub/GoogleAPI/JSJSONPARSE.html",
+		"/D/My Documents/GitHub/GoogleAPI/googlesearchex.html",
+		"/D/My Documents/GitHub/GoogleAPI/indexapi",
+		"/D/My Documents/GitHub/GoogleAPI/indexjason.html",
+		"/D/My Documents/GitHub/GoogleAPI/indexapi.html",
+		"/D/My Documents/GitHub/GoogleAPI/apicompletedog",
+		"/D/MountBlade Warband/MODULESYSTEM1157GDWBWWORKINGLATEST!jan6/module_dialogs.py",
+		"/D/My Documents/GitHub/frontend-nanodegree-resume/index2.html",
+		"/C/Users/Stephen/Downloads/index (1).html",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda/source/module_factions.py",
+		"/D/My Documents/GitHub/Brytenwalda/Brytenwalda21416/source/module_scripts.py",
+		"/C/Users/Stephen/Downloads/S_Ellwoodfrontendproblem3.html",
+		"/H/Androidprojects/JH5_test1/JH5_jszyperski_Hangman/bin/AndroidManifest.xml",
+		"/H/Androidprojects/JH5_test1/JH5_jszyperski_Hangman/res/layout/activity_main.xml"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda016july\\source\\companions",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\BrytenwaldaReworked53015\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source\\game_start",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source\\game_start",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source\\game_start",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source\\villages",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source\\constable",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source\\mission_template_triggers",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda21416\\source",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\data\\dataCA",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\data\\dataCA\\db",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\data\\dataCA",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\data\\dataCA\\db",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\assembly_kit\\raw_data\\db",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\assembly_kit\\raw_data\\db\\backup",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\data\\data0128",
+			"D:\\My Documents\\GitHub\\Brytenwalda\\Brytenwalda\\source",
+			"C:\\Steam\\steamapps\\common\\Total War Attila\\data",
+			"",
+			"D:\\MountBlade Warband\\_modsextra90615\\Floris SOURCE KIT Mod Pack v255-3489-2-55\\Floris Dev Suite 2.55\\Source\\Source - Floris Expanded Mod Pack",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Give me a few moments to prepare and I'll be ready ",
+			"ecruit_troop_as_companio",
+			"tc_tavern_talk",
+			"briton_archer",
+			"pict_horsesquiret3",
+			"saxon_horseman1",
+			"saxon_archer",
+			"BRITON",
+			"fresna_recruit",
+			"trp_",
+			"ind_item_cheat",
+			"random_town",
+			"try_begin",
+			"mercenary_tavern_talk",
+			"fac_neutral",
+			"skirmishert3m",
+			"fresna",
+			"fresba",
+			"slot_center_mercenary_troop_type",
+			"(try_end),",
+			"troops_begin",
+			"s_end",
+			"_end",
+			"eq, \"$talk_context\", tc_tavern_tal",
+			"90",
+			"s9",
+			"$novicemaster_opponent_troo",
+			"s9",
+			"novicemaster_opponent_tro",
+			"str_store_string",
+			"troop_type",
+			"party_count_members_of_type",
+			"arty_count_members_of_type",
+			"_type",
+			"troop_type",
+			"_id",
+			"mercenary id",
+			"get_troop_id",
+			"reg",
+			"agent_get_troop_id, reg",
+			"agent_get_troop_id",
+			"troop_id",
+			"troop_type",
+			"troop_no",
+			"get_troop_no",
+			"slot_center_volunteer_troop_type",
+			"slot_center_volunteer_troop_type\"",
+			"slot_center_volunteer_troop_type",
+			"troop_type",
+			"slot_center_mercenary_troop_type",
+			"you shouldn't be here",
+			"placeholderdonot",
+			"placeholder",
+			"mercenaries_end",
+			"update_mercenary_units_of_towns",
+			"pdate_npc_volunteer_troops",
+			"slot_center_npc_volunteer_troop_type",
+			"party_set_slot, \"p_village_8\", slot_center_npc_volunteer_troop_type",
+			"slot_center_npc_volunteer_troop_type\"",
+			"901",
+			"slot_center_npc_volunteer_troop_type",
+			"91",
+			"trp_antler",
+			"isit the mead hall",
+			"ercenary_troop\", \"$current_town\", \"slot_center_me",
+			"party_set_slot, \":town_no\", \"slot_center_mercenary_troop",
+			"back",
+			"party_get_slot, \":mercenary_troop\", \"$g_encountered_party\", s",
+			"slot_center_mercenary_troop_type",
+			"calling gamegetjoincost",
+			"DEBUG: calling gamegetjoincost",
+			"we are at your ser",
+			"companions",
+			"i have built many forts and ramparts",
+			"placeholderdonothire",
+			"he's always to tired for busy",
+			"he always to busy",
+			"update_mercenary_units_of",
+			"slot_center_mercenary_troop_type_2",
+			"party_get_slot, \":mercenary_troop\", \"$current_town\", \"slot_center_mercenary_troop_type",
+			"t, \":mercenary_amount\", 0)",
+			"party_get_slot, \":mercenary_troop\", \"$current_town",
+			"set_visitors, \":cur_entry\", \":mercenary_",
+			"set_visitors, \":cur_entry\", \":mercenary_troop\"",
+			"(gt, \":mercenary_amount\", 0),",
+			"You are known as a brave {man-at-arms/warrior} and a fine leader of",
+			"need for mecenaries",
+			"Do you have a need for mercenaries",
+			"testing mercenary talk after slot ",
+			"trp_merc_spy",
+			"equipment e1a",
+			"flail",
+			"ending",
+			" prisonerpenalty",
+			"My lads know how to keep their word ",
+			"party_get_slot, \":mercenary_troop\", \"$g_encountered_party\", \"slot_center_mercenary_tro",
+			"speed with pris",
+			"hire ",
+			"hire troops",
+			"Me? -he approaches and whispers in your ear",
+			"rp_briton_bannerman', \"porta_presentacion",
+			"mercenary",
+			"gent_get_wielded_item_slot_no",
+			"flail",
+			"agent_get_animation_progress",
+			"3302",
+			"g_dont_give_fief_to_player_days",
+			"slot_center_player_enterprise_days_until_complete",
+			"slot_center_player_enterprise",
+			"slot_center_player_enterprise_days_until_complete",
+			"towns_begin",
+			"slot_center_player_enterprise",
+			"lot_center_player_enterprise_days_until_complete",
+			"slot_center_player_enterprise",
+			"party_set_slot, \"$g_encountered_party\", slot_center_player_enterprise",
+			"slot_center_player_enterprise_days_until_complete",
+			"slot_center_player_enterprise",
+			"party_get_slot, \":product_type\", \":center_no\", slot_center_player_enterprise",
+			"budget_report_statement_block = StatementBlock(",
+			"town_enterprise",
+			"process_player_enterprise",
+			"gloval_max_fire_arrow",
+			"[^:_\"]slot_",
+			"[^:_\"]slot",
+			"get_join_cost",
+			"testing mercs after scriptjoin",
+			"initializing mercs in gamestartscript",
+			"initializing mercs"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"itm_arrows1",
+			"itm_shortbow",
+			"\"slot",
+			"",
+			"\"slot",
+			";\\n",
+			"itp_no_pick_up_from_ground",
+			"itp_cant_reload_on_horseback",
+			"itp_couchable",
+			"itp_covers_beard",
+			"flail_triggers",
+			"morale_rest",
+			"enable_morale_rest",
+			"g_morale_rest",
+			"npc19",
+			"npc17",
+			"npc19",
+			"npc17",
+			"npc20",
+			"npc19",
+			"pt_neko",
+			"tropa32"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/module_constants.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 123410,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 22701.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "source/module_dialogs.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/companions/rejoin.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2889.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/companions/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 49446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44528,
+								44552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7988.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/module_scripts.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/module_game_menus.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "source/module_troops.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "source/module_troops (3).py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/D/My Documents/GitHub/Brytenwalda/BrytenwaldaReworked53015/Brytenwalda/source/module_troops.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 5,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.621935264912,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "160726.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\MountBlade Warband\\_modsextra90615\\Brytenwalda2015.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 89.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
