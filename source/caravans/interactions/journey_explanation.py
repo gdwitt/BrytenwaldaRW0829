@@ -1,5 +1,5 @@
 from source.header_operations import *
-from source.header_common import s11, s12, s14, s15
+from source.header_common import *    #import s11, s12, s14, s15
 
 from source.header_dialogs import anyone
 
@@ -9,9 +9,13 @@ from source.module_constants import trade_goods_begin, trade_goods_end
 dialogs = [
     [anyone, "merchant_trip_explanation", [
         (party_get_slot, ":origin", "$g_encountered_party", "slot_party_last_traded_center"),
+        (str_store_party_name_link, s13, "$current_town"),  
         (party_get_slot, ":destination", "$g_encountered_party", "slot_party_ai_object"),
-        (str_store_party_name, s11, ":origin"),
-        (str_store_party_name, s12, ":destination"),
+        (get_party_ai_object, ":caravan_destination", "$g_encountered_party"),
+        (str_store_party_name, s12, ":caravan_destination"),
+
+        #(str_store_party_name, s11, ":origin"),
+        #(str_store_party_name, s12, ":destination"),
 
         (str_store_string, s14, "str___we_believe_that_there_is_money_to_be_made_selling_"),
         (store_sub, ":item_to_price_slot", "slot_town_trade_good_prices_begin", trade_goods_begin),
@@ -39,6 +43,6 @@ dialogs = [
             (str_store_string, s14, "str_s14and_other_goods"),
         (try_end),
 
-        ], "We are coming from {s11} and heading to {s12}.{s14}", "merchant_pretalk",
+        ], "We are coming from {s13} and heading to {s12}.{s14}", "merchant_pretalk",
      []],
 ]

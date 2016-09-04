@@ -2665,13 +2665,13 @@ simple_triggers = [
     ]),
 
   # Refresh number of cattle in villages
-  (24 * 1,##shoud be 24*7 I am testing
+  (24 * 8,##shoud be 24*7 gdw
    [
        (try_for_range, ":village_no", centers_begin, centers_end),
 	  (neg|is_between, ":village_no", castles_begin, castles_end),
       (party_get_slot, ":num_cattle", ":village_no", "slot_center_head_cattle"),
       (assign, reg2, ":num_cattle"),
-       (display_message, "@{!}DEBUG cattle initially at number {reg2}",0xFF0000),
+       (display_message, "@{!}DEBUG cattle initially at number {reg2}"),
       (party_get_slot, ":num_sheep", ":village_no", "slot_center_head_sheep"),
       (party_get_slot, ":num_acres", ":village_no", "slot_center_acres_pasture"),
 	  (val_max, ":num_acres", 1),

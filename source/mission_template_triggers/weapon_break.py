@@ -127,6 +127,10 @@ common_weapon_break = (0.4, 0, 0, [(eq, "$g_weapon_breaking", 0)], [
                (play_sound,"snd_shield_broken",),
 
                (display_message, "@Hah! Your weapon broke. This can not be repaired until the end of the battle"),
+                 (try_begin),
+                    (eq, "$cheat_mode", 1),
+                    (display_message, "@{!}DEBUG : Your weapon broke mst"),
+         (try_end),
            (try_end),
 #Cruger MODIFICATION END------------------------------------------------------------------------------
 

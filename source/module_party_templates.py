@@ -347,8 +347,8 @@ party_templates = [
 ##  ("alcluyd_foragers","Foragers",LazyFlag("icon_saxon_skirmishert5")|carries_goods(5),0,"fac_kingdom_7",merchant_personality,[("trp_irish_footmant2",5,10),("trp_irish_archer",2,4),("trp_irish_skirmishert3",2,4)]),
 ###pictos
 ##  ("pictish_foragers","Pictish Foragers",LazyFlag("icon_saxon_skirmishert5")|carries_goods(5),0,"fac_kingdom_5",merchant_personality,[("trp_pict_archer",6,12),("trp_pict_horseman",3,5),("trp_pict_woman",1,3)]),
-("oim_merchant_caravan", "Trade Carts",LazyFlag("icon_mule")|carries_goods(40)|pf_auto_remove_in_town|pf_quest_party,0,"fac_commoners",escorted_merchant_personality,[("trp_caravan_master",1,1),("trp_merc_infantryt3",5,25)]),
+("oim_merchant_caravan", "Trade Carts",LazyFlag("icon_mule")|carries_goods(40)|pf_auto_remove_in_town|pf_quest_party,0,"fac_merchants",escorted_merchant_personality,[("trp_caravan_master",1,0),("trp_merc_infantryt3",5,25)]),
   #("oim_merchant_caravan2","Merchant Caravan",LazyFlag("icon_mule")|carries_goods(40)|pf_auto_remove_in_town|pf_quest_party,0,"fac_commoners",escorted_merchant_personality,[("trp_caravan_master",1,1),("trp_merc_infantryt3",5,25)]),
-("oim_merchant_caravan2", "Merchant Caravan",LazyFlag("icon_mule")|carries_goods(40)|pf_auto_remove_in_town|pf_quest_party,0,"fac_commoners",escorted_merchant_personality,[("trp_caravan_master",1,1),("trp_merc_infantryt3",5,25)]),
+("oim_merchant_caravan2", "Merchant Caravan",LazyFlag("icon_mule")|carries_goods(40)|pf_auto_remove_in_town|pf_quest_party,0,"fac_merchants",escorted_merchant_personality,[("trp_caravan_master",1,0),("trp_merc_infantryt3",3,3)]),
 ] \
     + constable.party_templates

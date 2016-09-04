@@ -5586,7 +5586,7 @@ among other things......................."),
   ("squad_size_normal", "Normal squads"),
   ("squad_size_big", "Big squads"), 
   
-  ("price_there_known", "{s1}, ({s2} is {reg1} thalers there)"),
+  ("price_there_known", "{s1}, ({s2} is {reg1} scillingas there)"),
   ("price_there_unknown", "{s1}"),
   ("squad_size_huge", "Huge squads"), 
   ("reason_high_price", "This is too expensive!"),

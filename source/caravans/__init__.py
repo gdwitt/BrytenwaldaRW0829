@@ -25,7 +25,7 @@ dialogs = interactions.dialogs + caravandial.dialogs
 simple_triggers = trade.simple_triggers + interactions.simple_triggers + caravansubmodnodia.simple_triggers
 scripts = trade.scripts + interactions.scripts + initialize_trade_routes.scripts  + caravansubmodnodia.scripts 
 triggers = interactions.triggers+ caravansubmodnodia.triggers
-party_templates = caravansubmodnodia.party_templates
+#party_templates = caravansubmodnodia.party_templates
 menus = caravansubmodnodia.menus
 # 
 

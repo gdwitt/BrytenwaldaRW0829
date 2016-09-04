@@ -4301,7 +4301,7 @@ str_squad_size Squad_size:
 str_squad_size_small Small_squads
 str_squad_size_normal Normal_squads
 str_squad_size_big Big_squads
-str_price_there_known {s1},_({s2}_is_{reg1}_thalers_there)
+str_price_there_known {s1},_({s2}_is_{reg1}_scillingas_there)
 str_price_there_unknown {s1}
 str_squad_size_huge Huge_squads
 str_caravan_develireg_descr A_caravan_loaded_with_{reg0}_of_{s3},_shall_set_out_from_{s1}_to_{s5}.

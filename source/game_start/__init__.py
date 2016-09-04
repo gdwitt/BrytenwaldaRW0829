@@ -27,7 +27,7 @@ start_menu_0 = \
               (assign, "$character_gender", tf_male),
               (set_show_messages, 0),
 
-              (troop_add_gold, "trp_player", 43000),
+              (troop_add_gold, "trp_player", 45000),
               (troop_raise_attribute, "trp_player", ca_strength, 5),
               (troop_raise_attribute, "trp_player", ca_agility, 5),
               (troop_raise_attribute, "trp_player", ca_intelligence, 5),
@@ -41,16 +41,17 @@ start_menu_0 = \
               (troop_raise_skill, "trp_player", skl_pathfinding, 5),
               (troop_raise_skill, "trp_player", skl_riding, 5),
               (troop_raise_proficiency_linear, "trp_player", wp(100), 10),
-              (troop_add_item, "trp_player", "itm_spear2", 1),
+              (troop_add_item, "trp_player", "itm_flail1_blunt", 1),
               (troop_add_item, "trp_player", "itm_noblearmor21res", 0),
               (troop_add_item, "trp_player", "itm_shieldtarcza4", 0),
               (troop_add_item, "trp_player", "itm_roman_horse1", 0),
               (troop_equip_items, "trp_player"),
 
-              (add_xp_to_troop, 1000, "trp_player"),
+              #(add_xp_to_troop, 1000, "trp_player"),
               (troop_set_slot, "trp_player", "slot_troop_renown", 450),
               (set_show_messages, 1),
-
+              (assign,"$cheat_mode",2),
+              (assign,"$cheat_mode",1),
               (change_screen_map),
           ]),
 

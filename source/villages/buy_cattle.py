@@ -32,6 +32,9 @@ menus = [
        (display_message, "@{!}DEBUG cattle in village menu at number {reg5} & headcattle at {reg7}"),
         (gt, reg7, 0),
         (store_item_value, ":cattle_cost", "itm_cattle_meat"),
+        (val_add, ":cattle_cost", "itm_cattle_meat"),##gdw new to make cows more rep of slaughter value
+        (val_add, ":cattle_cost", "itm_raw_leather"),
+        (val_add, ":cattle_cost", "itm_raw_leather"),
         (call_script, "script_game_get_item_buy_price_factor", "itm_cattle_meat"),
         (val_mul, ":cattle_cost", reg0),
         (val_div, ":cattle_cost", 50),  # Multiplied by 2 and divided by 100
@@ -43,7 +46,7 @@ menus = [
             #(party_get_slot, ":num_cattle",  "$g_encountered_party", "slot_village_number_of_cattle"),
             (party_get_slot, reg6, "$g_encountered_party", "slot_center_head_cattle"),
             (ge, reg6, 1),
-            (assign, reg6, ":num_cattle"),
+            #(assign, reg6, ":num_cattle"),
             (display_message, "@{!}DEBUG cattle prepurchase no. is {reg6}"),
             (store_troop_gold, ":gold", "trp_player"),
             (ge, ":gold", "$temp"),

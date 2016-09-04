@@ -15,7 +15,7 @@ _NUMBER = {
 
 def _buy_cattle_dialog(cattle_number):
     return [anyone | plyr, "village_elder_buy_cattle_2", [
-        (party_get_slot, ":num_cattle", "$g_encountered_party", "slot_village_number_of_cattle"),
+        (party_get_slot, ":num_cattle", "$g_encountered_party", "slot_center_head_cattle"),
         (ge, ":num_cattle", cattle_number),
         (store_troop_gold, ":gold", "trp_player"),
         (store_mul, ":cost", "$temp", cattle_number),
@@ -28,9 +28,13 @@ def _buy_cattle_dialog(cattle_number):
 dialogs = [
 
     [anyone, "village_elder_buy_cattle", [
-        (party_get_slot, reg5, "$g_encountered_party", "slot_village_number_of_cattle"),
+        #(party_get_slot, reg5, "$g_encountered_party", "slot_village_number_of_cattle"),
+         (party_get_slot, reg5, "$g_encountered_party", "slot_center_head_cattle"),
         (gt, reg5, 0),
         (store_item_value, ":cattle_cost", "itm_cattle_meat"),
+        (val_add, ":cattle_cost", "itm_cattle_meat"),##gdw new to make cows more rep of slaughter value
+        (val_add, ":cattle_cost", "itm_raw_leather"),
+        (val_add, ":cattle_cost", "itm_raw_leather"),
         (call_script, "script_game_get_item_buy_price_factor", "itm_cattle_meat"),
         (val_mul, ":cattle_cost", reg0),
         # Multiplied by 2 and divided by 100

@@ -6151,9 +6151,7 @@ game_menus = game_start.first_menus + [
   ),
   (
     "encounter_retreat_confirm",0,
-    "As the party member with the highest tactics skill,\
- ({reg2}), {reg3?you devise:{s3} devises} a plan that will allow you and your men to escape with your lives,\
- but you'll have to leave {reg4} soldiers behind to stop the enemy from giving chase.",
+    "As the party member with the highest tactics skill,  ({reg2}), {reg3?you devise:{s3} devises} a plan that will allow you and your men to escape with your lives, but you'll have to leave {reg4} soldiers behind to stop the enemy from giving chase.",
     "none",
     [(call_script, "script_get_max_skill_of_player_party", "skl_tactics"),
      (assign, ":max_skill", reg0),
@@ -17677,6 +17675,7 @@ Controlling the mouth of the Clyde was where king Riderch Hael fought the Bernic
             (assign, "$g_player_icon_state", pis_normal),
             (set_camera_follow_party, "p_main_party"),
             (rest_for_hours, 0, 0, 0), #stop resting
+            (eq,"$g_player_surrenders",0),
            ##diplomacy begin
             (assign, "$g_move_fast", 1),
            ##diplomacy end
@@ -17730,7 +17729,7 @@ Controlling the mouth of the Clyde was where king Riderch Hael fought the Bernic
 
          (set_camera_follow_party, "$capturer_party"),
          (assign, "$g_player_is_captive", 1),
-         (store_random_in_range, ":random_hours", 24, 48), #TEMPERED chief LENGTHENED TIME cambiado
+         (store_random_in_range, ":random_hours", 32, 56), #TEMPERED chief LENGTHENED TIME cambiado
          (call_script, "script_event_player_captured_as_prisoner"),
          (call_script, "script_stay_captive_for_hours", ":random_hours"),
          (assign,"$auto_menu","mnu_captivity_wilderness_check"),
@@ -17830,7 +17829,7 @@ Controlling the mouth of the Clyde was where king Riderch Hael fought the Bernic
              (try_end),
 #recoloca en mar chief acaba
            (call_script, "script_set_parties_around_player_ignore_player", 8, 12), #it was radius:2 and hours:4, but players make lots of complains about consequent battle losses after releases from captivity then I changed this.
-
+(assign,"$g_player_surrenders",0),
            (assign, "$g_player_icon_state", pis_normal),
            (set_camera_follow_party, "p_main_party"),
            (rest_for_hours, 0, 0, 0), #stop resting

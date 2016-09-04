@@ -1,17 +1,16 @@
 from source.header_operations import *
-from source.header_common import *
-#from caravansubmodnodia import *
+from source.header_common import s0, s1,s2, s3, s4, s5
+from caravansubmodnodia import *
 from source.header_dialogs import *#anyone, plyr
-#from source.module_constants #import trade_goods_begin, trade_goods_end
-from source.header_parties import *##ai_bhvr_travel_to_party, ai_bhvr_travel_to_point, \
-    #pf_default_behavior
+from source.module_constants import trade_goods_begin, trade_goods_end
+from source.header_parties import ai_bhvr_travel_to_party, ai_bhvr_travel_to_point, \
+    pf_default_behavior
 from source.statement import StatementBlock
 from source.header_items import *
 from source.module_constants import *
 from source.module_troops import troops
 from source.module_quests import *
 from source.header_troops import *
-from source.lazy_flag import LazyFlag
 #from source.module_strings import *
 
 dialogs = [
@@ -40,25 +39,25 @@ dialogs = [
     # ]],
     [anyone | plyr,"oim_guild_master_ask", [], "What can I gain from a caravan?", "oim_send_caravan_generik_descr", []],          
 
-    [anyone,"oim_send_caravan_generik_descr", [], "Are you still waiting to hear on a prior guild quest? Well, you can buy a load of goods here on a discount, and send the caravan to another city, where you'd sell the goods -- for a profit or a loss, depends on how good a trader you are.", "oim_guild_master_talk", []],  
+    [anyone,"oim_send_caravan_generik_descr", [], "Well, you can buy a load of goods here on a discount, and send the caravan to another city, where you'd sell the goods -- for a profit or a loss, depends on how good a trader you are.", "oim_guild_master_talk", []],  
     
     [anyone | plyr,"oim_guild_master_ask", 
     [
         (this_or_next|quest_slot_eq, "qst_oim_deliver_caravan", "slot_quest_target_center", -1),  
         (neg|check_quest_active, "qst_oim_deliver_caravan"),
-    ], "I'd like to sponsor a caravan.", "oim_send_caravan_generik", []],     
+    ], "Yes, I'd like to send a caravan.", "oim_send_caravan_generik", []],     
 
     [anyone|plyr,"oim_guild_master_ask", 
     [
         (quest_slot_eq, "qst_oim_trade_pantent", "slot_quest_current_state", 1),
-    ], "I DEMAND A TRADE PERMIT!.", "oim_buy_trayd_patend", []],  
+    ], "I would like to get a trade permit.", "oim_buy_trayd_patend", []],  
     
-    [anyone,"oim_buy_trayd_patend", [], "Hold on there!. It's an honor to be in this select group that operates free of the Lords of the land. I should think that for you, {playername}, a guild membership can be issued on the spot for a mere 3000 scillingas.", "oim_buy_trayd_patend_1", []],   
+    [anyone,"oim_buy_trayd_patend", [], "I should think that for you, {playername}, a trade permit can be issued on the spot for a mere 2500 scillingas.", "oim_buy_trayd_patend_1", []],   
 
     [anyone|plyr,"oim_buy_trayd_patend_1", 
     [
         (store_troop_gold, ":gold", "trp_player"), 
-        (ge, ":gold", 3000),
+        (ge, ":gold", 2500),
     ], "I am willing to pay this amount. ", "oim_buy_trayd_patend_2", []],  
 
     [anyone,"oim_buy_trayd_patend_2", [], "Excellent. Here is the document and the seal... ", "oim_guild_master_talk", 
@@ -66,7 +65,7 @@ dialogs = [
         (quest_set_slot, "qst_oim_trade_pantent", "slot_quest_current_state", 2),
         (str_store_string, s4, "str_oim_trade_pantent_granted"),  
         (add_quest_note_from_sreg, "qst_oim_trade_pantent", 4, s2, 1),
-        (troop_remove_gold, "trp_player", 3000),
+        (troop_remove_gold, "trp_player", 2500),
         
         #(check_quest_active, "qst_oim_trade_pantent"), 
         #(quest_slot_eq, "qst_oim_trade_pantent", slot_quest_current_state, 2),
@@ -94,13 +93,13 @@ dialogs = [
           (try_end),
         (try_end),
 
-        (ge, ":num_items", 5),
+        (ge, ":num_items", 7),
 
         (assign, ":there_are_items_avaliable", 1),      
         (call_script, "script_oim_get_item_base_price", ":goods"), 
       
         (assign, ":base_price", reg0),
-        (ge, ":base_price", 19), #no need to make trade with less valueable items. its impossible to make profit because of trade expenses.   
+        (ge, ":base_price", 15), #no need to make trade with less valueable items. its impossible to make profit because of trade expenses.   
 
         (call_script, "script_game_get_item_buy_price_factor", ":goods"),#, "$g_encountered_party"), 
         (assign, ":price_factor", reg0),      
@@ -137,7 +136,7 @@ dialogs = [
     
     [anyone,"oim_send_caravan_generik", [   
     (eq, "$g_trade_next_menu", 1),  
-    ], "I am afraid we don't have enough items in stock to furnish the caravan.", "oim_send_caravan_give_up", []],         
+    ], "I am afraid, we don't have enough items in stock to furnish the caravan.", "oim_send_caravan_give_up", []],         
     
     [anyone,"oim_send_caravan_generik", [   
     (eq, "$g_trade_next_menu", 2),  
@@ -178,7 +177,7 @@ dialogs = [
       
       (val_mul, ":price", 5), 
 
-      (val_add, ":price", 130), #minimum caravan cost is 100 (80 for caravan master + 50 for one guard)
+      (val_add, ":price", 100), #minimum caravan cost is 100 (50 for caravan master + 50 for one guard)
       
       (store_troop_gold, ":gold", "trp_player"), 
       (ge, ":gold", ":price"),
@@ -230,12 +229,6 @@ dialogs = [
         (else_try),
           (str_store_string, s1, "str_price_there_unknown"),        
         (try_end),
-     # (call_script, "script_cf_select_most_profitable_town_at_peace_with_faction_in_trade_route", ":cur_center", ":merchant_faction"),
-     #         (assign, ":target_center", reg0),
-     #       (try_end),
-     #       # abort if no new target town found or next town is this town.
-     #       (is_between, ":target_center", towns_begin, towns_end),
-     #       (neg|party_is_in_town, ":party_no", ":target_center"),
 
     ], "{s1}", "oim_send_caravan_finish",[(store_repeat_object, "$town_suggested_to_go_to")]],
       
@@ -244,7 +237,7 @@ dialogs = [
     [anyone,"oim_send_caravan_finish", 
     [
       (store_distance_to_party_from_party, ":dist", "$town_suggested_to_go_to", "$g_encountered_party"),
-      (store_div, ":travel_time", ":dist", 16),#gdw 10
+      (store_div, ":travel_time", ":dist", 10),
       (assign, reg1, ":travel_time"),
 
       (str_store_item_name, s2, "$town_suggested_goods"),
@@ -262,7 +255,7 @@ dialogs = [
     ], "Very well, that shouldn't be a problem. The caravan shall head to {s1}. I guess the journey will take {reg1} hours. And how many {s2} would you like to send?", "oim_send_caravan_town_select_go_on4", []],         
         
     [anyone|plyr,"oim_send_caravan_town_select_go_on4", [
-        (ge, "$g_num_town_suggested_goods", 17),
+        (ge, "$g_num_town_suggested_goods", 20),
 
         (call_script, "script_oim_get_item_base_price", "$town_suggested_goods"), 
         (assign, ":price", reg0),
@@ -271,18 +264,17 @@ dialogs = [
         (call_script, "script_oim_game_get_item_buy_price_factor", "$town_suggested_goods", "$g_encountered_party"), 
         (assign, ":price_factor", reg0),
         (val_mul, ":price", ":price_factor"), 
-        (val_div, ":price", 114),#gdw discount for large 10%
-        (val_mul, ":price", 17), #count
+        (val_div, ":price", 100),
+        (val_mul, ":price", 20), #count
 
         (store_troop_gold, ":gold", "trp_player"), 
-        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (for 2 caravan masters)
+        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (50 for caravan master + 50 for one guard)
         (ge, ":gold_minus_minimum_caravan_expense", ":price"),
         (assign, reg0, ":price"),
         (assign, "$g_total_caravan_cost_huge", ":price"),
-    ], "A great caravan ({reg0} scillingas, 17 goods, can be sent for a 10 percent discount).", "oim_send_caravan_town_select_go_on4b", [(assign, "$oim_count_to_deliver", 17),(assign, "$g_total_caravan_cost", "$g_total_caravan_cost_huge"),]],         
-    
+    ], "A great caravan ({reg0} scillingas, 20 goods).", "oim_send_caravan_town_select_go_on4b", [(assign, "$oim_count_to_deliver", 20),(assign, "$g_total_caravan_cost", "$g_total_caravan_cost_huge"),]],         
     [anyone|plyr,"oim_send_caravan_town_select_go_on4", [
-        (ge, "$g_num_town_suggested_goods", 12),
+        (ge, "$g_num_town_suggested_goods", 15),
 
         (call_script, "script_oim_get_item_base_price", "$town_suggested_goods"), 
         (assign, ":price", reg0),
@@ -291,17 +283,17 @@ dialogs = [
         (call_script, "script_oim_game_get_item_buy_price_factor", "$town_suggested_goods", "$g_encountered_party"), 
         (assign, ":price_factor", reg0),
         (val_mul, ":price", ":price_factor"), 
-        (val_div, ":price", 108),
-        (val_mul, ":price", 12), #count
+        (val_div, ":price", 100),
+        (val_mul, ":price", 15), #count
 
         (store_troop_gold, ":gold", "trp_player"), 
-        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (for 2 caravan masters)
+        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (50 for caravan master + 50 for one guard)
         (ge, ":gold_minus_minimum_caravan_expense", ":price"),
         (assign, reg0, ":price"),
         (assign, "$g_total_caravan_cost_large", ":price"),
-    ], "A big caravan ({reg0} scillingas, 12 goods).", "oim_send_caravan_town_select_go_on4b", [(assign, "$oim_count_to_deliver", 12),(assign, "$g_total_caravan_cost", "$g_total_caravan_cost_large"),]],          
+    ], "A big caravan ({reg0} scillingas, 15 goods).", "oim_send_caravan_town_select_go_on4b", [(assign, "$oim_count_to_deliver", 15),(assign, "$g_total_caravan_cost", "$g_total_caravan_cost_large"),]],          
     [anyone|plyr,"oim_send_caravan_town_select_go_on4", [
-        (ge, "$g_num_town_suggested_goods", 8),
+        (ge, "$g_num_town_suggested_goods", 10),
 
         (call_script, "script_oim_get_item_base_price", "$town_suggested_goods"), 
         (assign, ":price", reg0),
@@ -309,15 +301,15 @@ dialogs = [
         (call_script, "script_oim_game_get_item_buy_price_factor", "$town_suggested_goods", "$g_encountered_party"), 
         (assign, ":price_factor", reg0),
         (val_mul, ":price", ":price_factor"), 
-        (val_div, ":price", 101),
-        (val_mul, ":price", 8), #count
+        (val_div, ":price", 100),
+        (val_mul, ":price", 10), #count
         
         (store_troop_gold, ":gold", "trp_player"), 
-        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (for 2 caravan masters)
+        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (50 for caravan master + 50 for one guard)
         (ge, ":gold_minus_minimum_caravan_expense", ":price"),
         (assign, reg0, ":price"),
         (assign, "$g_total_caravan_cost_medium", ":price"),
-    ], "A medium caravan ({reg0} scillingas, 8 goods).", "oim_send_caravan_town_select_go_on4b", [(assign, "$oim_count_to_deliver", 8),(assign, "$g_total_caravan_cost", "$g_total_caravan_cost_medium"),]],          
+    ], "A medium caravan ({reg0} scillingas, 10 goods).", "oim_send_caravan_town_select_go_on4b", [(assign, "$oim_count_to_deliver", 10),(assign, "$g_total_caravan_cost", "$g_total_caravan_cost_medium"),]],          
     [anyone|plyr,"oim_send_caravan_town_select_go_on4", [
         (ge, "$g_num_town_suggested_goods", 5),
 
@@ -327,11 +319,11 @@ dialogs = [
         (call_script, "script_oim_game_get_item_buy_price_factor", "$town_suggested_goods", "$g_encountered_party"), 
         (assign, ":price_factor", reg0),
         (val_mul, ":price", ":price_factor"), 
-        (val_div, ":price", 98),
+        (val_div, ":price", 100),
         (val_mul, ":price", 5), #count
 
         (store_troop_gold, ":gold", "trp_player"), 
-        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (for 2 caravan masters)
+        (store_sub, ":gold_minus_minimum_caravan_expense", ":gold", 100), #minimum caravan expense is 100 (50 for caravan master + 50 for one guard)
         (ge, ":gold_minus_minimum_caravan_expense", ":price"),
         (assign, reg0, ":price"),
         (assign, "$g_total_caravan_cost_small", ":price"),
@@ -385,23 +377,20 @@ dialogs = [
       (assign, reg5, 20), 
       (assign, reg0, 1000),
     ], "{reg5}, price: {reg0} scillingas.", "oim_send_caravan_town_select_go_on5", [(assign, "$g_number_of_escorts", 20),]],            
-    
-    [anyone|plyr,"oim_send_caravan_town_select_go_on4c", 
-    [], "Forget it. I can't do this now.", "close_window",[(jump_to_menu, "mnu_town")]], 
-    
+
     [anyone,"oim_send_caravan_town_select_go_on5", 
     [       
         (str_store_item_name, s1, "$town_suggested_goods"), 
         (str_store_party_name, s2, "$town_suggested_to_go_to"),         
 
         (try_begin),
-          (eq, "$oim_count_to_deliver", 17),
+          (eq, "$oim_count_to_deliver", 20),
           (assign, "$g_total_caravan_cost", "$g_total_caravan_cost_huge"),        
         (else_try),
-          (eq, "$oim_count_to_deliver", 12),
+          (eq, "$oim_count_to_deliver", 15),
           (assign, "$g_total_caravan_cost", "$g_total_caravan_cost_large"),
         (else_try),
-          (eq, "$oim_count_to_deliver", 9),
+          (eq, "$oim_count_to_deliver", 10),
           (assign, "$g_total_caravan_cost", "$g_total_caravan_cost_medium"),
         (else_try),       
           (assign, "$g_total_caravan_cost", "$g_total_caravan_cost_small"),
@@ -421,12 +410,7 @@ dialogs = [
         (set_spawn_radius,1),
         (spawn_around_party,"p_main_party", "pt_oim_merchant_caravan2"),
         (assign, ":oim_caravan", reg0),
-
-        # (spawn_around_party, "p_main_party", "pt_sacrificed_messenger"),
-        #                              (assign, ":new_party", reg0),
-        #                              (party_add_members, ":new_party", "$g_talk_troop", 1),
-        #                              (party_set_ai_behavior, ":new_party", ai_bhvr_travel_to_party),
-       #(party_set_slot, ":origin", "$g_encountered_party", "slot_party_last_traded_center"),
+        
         (party_set_slot, ":oim_caravan", "slot_party_type", spt_kingdom_caravan),
         (party_set_slot, ":oim_caravan", "slot_party_ai_state", spai_undefined),
 
@@ -436,13 +420,13 @@ dialogs = [
         (party_set_flags, ":oim_caravan", pf_default_behavior, 0),
         (party_add_leader, ":oim_caravan", "trp_caravan_master"),
         (party_add_members, ":oim_caravan", "trp_merc_infantryt3", "$g_number_of_escorts"), #was fix 10 for every kind of caravan
-        (party_set_faction, ":oim_caravan", "fac_merchants"),
-        # (try_begin),
-        #   (gt, "$players_kingdom", 0),
-        #   (party_set_faction, ":oim_caravan", "$players_kingdom"),
-        # (else_try),
-        #   (party_set_faction, ":oim_caravan", "fac_player_faction"),
-        # (try_end),
+        
+        (try_begin),
+          (gt, "$players_kingdom", 0),
+          (party_set_faction, ":oim_caravan", "$players_kingdom"),
+        (else_try),
+          (party_set_faction, ":oim_caravan", "fac_player_faction"),
+        (try_end),
 
         (troop_clear_inventory, "trp_caravan_master"),
         (troop_add_items, "trp_caravan_master", "$town_suggested_goods", "$oim_count_to_deliver"),
@@ -451,33 +435,19 @@ dialogs = [
         #qst_oim_deliver_caravan
         (call_script, "script_start_quest", "qst_oim_deliver_caravan", "trp_player"), 
         (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_current_state", 0),
-        (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_giver_troop", "trp_player"), 
-        (party_set_slot, "qst_oim_deliver_caravan","slot_party_last_traded_center","$current_town"),#gdw
-        (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_target_center", "$town_suggested_to_go_to"),  ##slot_party_ai_object
-        (party_set_slot, "qst_oim_deliver_caravan", "slot_party_ai_object", "$town_suggested_to_go_to"),
+        (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_giver_troop", "trp_player"),  
+        (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_target_center", "$town_suggested_to_go_to"),  
         (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_target_item", "$town_suggested_goods"),  
         (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_target_amount", "$oim_count_to_deliver"),  
         (quest_set_slot, "qst_oim_deliver_caravan", "slot_quest_target_party", ":oim_caravan"),  
         (setup_quest_text, "qst_oim_deliver_caravan"),  
         (str_store_party_name_link, s1, "$g_encountered_party"), 
-        (str_store_party_name_link, s5, "$town_suggested_to_go_to"),
-         (str_store_party_name_link, s13, "$current_town"),  
+        (str_store_party_name_link, s5, "$town_suggested_to_go_to"), 
         (str_store_item_name, s3, "$town_suggested_goods"), 
         (assign, reg0, "$oim_count_to_deliver"),
         (str_store_string, s2, "str_caravan_develireg_descr"),
-        (assign, "$mycaravan_escort_state",0 ),
           
-        ##set relation so dont attack
-
-      (store_relation, ":reln", "fac_merchants", "fac_player_supporters_faction"),
-      (val_add,":reln",3),
-            (val_max, ":reln", 1),##ensure no fighting w own caravan
-            (call_script, "script_set_player_relation_with_faction", "fac_merchants",":reln"),
-   #(store_relation, ":player_relation", ":oim_caravan", "fac_player_supporters_faction"),
-   #(set_relation, ":oim_caravan", "trp_player", 15), 
-   # (val_sub, ":player_relation", 3),
-   # (val_max, ":player_relation", 0),
-   # (set_relation, ":mission_object", "fac_player_supporters_faction", ":player_relation"),  
+        
         #removing gold
         (troop_remove_gold, "trp_player", "$g_total_caravan_cost"),
 
@@ -499,7 +469,7 @@ dialogs = [
         (assign, reg1, "$g_total_caravan_cost"),     
         (try_begin),
                   (ge, "$cheat_mode", 1),
-                  (display_message, "@{!}DEBUG: Charged player for $g_total_caravan_cost is {reg1} destination: {s5} origin {s14}"),
+                  (display_message, "@{!}DEBUG: Charged player for $g_total_caravan_cost is {reg1}"),
         (try_end),
         (str_store_party_name, s2, "$town_suggested_to_go_to"), 
     ]],         
@@ -514,9 +484,6 @@ dialogs = [
     [anyone,"oim_caravan_master_dlg", [], "Yes, let's move out as soon as possible!", "close_window", [
         (jump_to_menu, "mnu_auto_return_to_map"),
     ]], 
-
-
-    
 #####################################
 ##TRAINING
 # ###
@@ -651,5 +618,6 @@ dialogs = [
 #   [anyone|plyr,"special_choose1", [], "Nothing. Thank you.", "close_window",[]],
 
 #   [anyone,"special_window1", [], "Good Luck. Remember my name if you need training. Farewell.", "close_window",[]],
+################### 
 
 ]

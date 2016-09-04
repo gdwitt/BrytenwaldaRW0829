@@ -177,7 +177,7 @@ pt_ship Ship 6309657 0 2 7 36 1 1 0 -1 -1 -1 -1 -1
 pt_ambushers1 slotAmbushers 562949953421321 0 85 255 185 5 80 0 -1 -1 -1 -1 -1 
 pt_ambushers2 slotAmbushers 562949953421321 0 85 255 185 5 80 0 -1 -1 -1 -1 -1 
 pt_ambushers3 slotAmbushers 562949953421321 0 85 255 185 5 80 0 -1 -1 -1 -1 -1 
-pt_oim_merchant_caravan Trade_Carts 11258999068819490 0 2 11 223 1 1 0 30 5 25 0 -1 -1 -1 -1 
-pt_oim_merchant_caravan2 Merchant_Caravan 11258999068819490 0 2 11 223 1 1 0 30 5 25 0 -1 -1 -1 -1 
+pt_oim_merchant_caravan Trade_Carts 11258999068819490 0 6 11 223 1 0 0 30 5 25 0 -1 -1 -1 -1 
+pt_oim_merchant_caravan2 Merchant_Caravan 11258999068819490 0 6 11 223 1 0 0 30 3 3 0 -1 -1 -1 -1 
 pt_scout_party Scouts 281474980904962 0 2 312 -1 -1 -1 -1 -1 -1 
 pt_recruiter Recruiter 4194306 0 4 7 1891 1 1 0 -1 -1 -1 -1 -1 

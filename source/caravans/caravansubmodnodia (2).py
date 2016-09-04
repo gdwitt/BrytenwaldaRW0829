@@ -32,17 +32,16 @@ from source.statement import StatementBlock
 from source.module_quests import *
 from ..module_constants import *
 
-# party_templates = [
-#     ("recruiter", "Recruiter", LazyFlag("icon_gray_knight")|pf_show_faction, 0, "fac_neutral", merchant_personality, [("trp_recruiter", 1, 1)]),
-# ]
+party_templates = [
+    ("recruiter", "Recruiter", LazyFlag("icon_gray_knight")|pf_show_faction, 0, "fac_neutral", merchant_personality, [("trp_recruiter", 1, 1)]),
+]
 menus = [
 
   (
-    "oim_caravan_delivered",0,"All the caravan goods have been sold. After calculating all your expenses and any protection fees, you count a profit of {reg11} scillingas.",
+    "oim_caravan_delivered",0,"All the caravan goods have been sold. After calculating all your expenses, you count a profit of {reg11} scillingas. {s11}",
     "none",
     [
 			#code
-
 			(quest_get_slot, ":goods", "qst_oim_deliver_caravan","slot_quest_target_item"), 
 			(str_store_item_name, s2, ":goods"),
 			(quest_get_slot, ":count", "qst_oim_deliver_caravan","slot_quest_target_amount"),
@@ -52,10 +51,6 @@ menus = [
                   (display_message, "@{!}DEBUG: count for qst caravan {reg2}"),
               (try_end),
 			(quest_get_slot, ":party", "qst_oim_deliver_caravan","slot_quest_target_center"),
-			(party_get_slot, ":player_relation", ":party", "slot_center_player_relation"),
-			(val_add, ":player_relation", reg2),
-			(val_div, ":player_relation", 3),#1 relation for 3 items
-			(party_set_slot, ":party", "slot_center_player_relation", ":player_relation"),
 			(call_script, "script_oim_get_item_base_price", ":goods"), 
 			(assign, ":price", reg0),
 			 (try_begin),
@@ -145,25 +140,17 @@ menus = [
 				(str_store_string, s3, "str_percent_5_tax_is_paid"),
 				(display_message, s3), 
 			  (end_try), 
-			  
-			  #(assign, reg12, "$caravan_escort_agreed_reward"),##see escort_quest\
-			  # (assign, reg13, ":price"),
-			  # (store_sub, reg11, reg13, reg12),
-			  (assign, reg11, ":price"),
-			  (val_max, reg11,1),
-
-			  (call_script, "script_troop_add_gold", "trp_player", reg11),
+			
+			  (call_script, "script_troop_add_gold", "trp_player", ":price"),
+			  (assign, reg11, ":price"),##don't touch reg1 This is what you make!!!
 			  (str_clear,s11),
-			  
-			  			  
 			  (str_store_string, s11, "@^String report:a profit of {reg11} scillingas."),
 				(try_begin),
                   (ge, "$cheat_mode", 1),
-                  (display_message, "@{!}DEBUG: Total earnings:{reg11} for the caravan not including setup fee "),
+                  (display_message, "@{!}DEBUG: Total earnings:{reg11}"),
               	(try_end),
 			  (call_script, "script_oim_change_price_factors", ":party", ":goods", "$oim_count_to_deliver", 1),
-			  (succeed_quest,"qst_oim_deliver_caravan"),(call_script, "script_end_quest", "qst_oim_deliver_caravan"),
-         ##gdw random
+
 			  (assign, "$oim_count_to_deliver", 0),
             (try_end),
 	],
