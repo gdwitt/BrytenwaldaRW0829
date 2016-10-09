@@ -252,7 +252,7 @@ items = [
 
  ["raw_leather","Hides", [("leatherwork_inventory",0)], itp_merchandise|itp_type_goods, 0, 300,weight(40)|abundance(60),imodbits_none,[],['fac_kingdom_12','fac_kingdom_13','fac_kingdom_18','fac_kingdom_20']],
  ["leatherwork","Leatherwork", [("leatherwork_frame",0)], itp_merchandise|itp_type_goods, 0, 400,weight(30)|abundance(60),imodbits_none,[],['fac_kingdom_13','fac_kingdom_18','fac_kingdom_20','fac_kingdom_29']],
- ["jewelry","Jewelry", [("vc_jewelry",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 325,weight(30)|abundance(80)|food_quality(30)|max_ammo(50),imodbits_none ],
+ ["jewelry","Jewelry", [("vc_jewelry",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 525,weight(10)|abundance(40)|food_quality(30),imodbits_none ],
  #vc_jewelry
  ["silver","Silver", [("ore_silver",0)], itp_merchandise|itp_type_goods, 0, 475,weight(30)|abundance(60),imodbits_none,[],['fac_kingdom_6','fac_kingdom_7','fac_kingdom_8','fac_kingdom_21','fac_kingdom_22','fac_kingdom_23','fac_kingdom_24','fac_kingdom_25','fac_kingdom_26']],
  ["furs","Furs", [("fur_pack",0)], itp_merchandise|itp_type_goods, 0, 350,weight(40)|abundance(60),imodbits_none,[],['fac_kingdom_13','fac_kingdom_18','fac_kingdom_20']],
@@ -2181,7 +2181,7 @@ items = [
 
 # #####Hachas 2M
 
-["tree_axe2h",   "Two Handed Axe", [("einhendi_haloygox",0)], itp_2hax,itc_2hax,570 , weight(3)|difficulty(10)|spd_rtng(66) | weapon_length(97)|swing_damage(36 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
+["tree_axe2h",   "Two Handed Axe", [("einhendi_haloygox",0)], itp_2hax,itc_2hax,510 , weight(3)|difficulty(9)|spd_rtng(69) | weapon_length(96)|swing_damage(34 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
 ["battle_axe2ht2",   "Two Handed War Axe", [("01tveirhendr_hedmarkox",0)],itp_2hax,itc_2hax,620 , weight(3)|difficulty(11)|spd_rtng(66) | weapon_length(101)|swing_damage(39 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
 ["battle_axe2ht2_alt",   "Two Handed War Axe", [("01tveirhendr_hedmarkox",0)],itp_2haxb,itc_2hax,620 , weight(3)|difficulty(11)|spd_rtng(66) | weapon_length(101)|swing_damage(35 , blunt) | thrust_damage(0 , blunt),imodbits_axe ],
 ["war_axe2ht2",   "Two hand LONG war Axe", [("long_axe_c",0)], itp_2hax,itc_2hax,620 , weight(4)|difficulty(13)|spd_rtng(60) | weapon_length(105)|swing_damage(43 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
@@ -3534,7 +3534,7 @@ items = [
      #  (display_message,"@Horn rally men! (wounded troops recover 5 hitpoints)",0x6495ed),      
                               ],)]],
    
-["horn1", "BattleHorn", [("horn",0)],itp_type_thrown |itp_primary|itp_no_pick_up_from_ground, itcf_throw_knife,0, 1770 , weight(3.5)|abundance(60)|head_armor(0)|body_armor(0)|leg_armor(33)|difficulty(9) ,imodbits_none, 
+["horn1", "BattleHorn", [("horn",0)], itp_no_pick_up_from_ground| itp_type_foot_armor | itp_attach_armature,0, 1770 , weight(3.5)|abundance(60)|head_armor(0)|body_armor(0)|leg_armor(33)|difficulty(9) ,imodbits_none, 
    [(ti_on_weapon_attack, [
 
        (play_sound,"snd_horn2"),(try_for_agents,":agent"),

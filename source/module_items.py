@@ -252,7 +252,7 @@ items = [
 
  ["raw_leather","Hides", [("leatherwork_inventory",0)], itp_merchandise|itp_type_goods, 0, 300,weight(40)|abundance(60),imodbits_none,[],['fac_kingdom_12','fac_kingdom_13','fac_kingdom_18','fac_kingdom_20']],
  ["leatherwork","Leatherwork", [("leatherwork_frame",0)], itp_merchandise|itp_type_goods, 0, 400,weight(30)|abundance(60),imodbits_none,[],['fac_kingdom_13','fac_kingdom_18','fac_kingdom_20','fac_kingdom_29']],
- ["jewelry","Jewelry", [("vc_jewelry",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 325,weight(30)|abundance(60)|food_quality(30)|max_ammo(50),imodbits_none ],
+ ["jewelry","Jewelry", [("vc_jewelry",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 525,weight(10)|abundance(40)|food_quality(30),imodbits_none ],
  #vc_jewelry
  ["silver","Silver", [("ore_silver",0)], itp_merchandise|itp_type_goods, 0, 475,weight(30)|abundance(60),imodbits_none,[],['fac_kingdom_6','fac_kingdom_7','fac_kingdom_8','fac_kingdom_21','fac_kingdom_22','fac_kingdom_23','fac_kingdom_24','fac_kingdom_25','fac_kingdom_26']],
  ["furs","Furs", [("fur_pack",0)], itp_merchandise|itp_type_goods, 0, 350,weight(40)|abundance(60),imodbits_none,[],['fac_kingdom_13','fac_kingdom_18','fac_kingdom_20']],
@@ -279,8 +279,8 @@ items = [
 ["chicken","Chicken", [("chicken",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 80,weight(10)|abundance(60)|food_quality(40)|max_ammo(150),imodbits_none],
 ["pork","Pork", [("pork",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 100,weight(15)|abundance(60)|food_quality(70)|max_ammo(150),imodbits_none],
 ["butter","Butter", [("butter_pot",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 100,weight(6)|abundance(60)|food_quality(40)|max_ammo(90),imodbits_none],
-["itemslot1","ritemslot1", [("raw_meat",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 100,weight(6)|abundance(60)|food_quality(40)|max_ammo(90),imodbits_none],
-["itemslot2","ritemslot2", [("jug",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 100,weight(6)|abundance(60)|food_quality(40)|max_ammo(90),imodbits_none],
+["itemslot1","Someone's arm", [("raw_meat",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 100,weight(6)|abundance(60)|food_quality(40)|max_ammo(90),imodbits_none],
+["itemslot2","Bottle of Piss", [("jug",0)], itp_merchandise|itp_type_goods|itp_consumable|itp_food, 0, 100,weight(6)|abundance(60)|food_quality(40)|max_ammo(90),imodbits_none],
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 #-#-#-#Hunting chief Mod begin#-#-#-#
@@ -2382,7 +2382,7 @@ items = [
                                                       
 ["spear1",   "Spear", [("spjot",0)], itp_spear, itc_spear, 400 , weight(1.4)|abundance(60)|difficulty(7)|spd_rtng(90) | weapon_length(133)|swing_damage(15, blunt) | thrust_damage(26 , pierce),imodbits_polearm ],
 
-["spear2",   "1testspear1", [("saxon2hspear",0)], itp_test2hspear, itc_spear, 400 , weight(1.4)|abundance(6)|spd_rtng(90) | weapon_length(144)|swing_damage(20, blunt) | thrust_damage(22, pierce),imodbits_polearm ],
+["spear2",   "Medium Spear", [("saxon2hspear",0)], itp_test2hspear, itc_spear, 400 , weight(1.4)|abundance(6)|spd_rtng(90) | weapon_length(144)|swing_damage(20, blunt) | thrust_damage(22, pierce),imodbits_polearm ],
 ["spearlight",   "Light Spear", [("hoggkesja",0)], itp_spear, itc_spear, 165 , weight(1.3)|abundance(67)|difficulty(6)|spd_rtng(102) | weapon_length(125)|swing_damage(13, blunt) | thrust_damage(27 , pierce),imodbits_polearm ],
 ["spearboar",   "Boar Spear", [("svia2",0)], itp_spear, itc_spear, 521 , weight(2)|abundance(60)|difficulty(8)|spd_rtng(84) | weapon_length(131)|swing_damage(19 , blunt) | thrust_damage(26, pierce),imodbits_polearm ],
 #long spear

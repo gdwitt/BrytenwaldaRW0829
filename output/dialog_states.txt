@@ -1881,6 +1881,8 @@ arena_master_pre_talk
 arena_master_fight_result
 arena_master_talk
 arena_master_spar_teams
+askmentor1
+accept_mentor2
 arena_master_ask_tournaments
 arena_master_spar_teams_choose
 arena_master_spar_team_one
@@ -2036,10 +2038,9 @@ mayor_wealth_comparison_2
 mayor_wealth_comparison_3
 mayor_wealth_comparison_4
 mayor_wealth_comparison_5
-askmentor1
 accept_mentor1
-ms_npc_list
 ms_nps_variant_selected
+ms_npc_list
 ms_npc_agree_disagree
 ms_npc_variants
 ms_nps_variant_descr

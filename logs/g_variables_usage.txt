@@ -1,7 +1,6 @@
 cummoc_quest_finished 0
 holy_sword5 0
 holy_sword4 0
-g_is_npc_dialog 0
 g_current_town_faction 0
 debug_message_in_queue 0
 tutorial_1_finished 0
@@ -81,6 +80,7 @@ last_training_fight_town 1
 training_fight_time 1
 g_reclutar_p_puede 1
 g_dar_tropas 1
+g_is_npc_dialog 1
 player_can_persuade_npc 1
 player_can_refuse_npc_quitting 1
 disable_sisterly_advice 1

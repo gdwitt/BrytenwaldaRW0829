@@ -31560,9 +31560,6 @@ They are extremely valuable items and you will probably face many hardships to f
   [anyone|plyr,"arena_master_talk", [], "About the melee fights...", "arena_master_melee_pretalk",[]],
 #torneos personalizados chief
     [anyone|plyr,"arena_master_talk", [(party_get_num_companions,":troops","p_main_party"),(gt,":troops",1)], "I would like to spar with some of my men.", "arena_master_spar_teams",[]], # Jinnai
-####Training Start
-[anyone|plyr,"arena_master_talk", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship. Can you accept me?", "askmentor1",[]],
-[anyone|plyr,"arena_master_talk", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship. Can you accept one of my companion?", "accept_mentor2",[]],
 #chief acaba
   tournaments.arena_master_option,
   [anyone|plyr,"arena_master_talk", [], "I need to leave now. Farewell.", "close_window",[]],
@@ -34093,23 +34090,22 @@ They are extremely valuable items and you will probably face many hardships to f
 #(store_conversation_troop,reg(1)),
 #                     (is_between,reg(1),arena_masters_begin,arena_masters_end),
 #                     (eq,"$g_talk_troop_met", 0),
-
-#[anyone|plyr,"novicemaster_are_you_ready", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship.", "askmentor1",[]],
+[anyone|plyr,"arena_master_talk", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship", "askmentor1",[]],
+[anyone|plyr,"novicemaster_are_you_ready", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship.", "askmentor1",[]],
 # [anyone,"trainer_practice_1",
 #    #[(ge,"$novice_training_difficulty",4)],##temporary shortcut
 #    [(ge, "$cheat_mode", 1),
 #   (display_message, "@{!}DEBUG: About to engage in mentor training}"),],
 #  "You have passed all stages of training. I'm impressed. Would you like me to  mentor you for 3 days so you can quickly accelerate your skills?", "accept_mentor1",[(assign, "$g_is_npc_dialog", 1),]], 
-[anyone, "askmentor1", [], "You impress me. Yes, I am willing to take you on.","accept_mentor1",[]], 
-[anyone|plyr, "accept_mentor1", [], "I would accept this honor. But only 5 days, correct?","ms_nps_variant_selected",[(assign, "$g_cur_npc","trp_player"),]], 
-[anyone|auto_proceed, "start", 
-     [
-         (eq, "$g_is_npc_dialog", 1),
-     ], 
-     "{!}NOT SHOWN", "accept_mentor2",[]],
-
-[anyone, "accept_mentor2", [], "You impress me. Yes, I am willing to train your companion one special time this week","ms_npc_list",[]], 
- 
+[anyone, "askmentor1", [], "You impress me. Yes, I am willing to take you on.","accept_mentor1",[(assign, "$g_is_npc_dialog", 1),]], 
+[anyone|plyr, "accept_mentor1", [], "I really want to train one of my companions. 3 days?","ms_npc_list",[]], 
+[anyone|plyr, "accept_mentor1", [], "I would accept this honor. But only 3 days, correct?","ms_nps_variant_selected",[(assign, "$g_cur_npc","trp_player"),]], 
+#[anyone|auto_proceed, "start", 
+#     [
+ #        (eq, "$g_is_npc_dialog", 1),
+ #    ], 
+ #    "{!}NOT SHOWN", "train_start",[]], 
+   
  #[anyone|plyr, "train_start", [], "I want you to train me.", "ms_nps_variant_selected", 
   #[
  # (assign, "trp_player","$g_cur_npc"),
@@ -34140,11 +34136,11 @@ They are extremely valuable items and you will probably face many hardships to f
   [anyone,"ms_nps_variant_selected", [       
                                          (try_begin),
                                              (store_character_level, ":npc_level", "$g_cur_npc"),
-                                             (store_mul, "$g_study_price", ":npc_level", 4),
+                                             (store_mul, "$g_study_price", ":npc_level", 3),
                                              (val_mul, "$g_study_price", 500),                                              
                                              (assign, reg0, "$g_study_price"),
                                          (try_end),
-                                     ], "The cost of training will be {reg0} scillingas. No sneaking out of town is allowed; you will lose your investment.", "ms_npc_agree_disagree", []],  
+                                     ], "The cost of training will be {reg0} scillingas.", "ms_npc_agree_disagree", []],  
     
      [anyone|plyr,"ms_npc_agree_disagree", [ 
                                              (try_begin),
@@ -34170,8 +34166,8 @@ They are extremely valuable items and you will probably face many hardships to f
           (assign, "$g_player_icon_state", pis_camping),
        (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
      (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
-      (display_debug_message, "@Training continues"),
+       (rest_for_hours, 24 * 3, 20, 0), #rest while attackable
+      (display_message, "@Training continues"),
     (troop_raise_skill, "$g_cur_npc", skl_first_aid ,1),
     (troop_raise_skill, "$g_cur_npc", skl_surgery ,1),
     (troop_raise_skill, "$g_cur_npc", skl_wound_treatment ,1),
@@ -34192,7 +34188,7 @@ They are extremely valuable items and you will probably face many hardships to f
           (assign, "$g_player_icon_state", pis_camping),
        (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
      (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
+       (rest_for_hours, 24 * 3, 20, 0), #rest while attackable
       (display_message, "@Training continues"),
     (troop_raise_skill, "$g_cur_npc",skl_inventory_management,1),
       (troop_raise_skill, "$g_cur_npc",skl_spotting ,1),
@@ -34215,7 +34211,7 @@ They are extremely valuable items and you will probably face many hardships to f
           (assign, "$g_player_icon_state", pis_camping),
        (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
      (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
+       (rest_for_hours, 24 * 3, 20, 0), #rest while attackable
       (display_message, "@Training continues"),
    (troop_raise_skill, "$g_cur_npc",skl_foraging ,1),
    (troop_raise_skill, "$g_cur_npc",skl_riding ,1),
@@ -34239,7 +34235,7 @@ They are extremely valuable items and you will probably face many hardships to f
           (assign, "$g_player_icon_state", pis_camping),
        (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
      (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
+       (rest_for_hours, 24 * 3, 20, 0), #rest while attackable
       (display_message, "@Training continues"),
    (troop_raise_proficiency, "$g_cur_npc",wpt_one_handed_weapon,50),
           (troop_raise_proficiency, "$g_cur_npc",wpt_two_handed_weapon,50),

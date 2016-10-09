@@ -354,7 +354,7 @@ itemsfile version 3
  54 59 61 70
 0
 
- itm_jewelry Jewelry Jewelry 1  vc_jewelry 0  34144267 0 325 0 30.000000 60 30 0 0 0 0 0 0 0 50 0 0
+ itm_jewelry Jewelry Jewelry 1  vc_jewelry 0  34144267 0 525 0 10.000000 40 30 0 0 0 0 0 0 0 0 0 0
  0
 0
 
@@ -443,11 +443,11 @@ itemsfile version 3
  0
 0
 
- itm_itemslot1 ritemslot1 ritemslot1 1  raw_meat 0  34144267 0 100 0 6.000000 60 40 0 0 0 0 0 0 0 90 0 0
+ itm_itemslot1 Someone's_arm Someone's_arm 1  raw_meat 0  34144267 0 100 0 6.000000 60 40 0 0 0 0 0 0 0 90 0 0
  0
 0
 
- itm_itemslot2 ritemslot2 ritemslot2 1  jug 0  34144267 0 100 0 6.000000 60 40 0 0 0 0 0 0 0 90 0 0
+ itm_itemslot2 Bottle_of_Piss Bottle_of_Piss 1  jug 0  34144267 0 100 0 6.000000 60 40 0 0 0 0 0 0 0 90 0 0
  0
 0
 
@@ -4004,7 +4004,7 @@ itemsfile version 3
  0
 0
 
- itm_spear2 1testspear1 1testspear1 1  saxon2hspear 0  138674179 22236529535487232 400 8202 1.250000 6 0 0 0 0 0 90 0 144 0 278 532
+ itm_spear2 Medium_Spear Medium_Spear 1  saxon2hspear 0  138674179 22236529535487232 400 8202 1.250000 6 0 0 0 0 0 90 0 144 0 278 532
  0
 0
 
