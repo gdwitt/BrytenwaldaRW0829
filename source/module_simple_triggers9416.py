@@ -7436,21 +7436,12 @@ simple_triggers = [
  (try_begin),
      (lt, reg0, 2),
      (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", 0),
-     (try_begin),
-      (neg|map_free),
-      (ge, "$g_last_rest_center", 0),
-      (this_or_next|party_slot_eq, "$g_last_rest_center", "slot_center_has_manor", 1),
-      (is_between, "$g_last_rest_center", walled_centers_begin, walled_centers_end),
-      (assign, "$g_resting_at_manor_or_walled_center", 1),
-      (try_end),
  (else_try),
-     
-     # (try_begin),
-     #     (eq, "$g_last_rest_center", "$current_town"),
-     #     (assign, "$rest_up", 1),##jump to elsetry
+     (is_currently_night),
      (try_begin),
-        (is_currently_night),#not resting
-        (neq, "$g_resting_at_manor_or_walled_center", 1),
+         (eq, "$g_last_rest_center", "$current_town"),
+         (assign, "$rest_up", 1),##jump to elsetry
+     (else_try),
          (neq, "$g_player_icon_state", pis_camping),
          (neq, "$g_player_icon_state", pis_ship),
          (neq, "$g_player_besiege_town", "$g_encountered_party"),
@@ -7461,49 +7452,49 @@ simple_triggers = [
          (display_message, "@Your troops lose 3 morale from no night rest. morale_modifier_weariness={reg0}."),
          #(assign, ":lose_morale", reg0),
          #(call_script, "script_change_player_party_morale", -3),
+     (try_end),
+ (else_try),
+     (neq, "$rest_up", 0),##means rested in town
+     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+     
+     #(try_begin),##if 4 and up, don't assign further penalty gdw
+     (assign, reg1, 6),
+     (try_begin),##does this apply only to state where in town or in camp
+       (ge, "$g_last_rest_center", 0),
+       (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
+       (val_add, reg1, 2),##gdw this was 1
+     (try_end),
+     (val_sub, reg0, reg1),
+     (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+     #(call_script, "script_change_player_party_morale", reg1),
      #(try_end),
-     (else_try),
-        (eq, "$g_battle_weary",1),## see post battle from scripts battle wears party out
-        (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-       #(val_max, reg0,0),##test gdw delte this
-        (val_add, reg0, 10),
-       # (val_max, reg0,0),
-        (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-        (assign, "$g_battle_weary",0),
-     (else_try),
-        (is_currently_night),
-       (eq, "$g_resting_at_manor_or_walled_center", 1),
-       (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-       #(try_begin),##if 4 and up, don't assign further penalty gdw
-       (assign, reg1, 6),
-       # (try_begin),##does this apply only to state where in town or in camp
-       #   (ge, "$g_last_rest_center", 0),
-       #   (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
-       #   (val_add, reg1, 2),##gdw this was 1
-       (val_sub, reg0, reg1),
-       (val_min, reg0,0),
-       (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-       #(call_script, "script_change_player_party_morale", reg1),
-       #(try_end),
-       (display_message, "@Your troops feel refreshed from the center rest 8. morale_modifier_weariness={reg0}"),
-    (else_try),##night camping?
+     (display_message, "@Your troops feel refreshed from the center rest 8. morale_modifier_weariness={reg0}"),
+     (assign, "$rest_up", 0),
+  (else_try),##camping?
      (is_currently_night),
      (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
      (val_sub, reg0, 4),#camp less restful
-     (val_min, reg0,0),
+     # (val_max, reg0,0),
      (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
      #(call_script, "script_change_player_party_morale", 4),
      (display_message, "@Your troops troops gain morale from night rest. morale_modifier_weariness={reg0}."),
-  (else_try),##day camping
+  (else_try),##day resting
      (eq, "$g_player_icon_state", pis_camping),
      (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
      #(val_max, reg0,0),##test gdw delte this
      (val_sub, reg0, 2),#camp less restful
-     (val_min, reg0,0),
+     # (val_max, reg0,0),
      (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
      (display_message, "@Your troops troops gain morale from day rest. morale_modifier_weariness={reg0}."),
      #(call_script, "script_change_player_party_morale", 2),
-  
+  (else_try),
+      (eq, "$g_battle_weary",1),
+      (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+     #(val_max, reg0,0),##test gdw delte this
+      (val_sub, reg0, 9),#camp less restful
+     # (val_max, reg0,0),
+      (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+      (assign, "$g_battle_weary",0),
   (else_try),
       (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
       (try_begin),

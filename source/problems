@@ -1,0 +1,136 @@
+Can loot still? When?
+Take prisoner enemy lord? What is trigger dialog?
+Test battlehorn for leg armor.
+Books with intelligence score of 0
+Rest causing morale penalty
+Morale report
+Banner and crown morale stack?
+Sea traders at Caer Uisc
+Negative relations with neutral from Rheged quest?
+campaign ai
+tournament issues with uniform
+WSE tutorial correct which one
+
+ I want to create new character with high renown. Even if father: lesser noble or vocation: lesser noble, my character start with only 5 renown. I searched forum and could not find the answer. İt is a problem or normal thing for this mod? 
+spice_goods_spec.dds
+spice_goods_normal.dds
+spice_goods.dds textures missing still? check in Lord's hall of clc or pengwernnew companion 
+
+high nobles starting with 5 renown
+does blunt order persist between mst
+north bandit quest in rheged plus
+no special armors
+treasures of britanniaand hibernia quest
+
+1227
+enemey lords still fight if you persuade to join
+military book and merchatn ledger cant read
+village elders dont' give quests
+
+setup escape key
+enable escape out of battle
+problem finding criminal at village
+jan21 neko bugged when talk to cerdic
+
+Personal messages:
+0 cattle
+you, is the problem i had at my gaem when i became a Marshall, i was the first one, i did not serfe one before. i became lord pretty early and marshall because i didi some quess for the king. When i was Marshall they went to that castle when i called them to arms, i know it does not make much sense. But i gave up on being a Marshall and they did follow the new Marshall/NPC as supposed to, normal.
+The Priest was in ireland in Rig na Rough or something ^^ he gave me the better relations to the dead fraction.
+Fix trade goods
+
+The Outlaw hideout scene is still buged in Ireland and the spice thing wasnt fixed at the last version and some other stuff. The days when building at villages or towns, too
+
+Then i found 1 more thing, wich i still would like to get fixed. The Ceither a Irish infantry wich you get, when you upgrade the Bothach from Ireland villages. Some of the Ceither do not have weapons they attack with fists. Some have a weapon, so i think it is just one weapon-layout wich is missing a melee weapon. This makes this Unit almost complete useless, some farmes are more OP and need less money. BUT you need the Ceither Unit in big numbers to actually play in Ireland. 
+So pls let me know how to fix this, or pls try to fix it. It sux when you want to build an army and 1/4 of your troops are useing a shield and a their fist in Ireland (like some Pub-Warriors) ^^ actually that's very funny but makes playing from Ireland way more difficult.
+
+
+some other small stuff i found or dislike.
+
+- Lords in Taverns.. This sux and mostly when you just met him on the way somewhere.. but then he is in a tavern at the other direction, then he actually went.. ^^
+PLS keep them out of the Tavern and the {!} Castle 3 Seneschal or the {!} Town 34 Seneschal ;) I mean i like the new Warriors much in the tavern standing around but not Lords wich are actually running around or some {!} Guys. ^^
+
+-Then i get some red error text when companions are complaining about other companions sometimes. Not all get an error message when they are talking, complaining.
+
+-I saw the Item jewelry form VC wich you could buy at a village for 1 gold and it had (0/0)
+
+SCRIPT ERROR ON OPCODE 2322: Invalid Register ID: 463; LINE NO: 2: 
+ At dialog consequence: dlga_companion_personalityclash_b:companion_personalityclash_response. At dialog consequence: dlga_companion_personalityclash_b:companion_personalityclash_response.
+
+
+Some Lords do not have Weapons on Batllefields! Wich makes them **** in their League, Kingdom. They do not make kills, are not that usefull for the King so they get almost never a fief, even there are only 4 Lords at this Kingdom.
+
+ldic Gwrgant Fawr map Cynfyn, from the Gwent Fraction. He uses a shield and his fist everytime, everywhere. ^^
+I alredy found some stuff, bugs but it is more Item stuff and and missing features, like the patrols you can not speak with them, like it was at BW 1.41, you can not send them to any city or castle or tell them to patrol an other location. You can only do this from the castel, city (send a messanger) wich sux much. 
+-Also, I CAN NOT attack acravans at my game right now. When i speak to them they only tell me where they go or i can trade or leave.. There is no option to demand their stuff, attack.
+
+
+ found a game breaking bug, it is a duplicating Lord bug. I had a big battle with the King of East Seaxna with some Friendly Lords on my side after the Battle wich we won. My Friendly Lords Partys did still follow me but the Lords were in their casles after the battle, they got wounded (fall) in battle. So when i speak to their Praty now a commen soldier speeks with me and the Lords get a new army party at their castles.
+
+
+
+-There should be NO! shield and staff at tournaments, tkae axes insted. those traing axes, i can remember BW had axes in tournaments ! for me this is a big bug too. To fight with a staff and a shield in a tournament at that time.. pls give them an axe.
+
+
+-Companions or any Char. have no Hair when wearing this Item: Hardened BL coat013a
+dec 11 page 45 of peresonal messages
+
+-Particle_system, you should change the Horse, Hoof particle from BWreworked back to native, looks good and more realistic. AND saves a lot of Performance!
+Here is a downloadlink from my particle_system.txt i use for BWreworked, always update.
+https://mega.nz/#!YolUEA7I!mFCftSarB8m1CmvQhwEbpIMN8BgpZZ8RxC0nrOK4WZU
+
+
+-I cant not give Patrols the order to go and patrol or send them to a caslte, town. The old BW options for Patrols on the Map should be back. To send a messanger from your town, castle is nice to have too.
+
+
+-I saw a post on the BW forum about rents from Towns and so on. I think they are ok for now,
+
+
+-Troops get a bonus at night from resting even when the feature is turned off... If that is because of blancing then, try to disable the message.
+
+
+-I can not attack Caravans at some point ingame. I think it is some good reputaion bug. Because i played a Good Leader/ a Honorable Man, Trader too.
+
+
+-I can not find Battle Horns even on the Market at a later date ingame. Some Npc have it but i got no health boost from it when they were using it.
+
+
+-Some NPC have invisible Hands with this gloves: reservcoarse Gloves
+
+
+-Some Missile Troops (archers) have no MeleeWeapons from this Troop Tree, from the Allits on.
+https://www.flickr.com/photos/miyaoka/7335478294/in/photostream/
+
+
+- Teleporting Units- can you make the Mod to spawn all Partys on all Maps bit more into the Map, not so close to the edge of the map like it is now?
+I saw they only get teleported when they spawn to close to the Border of the Map. So, they should spawn like 10-20 m more into the map. The BW maps are already bigger so why not put the spawn more into it, to avoid this teleporting.
+
+
+-Most of the time Lords just charge with their units, only the archers stay back in Formation. Not a big deal but i can remember they used more Formations in BW 1.41.
+
+
+-Pls no Lords and {!} Castle3 Seneschal in Taverns.
+
+
+-The companion complains get sometimes an OP CADE ERROR, i already send you all infos on that.
+
+
+-Naked Lords in Castle Halls. to many to count but not so many that it is totaly gamebraking.
+
+
+-Some Lords have no Melee weapon like this guy.
+
+
+- Old Hero you get this Unit sometimes from an event on the Map. He has no legs, his legs, shoes are broken.
+
+
+-Building time for villages are borken, you get -1 days over a skill of 6. Also Ladders and Siege towers are broke. I changed them so the ladders take 20 hours and not 60 with a skill of 6.. You really should take a look at this makes you feel there is something very wronf st the MOD.
+HERE you can find a List of Tweaks, so you can change stuff like these building times easily in the TXT file. 
+
+    https://forums.taleworlds.com/index.php/topic,46290.0.html
+
+
+
+-One more thing i would like to see, is some new trade items, like gold and so on like at Repolished.
+
+
+Pls try to fix these bugs ^^ then the BWreworked MOD would be very awesome. :)

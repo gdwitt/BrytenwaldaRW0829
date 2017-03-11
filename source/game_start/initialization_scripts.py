@@ -2704,16 +2704,21 @@ scripts = [
 
         # Setting book intelligence requirements
         (item_set_slot, "itm_book_tactics", "slot_item_intelligence_requirement", 9),
-        (item_set_slot, "itm_book_persuasion", "slot_item_intelligence_requirement", 8),
-        (item_set_slot, "itm_book_leadership", "slot_item_intelligence_requirement", 7),
+        (item_set_slot, "itm_book_persuasion", "slot_item_intelligence_requirement", 10),
+        (item_set_slot, "itm_book_leadership", "slot_item_intelligence_requirement", 8),
         (item_set_slot, "itm_book_intelligence", "slot_item_intelligence_requirement", 10),
-        (item_set_slot, "itm_book_trade_reference", "slot_item_intelligence_requirement", 10),
+        (item_set_slot, "itm_book_pathfinding", "slot_item_intelligence_requirement", 8),
+        (item_set_slot, "itm_book_charisma", "slot_item_intelligence_requirement", 9),
+        (item_set_slot, "itm_book_training", "slot_item_intelligence_requirement", 8),
         (item_set_slot, "itm_book_weapon_mastery", "slot_item_intelligence_requirement", 9),
         (item_set_slot, "itm_book_engineering", "slot_item_intelligence_requirement", 12),
-
-        (item_set_slot, "itm_book_wound_treatment_reference", "slot_item_intelligence_requirement", 9),#gdw10
-        (item_set_slot, "itm_book_training", "slot_item_intelligence_requirement", 9),#gdw10
         (item_set_slot, "itm_book_surgery", "slot_item_intelligence_requirement", 9),   #gdw10
+        ##reference books below
+ (item_set_slot, "itm_book_trade_reference", "slot_item_intelligence_requirement", 9),
+ (item_set_slot, "itm_book_looting_reference", "slot_item_intelligence_requirement", 7),
+        (item_set_slot, "itm_book_firstaid_reference", "slot_item_intelligence_requirement", 9),#gdw10
+        (item_set_slot, "itm_book_training", "slot_item_intelligence_requirement", 9),#gdw10
+        
     ]),
 
     ("initialize_town_arena_info", [

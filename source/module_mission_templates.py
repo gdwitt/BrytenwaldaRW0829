@@ -1318,6 +1318,13 @@ mission_templates = [
         (tutorial_message_set_position, 500, 650),
         (tutorial_message_set_center_justify, 0),
         (tutorial_message_set_background, 1),
+(team_give_order, 1, grc_everyone,  mordr_use_any_weapon),
+(team_give_order, 0, grc_everyone,  mordr_use_any_weapon),
+(try_begin),
+                        (ge, "$cheat_mode", 1),
+                        (display_message, "@{!}DEBUG:calling use all weapons in battletype"),
+        (try_end),
+
         (try_begin),
             (eq,"$battle_type",1),
             (tutorial_message, "@ Scout report: --Sir, be careful! The enemy is on the other side of the estuary.--^^One of your men sighes: --This site is beautiful. It's a shame that soon the water will run stained with blood.--^^(press K to finish reading)"),
@@ -1730,6 +1737,13 @@ mission_templates = [
     [
       (ti_on_agent_spawn, 0, 0, [],
        [
+       (team_give_order, 1, grc_everyone,  mordr_use_any_weapon),
+(team_give_order, 0, grc_everyone,  mordr_use_any_weapon),
+(try_begin),
+                        (ge, "$cheat_mode", 1),
+                        (display_message, "@{!}DEBUG:calling use all weapons in battletype"),
+        (try_end),
+
          (store_trigger_param_1, ":agent_no"),
          (call_script, "script_agent_reassign_team", ":agent_no"),
 

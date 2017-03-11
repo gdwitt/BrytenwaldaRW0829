@@ -202,25 +202,25 @@ items = [
 # A treatise on The Method of Mechanical Theorems Archimedes
 #chief cambiados libros 
 #This book must be at the beginning of readable books
-["book_tactics","History of the Peloponnesian War (tactics)", [("book_a",0)], itp_type_book, 0, 4500,weight(2)|abundance(60),imodbits_none],
-["book_persuasion","Rhetorica ad Herennium (persuasion)", [("book_b",0)], itp_type_book, 0, 4600,weight(2)|abundance(60),imodbits_none],
-["book_leadership","The Life of Alexander the Great (leadership)", [("book_d",0)], itp_type_book, 0, 3780,weight(2)|abundance(60),imodbits_none], #cambiar chief
-["book_intelligence","Paedeia (intelligence)", [("book_e",0)], itp_type_book, 0, 4500,weight(2)|abundance(60),imodbits_none],
-["book_pathfinding","Guiding Pilgrim Travellers (pathfinding)", [("book_f",0)], itp_type_book, 0, 3600,weight(2)|abundance(60),imodbits_none],
-["book_weapon_mastery", "Polity of the Lacedaemonians, of Xenofonte (weaponsmaster)", [("book_d",0)], itp_type_book, 0, 4500,weight(2)|abundance(60),imodbits_none],
-["book_engineering","De architectura, of Vitrivius (engineering)", [("book_open",0)], itp_type_book, 0, 4500,weight(2)|abundance(60),imodbits_none],
-["book_charisma","Motivational Daily Readings (charisma)", [("book_open",0)], itp_type_book, 0, 3500,weight(2)|abundance(60),imodbits_none],
-["book_surgery","Synopsis of Aelius Galenus (surgery)", [("book_c",0)], itp_type_book, 0, 3600,weight(2)|abundance(60),imodbits_none],
-["book_training","Epitoma Rei Militaris (training)", [("book_open",0)], itp_type_book, 0, 3600,weight(2)|abundance(60),imodbits_none],
+["book_tactics","History of the Peloponnesian War (tactics)", [("book_a",0)], itp_type_book, 0, 4050,weight(2)|abundance(60),imodbits_none],
+["book_persuasion","Rhetorica ad Herennium (persuasion)", [("book_b",0)], itp_type_book, 0, 4150,weight(2)|abundance(60),imodbits_none],
+["book_leadership","The Life of Alexander the Great (leadership)", [("book_d",0)], itp_type_book, 0, 3400,weight(2)|abundance(60),imodbits_none], #cambiar chief
+["book_intelligence","Paedeia (intelligence)", [("book_e",0)], itp_type_book, 0, 4100,weight(2)|abundance(60),imodbits_none],
+["book_pathfinding","Guiding Pilgrim Travellers (pathfinding)", [("book_f",0)], itp_type_book, 0, 3250,weight(2)|abundance(60),imodbits_none],
+["book_weapon_mastery", "Polity of the Lacedaemonians, of Xenofonte (weaponsmaster)", [("book_d",0)], itp_type_book, 0, 4100,weight(2)|abundance(60),imodbits_none],
+["book_engineering","De architectura, of Vitrivius (engineering)", [("book_open",0)], itp_type_book, 0, 4100,weight(2)|abundance(60),imodbits_none],
+["book_charisma","Motivational Daily Readings (charisma)", [("book_open",0)], itp_type_book, 0, 3250,weight(2)|abundance(60),imodbits_none],
+["book_surgery","Synopsis of Aelius Galenus (surgery)", [("book_c",0)], itp_type_book, 0, 3300,weight(2)|abundance(60),imodbits_none],
+["book_training","Epitoma Rei Militaris (training)", [("book_open",0)], itp_type_book, 0, 3300,weight(2)|abundance(60),imodbits_none],
 #Reference books
 #This book must be at the beginning of reference books
-["book_wound_treatment_reference","De Materia Medica, of Dioscorides", [("book_c",0)], itp_type_book, 0, 3600,weight(2)|abundance(60),imodbits_none],
-["book_looting_reference","Swords of King Arthur's Court", [("book_c",0)], itp_type_book, 0, 3600,weight(2)|abundance(60),imodbits_none],
-["book_firstaid_reference","Convalescence shortened", [("book_c",0)], itp_type_book, 0, 3600,weight(2)|abundance(60),imodbits_none],
-["book_trade_reference","Merchant's Ledger", [("book_open",0)], itp_type_book, 0, 3500,weight(2)|abundance(60),imodbits_none],
+["book_wound_treatment_reference","De Materia Medica, of Dioscorides", [("book_c",0)], itp_type_book, 0, 3300,weight(2)|abundance(60),imodbits_none],
+["book_looting_reference","Swords of King Arthur's Court", [("book_c",0)], itp_type_book, 0, 3000,weight(2)|abundance(60),imodbits_none],
+["book_firstaid_reference","Convalescence shortened", [("book_c",0)], itp_type_book, 0, 3300,weight(2)|abundance(60),imodbits_none],
+["book_trade_reference","Merchant's Ledger", [("book_open",0)], itp_type_book, 0, 3200,weight(2)|abundance(60),imodbits_none],
 #chief cambiados libros acaba
 #puesto chief quest
-["book_slot","Read Latin Every Day to Remember", [("book_open",0)], itp_type_book, 0, 600,weight(2)|abundance(60),imodbits_none],#set to musketfor now#only available from abbots
+["book_slot","Read Latin Every Day to Remember", [("book_open",0)], itp_type_book, 0, 500,weight(2)|abundance(60),imodbits_none],#set to musketfor now#only available from abbots
 ["relic1","Vulgata Biblia", [("book_e",0)],itp_type_book, 0, 5500,weight(2)|abundance(60),imodbits_none],#type_book to prevent game from assignign at game start
 ["relic2","Slot for Relic2", [("book_e",0)], itp_type_book, 0, 5500,weight(2)|abundance(60),imodbits_none],#type_book to prevent game from assignign at game start
 ["relic3","Slot for Relic3", [("book_e",0)], itp_type_book, 0, 5500,weight(2)|abundance(60),imodbits_none],#type_book to prevent game from assignign at game start
@@ -2146,24 +2146,24 @@ items = [
 ["axe2","Cheapaxe",[("gallic_axe_1",0)],itp_axe1h,itc_axe1h,400,weight(1.5)|difficulty(5)|spd_rtng(75)|weapon_length(71)|swing_damage(27,pierce)|thrust_damage(0,pierce),imodbits_axe,],
 #invasores#t2=29-32 avg speed 80 length73 cost 530
 ["axe_englet2","EngleAxe",[("axefaradon3",0)],itp_axe1h,itc_axe1h,528,weight(2)|difficulty(7)|spd_rtng(81)|weapon_length(74)|swing_damage(29,pierce)|thrust_damage(0,pierce),imodbits_axe,[],['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5','fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
-["axe_longfrankisht3",    "Frankish Long Axe",[("vikingaxeb",0)],itp_axe1h,itc_axe1h,651,weight(2.5)|difficulty(9)|spd_rtng(75)|weapon_length(83)|swing_damage(33,pierce)|thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5']],
+["axe_longfrankisht3",    "Frankish Long Axe",[("vikingaxeb",0)],itp_axe1ha,itc_axe1h,651,weight(2.5)|difficulty(9)|spd_rtng(75)|weapon_length(83)|swing_damage(33,pierce)|thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5']],
 ["axe_longfrankisht3_alt","Frankish Long Axe a",[("vikingaxeb",0)],itp_axe1halt,itc_axe1h,481,weight(2)|difficulty(9)|spd_rtng(79)|weapon_length(80)|swing_damage(31,blunt)|thrust_damage(0 , blunt),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5']],
 ["axe_britonbattlet2",   "Frankish Axe", [("frankish_Axe2",0)],itp_axe1h,itc_axe1h,550 , weight(2)|difficulty(7)|spd_rtng(80) | weapon_length(77)|swing_damage(29 , pierce) | thrust_damage(0 , blunt),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5']],
-["decor_axet3",   "Elite Axe", [("vikingaxe",0)], itp_axe1h,itc_axe1h,617 , weight(2)|difficulty(8)|spd_rtng(83) | weapon_length(76)|swing_damage(32 , pierce) | thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
+["decor_axet3",   "Elite Axe", [("vikingaxe",0)], itp_axe1ha,itc_axe1h,617 , weight(2)|difficulty(8)|spd_rtng(83) | weapon_length(76)|swing_damage(32 , pierce) | thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
 ["decor_axet3_alt",   "Elite Axea", [("vikingaxe",0)],itp_axe1halt,itc_axe1h,597 , weight(2)|difficulty(8)|spd_rtng(80) | weapon_length(76)|swing_damage(31 , blunt) | thrust_damage(0 , blunt),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
 ["saxon_axet2",   "Saxon Axe", [("p_axe_1",0)],itp_axe1h,itc_axe1h,561 , weight(2)|difficulty(7)|spd_rtng(84) | weapon_length(74)|swing_damage(29 , pierce) | thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
-["germanic_axelongt2",   "Germanic Axe", [("lui_battleaxetwoh",0)],itp_axe1h,itc_axe1h,669 , weight(2)|difficulty(9)|spd_rtng(75) | weapon_length(84)|swing_damage(33 , pierce) | thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
+["germanic_axelongt2",   "Germanic Axe", [("lui_battleaxetwoh",0)],itp_axe1ha,itc_axe1h,669 , weight(2)|difficulty(9)|spd_rtng(75) | weapon_length(84)|swing_damage(33 , pierce) | thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
 ["germanic_axelongt2_alt","Germanic Axea", [("lui_battleaxetwoh",0)],itp_axe1halt,itc_axe1h,483 , weight(2)|difficulty(9)|spd_rtng(75) | weapon_length(83)|swing_damage(33 , blunt) | thrust_damage(0 , blunt),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
 #elite, Rey o noble Sajon, anglo o juto
-["bearded_axet2", "Bearded Hand Axe", [("le_werkaxt1",0)],itp_axe1h,itc_axe1h,557 , weight(2)|difficulty(9)|spd_rtng(75) | weapon_length(75)|swing_damage(32 , pierce) | thrust_damage(0 , pierce),imodbits_axe ], #chief modificado
+["bearded_axet2", "Bearded Hand Axe", [("le_werkaxt1",0)],itp_axe1ha,itc_axe1h,557 , weight(2)|difficulty(9)|spd_rtng(75) | weapon_length(75)|swing_damage(32 , pierce) | thrust_damage(0 , pierce),imodbits_axe ], #chief modificado
 ["bearded_axet2_alt", "Bearded Hand Axea", [("le_werkaxt1",0)],itp_axe1halt,itc_axe1h,457 , weight(2)|difficulty(9)|spd_rtng(75) | weapon_length(75)|swing_damage(30 , blunt) | thrust_damage(0 , blunt),imodbits_axe ], #chief modificado
-["elite_axelong1ht3",   "Decorated Elite Axe", [("talak_nordic_axe",0)],itp_axe1h,itc_axe1h,721 , weight(2.6)|difficulty(10)|spd_rtng(80) | weapon_length(87)|swing_damage(33 , pierce) | thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
+["elite_axelong1ht3",   "Decorated Elite Axe", [("talak_nordic_axe",0)],itp_axe1ha,itc_axe1h,721 , weight(2.6)|difficulty(10)|spd_rtng(80) | weapon_length(87)|swing_damage(33 , pierce) | thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
 ["elite_axelong1ht3_alt",   "Decorated Elite Axea", [("talak_nordic_axe",0)],itp_axe1halt,itc_axe1h,481 , weight(2)|difficulty(9)|spd_rtng(80) | weapon_length(79)|swing_damage(33 , blunt) | thrust_damage(0 , blunt),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5', 'fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
-["nordic_axet3", "War Axe", [("05einhendi_hedmarkrox",0)],itp_axe1h,itc_axe1h,700 , weight(2)|difficulty(9)|spd_rtng(84) | weapon_length(75)|swing_damage(31 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
+["nordic_axet3", "War Axe", [("05einhendi_hedmarkrox",0)],itp_axe1ha,itc_axe1h,700 , weight(2)|difficulty(9)|spd_rtng(84) | weapon_length(75)|swing_damage(31 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
 ["nordic_axet3_alt", "War Axea", [("05einhendi_hedmarkrox",0)],itp_axe1halt,itc_axe1h,480 , weight(2)|difficulty(9)|spd_rtng(80) | weapon_length(70)|swing_damage(32 , blunt) | thrust_damage(0 , blunt),imodbits_axe ],
-["blackened_axet2", "Gaelic Hand Axe", [("talak_bearded_axe",0)],itp_axe1h,itc_axe1h,567 , weight(2)|difficulty(9)|spd_rtng(80) | weapon_length(75)|swing_damage(30 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
+["blackened_axet2", "Gaelic Hand Axe", [("talak_bearded_axe",0)],itp_axe1ha,itc_axe1h,567 , weight(2)|difficulty(9)|spd_rtng(80) | weapon_length(75)|swing_damage(30 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
 ["blackened_axet2_alt", "Gaelic Hand Axea", [("talak_bearded_axe",0)],itp_axe1halt,itc_axe1h,497 , weight(2)|difficulty(8)|spd_rtng(78) | weapon_length(65)|swing_damage(32 , blunt) | thrust_damage(0 , blunt),imodbits_axe ],
-["slotaxe1", "slotfor axe", [("gallic_axe_1",0)],itp_axe1halt,itc_axe1h, 433 , weight(1.5)|difficulty(8)|spd_rtng(80) | weapon_length(63)|swing_damage(30 , pierce) | thrust_damage(0 , pierce),imodbits_axe],
+["slotaxe1", "slotfor axe", [("gallic_axe_1",0)],itp_axe1ha,itc_axe1h, 433 , weight(1.5)|difficulty(8)|spd_rtng(80) | weapon_length(63)|swing_damage(30 , pierce) | thrust_damage(0 , pierce),imodbits_axe],
 ["slotaxe1_alt", "slotfor axe a", [("gallic_axe_1",0)],itp_axe1halt,itc_axe1h, 433 , weight(1.5)|difficulty(8)|spd_rtng(80) | weapon_length(63)|swing_damage(30 , blunt) | thrust_damage(0 , blunt),imodbits_axe], 
 # # #pictos
  
@@ -2172,9 +2172,9 @@ items = [
 ["axe_1hlongt2", "Fighting Axe", [("cavalry_Axe",0)],itp_axe1h,itc_axe1h, 695, weight(2.5)|difficulty(10)|spd_rtng(70)|weapon_length(91)|swing_damage(33,pierce)|thrust_damage(0 , pierce),imodbits_axe,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 #especiales 1 m
-["elite_longaxet4reser", "Penda's Axe", [("talak_bearded_axe",0)],itp_axe1h,itc_axe1h,1897,weight(3)|difficulty(12)|spd_rtng(81) | weapon_length(84)|swing_damage(35 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
+["elite_longaxet4reser", "Penda's Axe", [("talak_bearded_axe",0)],itp_axe1ha,itc_axe1h,1897,weight(3)|difficulty(12)|spd_rtng(81) | weapon_length(84)|swing_damage(35 , pierce) | thrust_damage(0 , pierce),imodbits_axe ],
 ["elite_longaxet4reser_alt", "Penda's Axe", [("talak_bearded_axe",0)],itp_axe1halt,itc_axe1h,1897,weight(2)|difficulty(10)|spd_rtng(81) | weapon_length(83)|swing_damage(35 , blunt) | thrust_damage(0 , blunt),imodbits_axe ],
-["elite_shortaxet4reser", "Special Cav Axe very long", [("cavalry_Axe",0)], itp_axe1h,itc_axe1h, 1392 , weight(2.8)|difficulty(12)|spd_rtng(74) | weapon_length(95)|swing_damage(34 , pierce) | thrust_damage(0 , pierce),imodbits_axe,
+["elite_shortaxet4reser", "Special Cav Axe very long", [("cavalry_Axe",0)], itp_axe1ha,itc_axe1h, 1392 , weight(2.8)|difficulty(12)|spd_rtng(74) | weapon_length(95)|swing_damage(34 , pierce) | thrust_damage(0 , pierce),imodbits_axe,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 ["elite_shortaxet4reser_alt", "Special Cav Axe very long", [("cavalry_Axe",0)],itp_axe1halt,itc_axe1h, 1392 , weight(1.5)|difficulty(8)|spd_rtng(82) | weapon_length(66)|swing_damage(38 , blunt) | thrust_damage(0 , blunt),imodbits_axe],
 
@@ -3483,9 +3483,9 @@ items = [
 
 
 ####trofeos de batalla chief
-["trophy_a","Battle Trophy", [("horn",0)], itp_type_goods|itp_always_loot, 0, 210,weight(3)|abundance(60),imodbits_none],
-["trophy_b","War Trophy", [("wessexbanner8",0)], itp_type_goods|itp_always_loot, 0, 410,weight(7)|abundance(60),imodbits_none],
-["trophy_c","Epic King Trophy", [("chest_c",0)], itp_type_goods|itp_always_loot, 0, 610,weight(10)|abundance(60),imodbits_none],
+["trophy_a","Battle Trophy", [("horn",0)], itp_type_goods|itp_always_loot, 0, 470,weight(3)|abundance(60),imodbits_none],
+["trophy_b","War Trophy", [("wessexbanner8",0)], itp_type_goods|itp_always_loot, 0, 720,weight(7)|abundance(60),imodbits_none],
+["trophy_c","Epic King Trophy", [("chest_c",0)], itp_type_goods|itp_always_loot, 0, 1250,weight(10)|abundance(60),imodbits_none],
 #chief begin
 ["dplmc_coat_of_plates_red_constable", "Constable Mail", [("byrnie16",0)], itp_type_body_armor |itp_covers_legs |itp_civilian,0,
  3828 , weight(25)|abundance(60)|head_armor(0)|body_armor(52)|leg_armor(16)|difficulty(0) ,imodbits_armor ],

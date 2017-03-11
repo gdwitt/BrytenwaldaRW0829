@@ -5597,7 +5597,7 @@ scripts = [
             (str_store_string, s1, "@persuasion+2"),#gdw temp fix
           (else_try), #anadido chief relic
             (eq, ":item_no", "itm_book_slot"),
-            (str_store_string, s1, "@You can read. Just sell this."),#gdw temp fix
+            (str_store_string, s1, "@You can read now. Just sell this."),#gdw temp fix
           (try_end),
           (set_result_string, "@+1 to {s1} while in inventory"),
           (set_trigger_result, 0xFFEEDD),
@@ -7498,34 +7498,31 @@ scripts = [
         (troop_add_merchandise, "trp_temp_troop", itp_type_goods, ":plunder_amount"),
         (val_add, ":num_looted_items", ":plunder_amount"),
       (try_end),
- #      ##Trophies calculation: (50% base chance + loot skill * 4) for every 10 enemies
-		(try_begin),
-		(store_party_size_wo_prisoners, ":enemies_count", ":enemy_party"),
-		(val_div, ":enemies_count", 10),
-		(party_get_skill_level, ":player_party_looting", "p_main_party", "skl_looting"),
-		(val_mul, ":player_party_looting", 4),
-		(assign, ":trophy_chance", 50),
-		(val_add, ":trophy_chance", ":player_party_looting"),
-		(try_for_range, ":i_try", 0, ":enemies_count"),
-		  (store_random_in_range, ":roll", 0, 100),
-		  (try_begin),
-		    (gt, ":trophy_chance", ":roll"),
-		    (val_add, ":num_looted_items", 1),
-		    (troop_add_item, "trp_player", "itm_trophy_a"),
-		  (try_end),
-		(try_end),
-		(try_end),
-##End trophies calculation
+      
       #Now loot the defeated party
       (store_mul, ":loot_probability", player_loot_share, 8),#gdw3
       (val_mul, ":loot_probability", "$g_strength_contribution_of_player"),
       (party_get_skill_level, ":player_party_looting", "p_main_party", "skl_looting"),
-      (val_add, ":player_party_looting", 1),##so get minimal amount at beginning
-      (val_mul, ":player_party_looting", 5),#gdwneed to use the skill somehow was (val_add, ":player_party_looting", 10),
+      (val_mul, ":player_party_looting", 6),#gdwneed to use the skill somehow was (val_add, ":player_party_looting", 10),
       (val_mul, ":loot_probability", ":player_party_looting"),
       (val_div, ":loot_probability", 10),
       (val_div, ":loot_probability", ":num_player_party_shares"),
-
+	##Trophies calculation: (50% base chance + loot skill * 4) for every 10 enemies
+	(store_party_size_wo_prisoners, ":enemies_count", ":enemy_party"),
+	(val_div, ":enemies_count", 10),
+	(party_get_skill_level, ":player_party_looting", "p_main_party", "skl_looting"),
+	(val_mul, "player_party_looting", 4),
+	(assign, ":trophy_chance", 50),
+	(val_add, ":trophy_chance", ":player_party_looting"),
+	(try_for_range, ":i_try", 0, ":enemies_count"),
+	  (store_random_in_range, ":roll", 0, 100),
+	  (try_begin),
+	    (gt, ":trophy_chance", ":roll"),
+	    (val_add, ":num_looted_items", 1),
+	    (troop_add_item, "trp_temp_troop", "trophy_a"),
+	  (try_end),
+	(try_end),
+##End trophies calculation
 ## CC chief
       (store_add, ":temp_array_c_plus_one", "trp_temp_array_c", 1),
       (try_for_range, ":cur_troop", "trp_temp_array_a", ":temp_array_c_plus_one"),
@@ -49669,29 +49666,29 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
   #Temepred  script_restore_wagon_troops
   # Input: 
   # Output: 
-("restore_wagon_troops",
-   [   
+  ("restore_wagon_troops",
+   [	
    
-      (party_get_num_companion_stacks, ":num_stacks","p_temp_loot_wagon"),
-      (try_for_range, ":stack_no", 0, ":num_stacks"),
-         (party_stack_get_troop_id, ":stack_troop","p_temp_loot_wagon",0),
-         (party_stack_get_size, ":stack_size","p_temp_loot_wagon",0),
-         (party_remove_members,"p_temp_loot_wagon",":stack_troop",":stack_size"),
-         (party_add_members, "p_main_party", ":stack_troop", ":stack_size"),         
-      (try_end),
-      (party_get_num_prisoner_stacks, ":num_stacks","p_temp_loot_wagon"),
-      (try_begin),
-         (gt,":num_stacks",0),
-         (try_for_range, ":stack_no", 0, ":num_stacks"),
-            (party_prisoner_stack_get_troop_id, ":stack_troop","p_temp_loot_wagon",0),
-            (party_prisoner_stack_get_size, ":stack_size","p_temp_loot_wagon",0),         
-            (party_remove_prisoners,"p_temp_loot_wagon",":stack_troop",":stack_size"),
-            (party_add_prisoners, "p_main_party", ":stack_troop", ":stack_size"),
-         (try_end),
-      (try_end),
-      (display_message,"@                Supply wagon troops have been reassigned to the main party."),
+		(party_get_num_companion_stacks, ":num_stacks","p_temp_loot_wagon"),
+		(try_for_range, ":stack_no", 0, ":num_stacks"),
+			(party_stack_get_troop_id, ":stack_troop","p_temp_loot_wagon",":stack_no"),
+			(party_stack_get_size, ":stack_size","p_temp_loot_wagon",":stack_no"),
+			(party_remove_members,"p_temp_loot_wagon",":stack_troop",":stack_size"),
+			(party_add_members, "p_main_party", ":stack_troop", ":stack_size"),			
+		(try_end),
+		(party_get_num_prisoner_stacks, ":num_stacks","p_temp_loot_wagon"),
+		(try_begin),
+			(gt,":num_stacks",0),
+			(try_for_range, ":stack_no", 0, ":num_stacks"),
+				(party_prisoner_stack_get_troop_id, ":stack_troop","p_temp_loot_wagon",":stack_no"),
+				(party_prisoner_stack_get_size, ":stack_size","p_temp_loot_wagon",":stack_no"),			
+				(party_remove_prisoners,"p_temp_loot_wagon",":stack_troop",":stack_size"),
+				(party_add_prisoners, "p_main_party", ":stack_troop", ":stack_size"),
+			(try_end),
+		(try_end),
+		(display_message,"@                Supply wagon troops have been reassigned to the main party."),
 
-    ]),
+    ]),	
 	
 #TEMPERED ADD LOOT TO WAGON AFTER A BATTLE
   ("add_wagon_inventory",

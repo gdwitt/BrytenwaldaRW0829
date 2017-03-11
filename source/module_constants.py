@@ -2001,7 +2001,7 @@ readable_books_begin = "itm_book_tactics"
 readable_books_end = reference_books_begin
 
 books_begin = readable_books_begin
-books_end = reference_books_end
+books_end = "itm_relic1"
 
 horses_begin = "itm_pony_horse"
 horses_end = "itm_pilgrim_disguise"

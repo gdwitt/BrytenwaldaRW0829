@@ -701,18 +701,18 @@ town_menu_options = [
            (val_add, ":cur_entry", 1),
          (try_end),
 
-# ## CC gambling begin chief
-#              (try_begin),
-#                (party_get_slot, ":prosperity", "$current_town", "slot_town_prosperity"),
-#                (val_mod, ":prosperity", 24),
-#                (store_time_of_day, ":cur_hour"),
-#                (store_sub, ":difference", ":prosperity", ":cur_hour"),
-#                (is_between, ":difference", -1, 2), # -1 0 1, 1/8 probability
-#                (set_visitor, ":cur_entry", "trp_especial_merchant"),
-#                (troop_set_name, "trp_especial_merchant", "@Mystic Merchant"),
-#                (call_script, "script_refresh_mystic_merchant_items", "trp_especial_merchant"),
-#                (val_add, ":cur_entry", 1),
-#              (try_end),
+## CC gambling begin chief
+             (try_begin),
+               (party_get_slot, ":prosperity", "$current_town", "slot_town_prosperity"),
+               (val_mod, ":prosperity", 24),
+               (store_time_of_day, ":cur_hour"),
+               (store_sub, ":difference", ":prosperity", ":cur_hour"),
+               (is_between, ":difference", -1, 2), # -1 0 1, 1/8 probability
+               (set_visitor, ":cur_entry", "trp_especial_merchant"),
+               (troop_set_name, "trp_especial_merchant", "@Mystic Merchant"),
+               (call_script, "script_refresh_mystic_merchant_items", "trp_especial_merchant"),
+               (val_add, ":cur_entry", 1),
+             (try_end),
 ## CC gambling end
 
              (try_begin),
@@ -2290,20 +2290,20 @@ game_menus = game_start.first_menus + [
     (try_end),
     (val_sub, ":sum_modifiers", reg1),
 
-    (party_get_slot, "$g_player_party_morale_modifier_weariness", "p_main_party", "slot_party_unrested_morale_penalty"),
-    (assign, reg2, "$g_player_party_morale_modifier_weariness"),
+    (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+    #(assign, reg2, "$g_player_party_morale_modifier_weariness"),
     (try_begin),
           (ge, "$cheat_mode", 1),
-          (display_message, "@gamemenus=moralereportwearinesss={reg2}"),
+          (display_message, "@gamemenus=moralereportwearinesss={reg0}"),
     (try_end),
-    #(assign, reg2, reg0),
+    (assign, reg2, reg0),
     (try_begin),
       (gt, reg2, 0),
       (str_store_string, s3, "@{!} -"),
     (else_try),
       (str_store_string, s3, "str_space"),
     (try_end),
-    (val_sub, ":sum_modifiers", reg2),  ##bug fix  temporary switch  war wearniness to positive number
+    (val_add, ":sum_modifiers", reg2),  ##bug fix  temporary switch  war wearniness to positive number
 
     (try_begin),
       (gt, "$g_player_party_morale_modifier_no_food", 0),
@@ -2344,7 +2344,7 @@ game_menus = game_start.first_menus + [
     (str_store_string, s1, "@Current party morale is {reg5}.^Current party morale modifiers are:^^Base morale:  +{reg6}^Party size unmanageable: {s2}{reg1}^Lack of rest: {s3}{reg2}^Food variety: {s4}{reg3}{s5}{s6}^Recent events: {s7}{reg4}^TOTAL:  {reg5}^^^"),
     (try_begin),
           (ge, "$cheat_mode", 1),
-          (display_message, "@ summodifierrs= Current party morale is {reg5}.^Current party morale modifiers are:^^Base morale:  +{reg6}^Party size unmanageable: {s2}{reg1}^Lack of rest: {s3}{reg2}^Food variety: {s4}{reg3}{s5}{s6}^Recent events: {s7}{reg4}^TOTAL:  {reg5}^^^"),
+          (display_message, "@ summodifierrs=  {reg6} strCurrent party morale is {reg5}.^Current party morale modifiers are:^^Base morale:  +{reg6}^Party size unmanageable: {s2}{reg1}^Lack of rest: {s3}{reg2}^Food variety: {s4}{reg3}{s5}{s6}^Recent events: {s7}{reg4}^TOTAL:  {reg5}^^^"),
     (try_end),
     (try_for_range, ":kingdom_no", npc_kingdoms_begin, npc_kingdoms_end),
       (faction_get_slot, ":faction_morale", ":kingdom_no",  "slot_faction_morale_of_player_troops"),

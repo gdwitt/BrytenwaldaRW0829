@@ -99,6 +99,7 @@ g_custom_battle_scenario 1
 g_tutorial_entered 1
 g_custom_battle_team1_death_count 1
 g_is_quick_battle 1
+g_player_party_morale_modifier_weariness 1
 emboscada_time 1
 force_presentation_shown 1
 g_village_raid_evil 1
@@ -315,7 +316,6 @@ g_one_faction_left_notification_shown 1
 g_last_report_control_day 1
 g_savegames_necesario 1
 g_lyx_last_random_event 1
-rest_up 1
 ship_rented 1
 disable_npc_kingsupport 1
 g_comment_found 2
@@ -600,6 +600,7 @@ begging_action_started 2
 qst_scout_waypoints_wp_1_visited 2
 qst_scout_waypoints_wp_2_visited 2
 qst_scout_waypoints_wp_3_visited 2
+g_resting_at_manor_or_walled_center 2
 sea_morale_penalty 2
 daytime 2
 g_belligerent_drunk_leaving 3
@@ -1681,9 +1682,9 @@ gk_order 297
 g_cur_month 338
 g_talk_troop_faction 358
 g_multiplayer_game_type 380
-cheat_mode 456
+cheat_mode 458
 players_kingdom 680
-current_town 770
+current_town 768
 fplayer_team_no 849
 g_encountered_party 1215
 g_talk_troop 2312
