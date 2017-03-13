@@ -3427,9 +3427,9 @@ items = [
 
 
 ####trofeos de batalla chief
-["trophy_a","Battle Trophy", [("horn",0)], itp_type_goods|itp_always_loot, 0, 470,weight(3)|abundance(60),imodbits_none],
-["trophy_b","War Trophy", [("wessexbanner8",0)], itp_type_goods|itp_always_loot, 0, 720,weight(7)|abundance(60),imodbits_none],
-["trophy_c","Epic King Trophy", [("chest_c",0)], itp_type_goods|itp_always_loot, 0, 1250,weight(10)|abundance(60),imodbits_none],
+["trophy_a","Battle Trophy", [("horn",0)], itp_type_goods|itp_always_loot, 0, 1000,weight(3)|abundance(60),imodbits_none],
+["trophy_b","War Trophy", [("wessexbanner8",0)], itp_type_goods|itp_always_loot, 0, 2000,weight(7)|abundance(60),imodbits_none],
+["trophy_c","Epic King Trophy", [("chest_c",0)], itp_type_goods|itp_always_loot, 0, 5000,weight(10)|abundance(60),imodbits_none],
 #chief begin
 ["dplmc_coat_of_plates_red_constable", "Constable Mail", [("byrnie16",0)], itp_type_body_armor |itp_covers_legs |itp_civilian,0,
  3828 , weight(25)|abundance(60)|head_armor(0)|body_armor(52)|leg_armor(16)|difficulty(0) ,imodbits_armor ],
