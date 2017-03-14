@@ -6,8 +6,8 @@ from header_parties import *
 from header_music import mtf_sit_travel
 from header_items import ek_item_0
 from header_item_modifiers import imod_rotten, imod_fresh
-from header_skills import skl_trainer, skl_foraging
-from header_troops import ca_intelligence, ca_charisma
+from header_skills import *
+from header_troops import *
 from header_terrain_types import rt_water, rt_river, rt_bridge, dplmc_terrain_code_siege
 
 from module_constants import *
@@ -2670,8 +2670,11 @@ simple_triggers = [
        (try_for_range, ":village_no", centers_begin, centers_end),
 	  (neg|is_between, ":village_no", castles_begin, castles_end),
       (party_get_slot, ":num_cattle", ":village_no", "slot_center_head_cattle"),
+    (try_begin),
+      (eq, "$cheat_mode", 1),
       (assign, reg2, ":num_cattle"),
-       (display_message, "@{!}DEBUG cattle initially at number {reg2}"),
+      (display_message, "@{!}DEBUG cattle initially at number {reg2}"),
+    (try_end),
       (party_get_slot, ":num_sheep", ":village_no", "slot_center_head_sheep"),
       (party_get_slot, ":num_acres", ":village_no", "slot_center_acres_pasture"),
 	  (val_max, ":num_acres", 1),
@@ -2752,8 +2755,11 @@ simple_triggers = [
        (try_end),
 
        (party_set_slot, ":village_no", "slot_center_head_cattle", ":num_cattle"),
-       (assign, reg1, ":num_cattle"),
-       (display_message, "@{!}DEBUG refreshed cattle number {reg1}",0xFF0000),
+        (try_begin),
+          (eq, "$cheat_mode", 1),
+          (assign, reg1, ":num_cattle"),
+          (display_message, "@{!}DEBUG refreshed cattle number {reg1}",0xFF0000),
+        (try_end),
        (party_set_slot, ":village_no", "slot_center_head_sheep", ":num_sheep"),	  	  	  
      (try_end),
     ]),
@@ -8286,6 +8292,68 @@ simple_triggers = [
            [
                (call_script, "script_randomly_make_prisoner_heroes_escape_from_party", "p_fort", 990),
             ]),
+
+  #Sladki
+  #TRAINING_TRIGGER (see TRAINER_DIALOG)
+  (1, [
+    (neg|map_free),
+    (lt, "$g_trainer_price", 0),
+    (val_add, "$g_trainer_price", 1), #1 hour passed
+
+    (try_begin),
+      (eq, "$g_trainer_price", -13),
+      (display_message, "@The training started"), #Started training message
+    (else_try),
+      (eq, "$g_trainer_price", -1),
+      #Raise skills or attributes
+      (try_begin),
+        (eq, "$g_trainer_mastery", 0),
+        (troop_raise_skill, "$g_trainer_character", skl_first_aid, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_surgery, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_wound_treatment, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_leadership, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_prisoner_management,1),
+        (troop_raise_skill, "$g_trainer_character", skl_entertain, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_persuasion, 1),
+      (else_try),
+        (eq, "$g_trainer_mastery", 1),
+        (troop_raise_skill, "$g_trainer_character", skl_inventory_management, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_spotting, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_pathfinding, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_tactics, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_tracking, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_trainer, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_looting, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_engineer, 1),
+      (else_try),
+        (eq, "$g_trainer_mastery", 2),
+        (troop_raise_skill, "$g_trainer_character", skl_foraging, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_riding, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_athletics, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_shield, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_weapon_master, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_power_draw, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_power_throw, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_power_strike, 1),
+        (troop_raise_skill, "$g_trainer_character", skl_ironflesh, 1),
+      (else_try),
+        (eq, "$g_trainer_mastery", 3),
+        (troop_raise_proficiency, "$g_trainer_character", wpt_one_handed_weapon, 50),
+        (troop_raise_proficiency, "$g_trainer_character", wpt_two_handed_weapon, 50),
+        (troop_raise_proficiency, "$g_trainer_character", wpt_archery, 50),
+        (troop_raise_proficiency, "$g_trainer_character", wpt_throwing, 50),
+        (troop_raise_proficiency, "$g_trainer_character", wpt_polearm, 50),
+        (troop_raise_attribute, "$g_trainer_character", ca_strength, 1),
+        (troop_raise_attribute, "$g_trainer_character", ca_agility, 1),
+        (troop_raise_attribute, "$g_trainer_character", ca_intelligence, 1),
+        (troop_raise_attribute, "$g_trainer_character", ca_charisma, 1),
+      (try_end),
+
+      #End of training
+      (display_message, "@The training completed!"),
+      (assign, "$g_trainer_price", 0), #Just reset
+    (try_end),
+  ]),
 
 ##+ enterprise.simple_triggers\  ##gdw this is throwing error see entrprise init
 ] \
