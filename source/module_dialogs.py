@@ -31561,8 +31561,8 @@ They are extremely valuable items and you will probably face many hardships to f
 #torneos personalizados chief
     [anyone|plyr,"arena_master_talk", [(party_get_num_companions,":troops","p_main_party"),(gt,":troops",1)], "I would like to spar with some of my men.", "arena_master_spar_teams",[]], # Jinnai
 ####Training Start
-[anyone|plyr,"arena_master_talk", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship. Can you accept me?", "askmentor1",[]],
-[anyone|plyr,"arena_master_talk", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship. Can you accept one of my companion?", "accept_mentor2",[]],
+[anyone|plyr, "arena_master_talk", [], "I've heard that you can teach different things. Can you accept me?", "trainer_choose_mastery_player", []],
+[anyone|plyr, "arena_master_talk", [], "I've heard that you can teach different things. Can you accept one of my companions?", "trainer_ask_companions", []],
 #chief acaba
   tournaments.arena_master_option,
   [anyone|plyr,"arena_master_talk", [], "I need to leave now. Farewell.", "close_window",[]],
@@ -34089,171 +34089,162 @@ They are extremely valuable items and you will probably face many hardships to f
 ##                                                                                                                          (encounter_attack,0)]],
 ##  [anyone|plyr, "reinforcements_attack", [], "All right, continue your travels! But do not tell anyone that you have seen me!", "close_window",[]],
 ####chief acaba####
+
 ##########Training start##############################################################################################
-#(store_conversation_troop,reg(1)),
-#                     (is_between,reg(1),arena_masters_begin,arena_masters_end),
-#                     (eq,"$g_talk_troop_met", 0),
-
-#[anyone|plyr,"novicemaster_are_you_ready", [], "Hold on. I heard that you can adopt novices for a few days in a special master relationship.", "askmentor1",[]],
-# [anyone,"trainer_practice_1",
-#    #[(ge,"$novice_training_difficulty",4)],##temporary shortcut
-#    [(ge, "$cheat_mode", 1),
-#   (display_message, "@{!}DEBUG: About to engage in mentor training}"),],
-#  "You have passed all stages of training. I'm impressed. Would you like me to  mentor you for 3 days so you can quickly accelerate your skills?", "accept_mentor1",[(assign, "$g_is_npc_dialog", 1),]], 
-[anyone, "askmentor1", [], "You impress me. Yes, I am willing to take you on.","accept_mentor1",[]], 
-[anyone|plyr, "accept_mentor1", [], "I would accept this honor. But only 5 days, correct?","ms_nps_variant_selected",[(assign, "$g_cur_npc","trp_player"),]], 
-[anyone|auto_proceed, "start", 
-     [
-         (eq, "$g_is_npc_dialog", 1),
-     ], 
-     "{!}NOT SHOWN", "accept_mentor2",[]],
-
-[anyone, "accept_mentor2", [], "You impress me. Yes, I am willing to train your companion one special time this week","ms_npc_list",[]], 
- 
- #[anyone|plyr, "train_start", [], "I want you to train me.", "ms_nps_variant_selected", 
-  #[
- # (assign, "trp_player","$g_cur_npc"),
- #]],
- # [anyone,"train_start", [], "I want to train my companion.",
- 
-  [anyone|plyr|repeat_for_troops,"ms_npc_list", [
-                                 (store_repeat_object, ":troop_no"),
-                                 (is_between, ":troop_no", companions_begin, companions_end),
-                                 (str_store_troop_name, s0, ":troop_no"),
-                                 (troop_slot_eq, ":troop_no", "slot_troop_occupation", slto_player_companion),
-                                 ], "{s0}", "ms_nps_variant_selected",
-                              [
-                                 (store_repeat_object, "$g_cur_npc"),
-                             ]],
-  [anyone|plyr,"ms_npc_list", [], "I've changed my mind.", "close_window",[ (assign, "$g_is_npc_dialog", 0),]],
- 
-#  #slot_troop_studing_count
-#  #slot_troop_studing_war
-#  #slot_troop_studing_medicine
-#  #slot_troop_studing_war_work
- 
-#  [anyone, "ms_npc_variants", [
-#     (troop_slot_eq, "$g_cur_npc", "slot_troop_studing_count", 4),
-#  ], "We can teach him nothing more!", "ms_npc_dialog_start", []], 
   
-     
-  [anyone,"ms_nps_variant_selected", [       
-                                         (try_begin),
-                                             (store_character_level, ":npc_level", "$g_cur_npc"),
-                                             (store_mul, "$g_study_price", ":npc_level", 4),
-                                             (val_mul, "$g_study_price", 500),                                              
-                                             (assign, reg0, "$g_study_price"),
-                                         (try_end),
-                                     ], "The cost of training will be {reg0} scillingas. No sneaking out of town is allowed; you will lose your investment.", "ms_npc_agree_disagree", []],  
-    
-     [anyone|plyr,"ms_npc_agree_disagree", [ 
-                                             (try_begin),
-                                                 (store_troop_gold, ":player_gold", "trp_player"),
-                                             (try_end),
-                                             (ge, ":player_gold", "$g_study_price"),
-                                            ], "All right, here's the pay.", "ms_npc_variants", 
-                                                                    [ 
-                                  #(assign,":cur_npc","$g_cur_npc"),                                                                                                                                                                                              
-                                                                    ]], 
-     [anyone|plyr,"ms_npc_agree_disagree", [],  "Some other time.", "arena_master_pre_talk",[]],  
-   # (call_script, "script_stay_captive_for_hours", 1),
-   #      (assign,"$auto_menu","mnu_captivity_wilderness_check"),
-   #      (change_screen_return),
-[anyone, "ms_npc_variants", [], "Very well, pick an art you would like to master.", "ms_nps_variant_descr", []], 
-  [anyone|plyr, "ms_nps_variant_descr", [
-  ], "Special Training", "close_window",
-  [    (try_begin),   
-    (troop_remove_gold, "trp_player",  "$g_study_price"),
-          (display_message, "@ Special Training started"),
-          (assign,"$g_camp_mode", 1),
-          (assign, "$g_infinite_camping", 0),
-          (assign, "$g_player_icon_state", pis_camping),
-       (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
-     (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
-      (display_debug_message, "@Training continues"),
-    (troop_raise_skill, "$g_cur_npc", skl_first_aid ,1),
-    (troop_raise_skill, "$g_cur_npc", skl_surgery ,1),
-    (troop_raise_skill, "$g_cur_npc", skl_wound_treatment ,1),
-    (troop_raise_skill, "$g_cur_npc", skl_leadership,1 ),
-    (troop_raise_skill, "$g_cur_npc", skl_prisoner_management,1 ),
-    (troop_raise_skill, "$g_cur_npc", skl_entertain ,1),
-    (troop_raise_skill, "$g_cur_npc", skl_persuasion ,1),   
-    (try_end),
-          (change_screen_map),]],
- 
-  [anyone|plyr, "ms_nps_variant_descr", [     
-  ], "Tactics", "close_window",
-   [  (try_begin),    
-    (troop_remove_gold, "trp_player",  "$g_study_price"),
-          (display_message, "@ Tactics training started"),
-          (assign,"$g_camp_mode", 1),
-          (assign, "$g_infinite_camping", 0),
-          (assign, "$g_player_icon_state", pis_camping),
-       (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
-     (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
-      (display_message, "@Training continues"),
-    (troop_raise_skill, "$g_cur_npc",skl_inventory_management,1),
-      (troop_raise_skill, "$g_cur_npc",skl_spotting ,1),
-    (troop_raise_skill, "$g_cur_npc",skl_pathfinding ,1),
-    (troop_raise_skill, "$g_cur_npc",skl_tactics,1), 
-    (troop_raise_skill, "$g_cur_npc",skl_tracking ,1),
-      (troop_raise_skill, "$g_cur_npc",skl_trainer ,1),
-    (troop_raise_skill, "$g_cur_npc",skl_looting ,1),
-    (troop_raise_skill, "$g_cur_npc",skl_engineer ,1),    
-   (try_end),
-          (change_screen_map),]],
- 
-  [anyone|plyr, "ms_nps_variant_descr", [     
-  ], "Military training", "close_window",
-   [  (try_begin),    
-    (troop_remove_gold, "trp_player",  "$g_study_price"),
-          (display_message, "@ Military training started"),
-          (assign,"$g_camp_mode", 1),
-          (assign, "$g_infinite_camping", 0),
-          (assign, "$g_player_icon_state", pis_camping),
-       (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
-     (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
-      (display_message, "@Training continues"),
-   (troop_raise_skill, "$g_cur_npc",skl_foraging ,1),
-   (troop_raise_skill, "$g_cur_npc",skl_riding ,1),
-   (troop_raise_skill, "$g_cur_npc",skl_athletics ,1),
-   (troop_raise_skill, "$g_cur_npc",skl_shield ,1),
-     (troop_raise_skill, "$g_cur_npc",skl_weapon_master ,1),
-   (troop_raise_skill, "$g_cur_npc",skl_power_draw ,1),
-   (troop_raise_skill, "$g_cur_npc",skl_power_throw ,1),
-   (troop_raise_skill, "$g_cur_npc",skl_power_strike,1), 
-     (troop_raise_skill, "$g_cur_npc",skl_ironflesh,1),        
-   (try_end),
-          (change_screen_map),]],
- 
-  [anyone|plyr, "ms_nps_variant_descr", [     
-  ], "Attribute and Weapon training", "close_window",
-   [  (try_begin),    
-    (troop_remove_gold, "trp_player",  "$g_study_price"),
-          (display_message, "@ Attribute and Weapon training started"),
-          (assign,"$g_camp_mode", 1),
-          (assign, "$g_infinite_camping", 0),
-          (assign, "$g_player_icon_state", pis_camping),
-       (party_set_slot,"p_main_party","slot_party_entrenched",0), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT
-     (assign,"$current_camp_party",-1), #TEMPERED chief ADDED LINE FOR NO ENTRENCHMENT           
-       (rest_for_hours, 24 * 5, 20, 0), #rest while attackable
-      (display_message, "@Training continues"),
-   (troop_raise_proficiency, "$g_cur_npc",wpt_one_handed_weapon,50),
-          (troop_raise_proficiency, "$g_cur_npc",wpt_two_handed_weapon,50),
-          (troop_raise_proficiency, "$g_cur_npc",wpt_archery,50),
-          (troop_raise_proficiency, "$g_cur_npc",wpt_throwing,50),
-          (troop_raise_proficiency, "$g_cur_npc",wpt_polearm,50),
-          (troop_raise_attribute, "$g_cur_npc" , ca_strength,1),
-          (troop_raise_attribute, "$g_cur_npc" , ca_agility,1),
-          (troop_raise_attribute, "$g_cur_npc" , ca_intelligence,1),
-          (troop_raise_attribute, "$g_cur_npc" , ca_charisma,1),     
-   (try_end),
-          (change_screen_map),]],
- 
-  [anyone|plyr,"ms_nps_variant_descr", [], "Return...", "arena_master_pre_talk",[]], 
+  #Sladki
+  #TRAINING_DIALOG
+  #Reworked caravans(?) training dialog
+  #Check for scheduled training session
+  [anyone, "trainer_ask_companions", [(lt, "$g_trainer_price", 0),], "I will wait outside of the town.", "close_window", []],
+  [anyone, "trainer_choose_mastery_player", [(lt, "$g_trainer_price", 0),], "I will wait outside of the town.", "close_window", []],
+
+  #Choose companion to train
+  [anyone, "trainer_ask_companions", [(ge, "$g_trainer_price", 0),], "Yes I can train one of your companions. Choose one.",
+    "trainer_choose_companion", []],
+  [anyone|plyr|repeat_for_troops, "trainer_choose_companion", [
+    (ge, "$g_trainer_price", 0),
+    (store_repeat_object, ":troop_no"),
+    (is_between, ":troop_no", companions_begin, companions_end),
+    (str_store_troop_name, s0, ":troop_no"),
+    (troop_slot_eq, ":troop_no", "slot_troop_occupation", slto_player_companion),
+    ], "{s0}", "trainer_choose_mastery_companion", [(store_repeat_object, "$g_trainer_character"),]],
+  [anyone|plyr, "trainer_choose_companion", [], "Never mind.", "arena_master_pre_talk", []],
+
+  #Check for player's character battle wounds
+  [anyone, "trainer_choose_mastery_player", [
+    (gt, "$wound_type", 0),
+    ], "You have to heal your battle wounds first.", "arena_master_pre_talk", []],
+
+  #Choose a mastery to train
+  [anyone, "trainer_choose_mastery_companion", [], "Now choose a mastery to train.", "trainer_choose_mastery", []],
+  [anyone, "trainer_choose_mastery_player", [
+    (eq, "$wound_type", 0),
+  ], "Yes, I can teach you. Choose a mastery you'd like to advance in.", "trainer_choose_mastery", [(assign, "$g_trainer_character", "trp_player"),]],
+
+  #Calculate cost
+  #The cost formula is "Cost = 4000 (2000 for fighting skills) + (Sum_of_skills / Count_of_skills)^2 * 1500 (700 for fighting)"
+  #For attributes training the formula is: "Cost = 3000 + (Sum_of_attributes / 4)^2 + Character_level * 75"
+  [anyone|plyr, "trainer_choose_mastery", [], "Humanitarian and personal skills.", "trainer_mastery_chosen", [
+    (assign, "$g_trainer_mastery", 0),
+
+    (store_skill_level, ":troop_skill", skl_first_aid, "$g_trainer_character"),
+    (store_add, ":skills_sum", ":troop_skill", 1),
+    (store_skill_level, ":troop_skill", skl_surgery, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_wound_treatment, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_leadership, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_prisoner_management, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_entertain, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_persuasion, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (val_div, ":skills_sum", 7),
+    (val_mul, ":skills_sum", ":skills_sum"),
+    (val_mul, ":skills_sum", 1500),
+    (store_add, "$g_trainer_price", ":skills_sum", 4000),]],
+
+  #Military skills
+  [anyone|plyr, "trainer_choose_mastery", [], "Military skills.", "trainer_mastery_chosen", [
+    (assign, "$g_trainer_mastery", 1),
+
+    (store_skill_level, ":troop_skill", skl_inventory_management, "$g_trainer_character"),
+    (store_add, ":skills_sum", ":troop_skill", 1),
+    (store_skill_level, ":troop_skill", skl_spotting, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_pathfinding, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_tactics, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_tracking, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_trainer, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_looting, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_engineer, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (val_div, ":skills_sum", 8),
+    (val_mul, ":skills_sum", ":skills_sum"),
+    (val_mul, ":skills_sum", 1500),
+    (store_add, "$g_trainer_price", ":skills_sum", 4000),]],
+
+  #Fighting and surviving skills
+  [anyone|plyr, "trainer_choose_mastery", [], "Fighting and surviving skills.", "trainer_mastery_chosen", [
+    (assign, "$g_trainer_mastery", 2),
+    (assign, ":armor_penalties", "$g_armor_penalties"),
+    (assign, "$g_armor_penalties", 0),
+
+    (store_skill_level, ":troop_skill", skl_foraging, "$g_trainer_character"),
+    (store_add, ":skills_sum", ":troop_skill", 1),
+    (store_skill_level, ":troop_skill", skl_riding, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_athletics, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_shield, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_weapon_master, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_power_draw, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_power_throw, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_power_strike, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (store_skill_level, ":troop_skill", skl_ironflesh, "$g_trainer_character"),
+    (val_add, ":skills_sum", ":troop_skill"),
+    (val_div, ":skills_sum", 9),
+    (val_mul, ":skills_sum", ":skills_sum"),
+    (val_mul, ":skills_sum", 700),
+    (store_add, "$g_trainer_price", ":skills_sum", 2000),
+
+    (assign, "$g_armor_penalties", ":armor_penalties"),]],
+
+  #Personal mastery
+  [anyone|plyr, "trainer_choose_mastery", [], "Personal mastery.", "trainer_mastery_chosen", [
+    (assign, "$g_trainer_mastery", 3),
+
+    (store_attribute_level, ":troop_attribute", "$g_trainer_character", ca_strength),
+    (store_add, ":attributes_sum", ":troop_attribute", 1),
+    (store_attribute_level, ":troop_attribute", "$g_trainer_character", ca_agility),
+    (val_add, ":attributes_sum", ":troop_attribute"),
+    (store_attribute_level, ":troop_attribute", "$g_trainer_character", ca_intelligence),
+    (val_add, ":attributes_sum", ":troop_attribute"),
+    (store_attribute_level, ":troop_attribute", "$g_trainer_character", ca_charisma),
+    (val_add, ":attributes_sum", ":troop_attribute"),
+    (val_div, ":attributes_sum", 4),
+    (val_mul, ":attributes_sum", ":attributes_sum"),
+    (store_character_level, ":character_level", "$g_trainer_character"),
+    (val_add, ":attributes_sum", ":character_level"),
+    (val_mul, ":attributes_sum", 75),
+    (store_add, "$g_trainer_price", ":attributes_sum", 3000),]],
+
+  [anyone|plyr, "trainer_choose_mastery", [], "Never mind.", "arena_master_pre_talk", []],
+
+  #Say the price and check can player afford the training
+  [anyone, "trainer_mastery_chosen", [(assign, reg0, "$g_trainer_price"),], "It will cost {reg0}. Don't sneak out of town or you will lose your investment.",
+   "trainer_can_afford", []],
+
+  [anyone|plyr, "trainer_can_afford", [
+    (store_troop_gold, ":player_gold", "trp_player"),
+    (ge, ":player_gold", "$g_trainer_price"),
+    ], "Come on! Let's go!", "trainer_start_training", []],
+
+  [anyone|plyr, "trainer_can_afford", [], "May be later...", "arena_master_pre_talk", []],
+
+  #Start the training
+  [anyone, "trainer_start_training", [], "Yeah! I'll wait on a training ground right outside of the town.", "close_window", [
+    (troop_remove_gold, "trp_player", "$g_trainer_price"),
+    #Wait and arm TRAINING_TRIGGER trigger
+    (assign, "$auto_enter_town", "$current_town"),
+    (assign, "$g_town_visit_after_rest", 1),
+    (rest_for_hours, 14, 6, 0),
+    (assign, "$g_trainer_price", -14),  #Store hours
+  ]],
+
 ###Training end  
 
 ]
