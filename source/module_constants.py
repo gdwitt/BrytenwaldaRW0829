@@ -164,6 +164,14 @@ slot_agent_fatiga_inicial = 53
 ### aoe
 slot_agent_has_been_healed        = 54
 slot_agent_dinerotropas       = 55
+
+#Sladki blunt order trigger (56-59)
+slot_agent_sblunt_invslot_0 = 56
+slot_agent_sblunt_invslot_1 = 57
+slot_agent_sblunt_invslot_2 = 58
+slot_agent_sblunt_invslot_3 = 59
+
+
 ########################################################
 ##  FACTION SLOTS          #############################
 ########################################################

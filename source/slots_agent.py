@@ -57,4 +57,10 @@ slots = [
     ["agent_horse_is_charging", 1],
 
     ["agent_volley_fire", 1],
+
+    #Sladki blunt slots
+    ["agent_sblunt_invslot_0", 1],
+    ["agent_sblunt_invslot_1", 1],
+    ["agent_sblunt_invslot_2", 1],
+    ["agent_sblunt_invslot_3", 1],
 ]
