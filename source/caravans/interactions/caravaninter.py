@@ -48,25 +48,30 @@ dialogs = [
     [anyone | plyr, "merchant_talk", [
         (le, "$talk_context", tc_party_encounter),
         (eq, "$g_encountered_party_faction", "$players_kingdom"),
-        (check_quest_active, "qst_oim_deliver_caravan"),
-        (quest_slot_neq, "qst_oim_deliver_caravan", "slot_quest_target_party", "$g_encountered_party"),  
+        (neg | check_quest_active, "qst_oim_deliver_caravan"),
+        #(check_quest_active, "qst_oim_deliver_caravan"),
+        #(neg | quest_slot_eq, "qst_oim_deliver_caravan", "slot_quest_target_party", "$g_encountered_party"),  
         ], "I have an offer for you.", "merchant_talk_offer", []],
 
     [anyone | plyr, "merchant_talk", [##gor caravan submod
         (le, "$talk_context", tc_party_encounter),
         #(eq, "$g_encountered_party_faction", "$players_kingdom")
-        (check_quest_active, "qst_oim_deliver_caravan"),
-        (quest_slot_eq, "qst_oim_deliver_caravan", "slot_quest_target_party", "$g_encountered_party"), 
+        (neg |check_quest_active, "qst_oim_deliver_caravan"),
+        #(quest_slot_eq, "qst_oim_deliver_caravan", "slot_quest_target_party", "$g_encountered_party"), 
         ], "I will protect you  Follow me.", "merchant_talk_offerprotect", []],
 
     # demand something
     [anyone | plyr, "merchant_talk", [
         (eq, "$talk_context", tc_party_encounter),
-        (party_slot_lt, "$g_encountered_party", "slot_party_last_toll_paid_hours", "$g_current_hours"),
+        #doesn'tseem towork properly(party_slot_lt, "$g_encountered_party", "slot_party_last_toll_paid_hours", "$g_current_hours"),
+        (neg|party_slot_ge, "$g_encountered_party", slot_party_last_toll_paid_hours, "$g_current_hours"),
         # (party_get_slot, "$g_encountered_party_type", "$g_encountered_party", "slot_party_type"),
         # (quest_get_slot, "qst_oim_deliver_caravan", "slot_quest_target_party", "$g_encountered_party",),
-        (check_quest_active, "qst_oim_deliver_caravan"),
-        (quest_slot_neq, "qst_oim_deliver_caravan", "slot_quest_target_party", "$g_encountered_party"),  
+       #prevent raid of a party you are guiding
+
+        (neg |check_quest_active, "qst_oim_deliver_caravan"),
+        #(neg | check_quest_concluded, "qst_oim_deliver_caravan"),
+        #(neg | quest_slot_eq, "qst_oim_deliver_caravan", "slot_quest_target_party", "$g_encountered_party"),  
         #(neq,quest_slot_ge,"qst_oim_deliver_caravan","slot_quest_current_state", 0),
         #(neg|is_between, "$g_encountered_party_faction", kingdoms_begin, kingdoms_end),
         ], "I demand something from you!", "merchant_demand", []

@@ -2528,6 +2528,12 @@ scripts = [
         (item_set_slot, "itm_leatherwork", "slot_item_overhead_per_run", 43),
         (item_set_slot, "itm_leatherwork", "slot_item_base_price", 400),  #chief cambia
         (item_set_slot, "itm_leatherwork", "slot_item_enterprise_building_cost", 15000),  #chief cambia
+#gdw jewelry 31817
+        (item_set_slot, "itm_jewelry", "slot_item_urban_demand", 4),  #luxury
+          (item_set_slot, "itm_jewelry", "slot_item_rural_demand", -1),
+          (item_set_slot, "itm_jewelry", "slot_item_desert_demand", -1),
+          (item_set_slot, "itm_jewelry", "slot_item_production_slot", "slot_center_pottery_kilns"),
+          (item_set_slot, "itm_jewelry", "slot_item_production_string", "str_kilns"),
 
         (item_set_slot, "itm_raw_leather", "slot_item_urban_demand", 8),
         (item_set_slot, "itm_raw_leather", "slot_item_rural_demand", 0),

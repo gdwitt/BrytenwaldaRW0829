@@ -64,7 +64,7 @@ menus = [
             (neg | party_slot_ge, "$current_town", "slot_village_infested_by_bandits", 1),
             (store_faction_of_party, ":center_faction", "$current_town"),
             (store_relation, ":reln", "fac_player_supporters_faction", ":center_faction"),
-            (lt, ":reln", 0),
+            (lt, ":reln", 2),
         ], "Pillage and burn this village.", [
             (jump_to_menu, "mnu_village_start_attack"),
         ]),

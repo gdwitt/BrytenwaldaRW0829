@@ -640,7 +640,7 @@ slot_town_trade_routes_begin = slot_town_trade_route_1
 slot_town_trade_routes_end = slot_town_trade_route_15 + 1
 
 
-num_trade_goods = 39 ####"itm_siege_supply" - "itm_spice"
+num_trade_goods = 46 ####"itm_siege_supply" - "itm_spice"
 slot_town_trade_good_productions_begin       = 500 #a harmless number, until it can be deprecated, motomataru, it is native, are you sure to change?
 
 #These affect production but in some cases also demand, so it is perhaps easier to itemize them than to have separate 

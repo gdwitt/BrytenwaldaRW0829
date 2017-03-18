@@ -17877,7 +17877,7 @@ scripts = [
               #MOTO rewrite end
       (store_relation, ":relation", ":attacker_faction", ":defender_faction"),
 	    (ge, ":relation", 0),
-      (call_script, "script_change_player_honor", -2),
+      (call_script, "script_change_player_honor", -3),
 	  (try_end),
 
 	  (try_begin),
