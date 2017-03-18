@@ -5,7 +5,7 @@ from source.header_triggers import ti_on_order_issued, ti_on_item_wielded, \
 from source.header_items import itp_type_one_handed_wpn, itp_type_arrows, \
     ek_item_0, ek_head
 from source.header_mission_templates import mordr_use_any_weapon, \
-    mordr_use_blunt_weapons, wordr_use_blunt_weapons
+    mordr_use_blunt_weapons, mordr_stand_ground
 from source.header_items import *
 from source.module_constants import *
 
@@ -30,6 +30,32 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
     (agent_get_class, ":class_no", ":agent_no"),
     (class_is_listening_order, ":team_no", ":class_no"),
     (agent_get_wielded_item, ":item_no", ":agent_no", 0),
+
+    #Sladki
+    #Toggling weapons with alternative "blunt" version and back to "default" on respective orders
+    (try_begin),
+      (is_between, ":order_no", mordr_use_blunt_weapons, mordr_stand_ground),
+      (try_for_range, ":item_slot", ek_item_0, ek_head),
+        (agent_get_item_slot, ":item_id", ":agent_no", ":item_slot"),
+        (gt, ":item_id", 0),
+        (item_get_type, ":item_type", ":item_id"),
+        (is_between, ":item_type", itp_type_one_handed_wpn, itp_type_arrows),
+        (item_get_slot, ":alternative_weapon", ":item_id", "slot_item_alternate"),
+        (gt, ":alternative_weapon", 0),
+        (item_get_swing_damage_type, ":damage_type", ":alternative_weapon"),
+
+        (try_begin),
+          (this_or_next|eq, ":order_no", mordr_use_any_weapon),
+          (eq, ":damage_type", blunt),
+          (this_or_next|eq, ":order_no", mordr_use_blunt_weapons),
+          (neq, ":damage_type", blunt),
+          (agent_unequip_item, ":agent_no", ":item_id", ":item_slot"),
+          (agent_equip_item, ":agent_no", ":alternative_weapon", ":item_slot"),
+        (try_end),
+
+      (try_end),
+    (try_end),
+
     # (assign, reg10, ":agent_no"),
     # (str_store_agent_name, s1, ":agent_no"),
     # (try_begin),
@@ -53,88 +79,88 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
     #(assign, ":swap_no", 0),
 
     #here we assume a weapon with alternate mode has been found already - it is rare that two item types will be equipped that can be swapped with different damage modes
-    (try_begin), #make use of the other item slots
-      (eq, ":order_no", mordr_use_any_weapon), #just plain swapping
-      #(assign, ":useblunts",0),
-      # (item_get_slot, ":swap_no", ":item_no", "slot_item_alternate"),
-      # (gt, ":swap_no", 1),
-      # (agent_unequip_item, ":agent_no", ":item_no"),
-      # (agent_equip_item, ":agent_no", ":swap_no"),
-      # (agent_set_wielded_item, ":agent_no", ":swap_no", 0),
-      # (store_mission_timer_a, ":timer_a"),
-      # (val_add, ":timer_a", 1000),
-      # (agent_set_slot, ":agent_no", slot_agent_last_weapon_toggled, ":timer_a"),
-    (else_try),
-      #(neq,":useblunts",1),
-      (eq, ":order_no", mordr_use_blunt_weapons), #switching to blunt modes only
-      #(assign, ":useblunts",1),
-      (neg|item_slot_ge, ":item_no", 'slot_item_swing_damage', 525), #not already holding blunt
-      #check inventory to see if weapon can be toggled
-      (assign, ":end", ek_head),
-      (str_store_agent_name, s10, ":agent_no"),
-      (assign, reg10, ":agent_no"),
-      (str_store_string, s10, "@{reg10}={s10}:blunt"),
-      (try_for_range, ":item_slot", ek_item_0, ":end"),
-        (agent_get_item_slot, ":item_id", ":agent_no", ":item_slot"),
-        (gt, ":item_id", 0),
-
-        (item_get_type, ":item_itp", ":item_id"),
-        (is_between, ":item_itp", itp_type_one_handed_wpn, itp_type_arrows),
-        (assign, reg2, ":item_id"),
-        #(neq, ":item_itp",itp_staff), ###gdw help for staffs  ERROR: invalid opcode -2147483648   -2147483648 ##all staffs should have swing damage over 13
-        (neg|item_slot_ge, ":item_id", "slot_item_swing_damage", 522), #let engine set wielded
-        #(neg|item_slot_gt, ":item_id", slot_item_thrust_damage, 523), #let engine set wielded
-        (str_store_item_name, s1, ":item_id"),
-        (item_get_slot, reg9, ":item_id", "slot_item_swing_damage"),
-        (item_get_slot, reg8, ":item_id", "slot_item_thrust_damage"),
-        # (str_store_string, s10, "@{s10},checking {s1} with {reg10} dmg"),
-        # (display_message, "@!{reg10} is agent {s10} w item tdam {reg9}  w swing dam {reg8}"),
-        #(item_get_slot, ":swap_id", ":item_id", "slot_item_alternate"), ##identify the alternate with swapid
-        #(gt, ":swap_id", 1),
-        #(str_store_string, s10, "@{s10} and alt"),
-###new WSE operations
-        (try_begin),
-          (item_get_slot, ":swdamage", ":item_id", "slot_item_swing_damage"),
-          (assign, ":item_no", ":item_id"),
-          (val_div, ":swdamage", 3),
-          (val_mul, ":swdamage", 2),
-          (item_set_swing_damage, ":item_no",":swdamage"),
-          (item_set_swing_damage_type, ":item_no", 2),
-          (assign, reg4, ":item_no"),
-          (assign, reg5, ":swdamage"),
-          
-          #(item_set_slot, ":item_id", slot_item_swing_damage, ":sdamage"),
-          #(item_get_slot, reg3, ":item_id", "slot_item_swing_damage"),
-          # (display_message, "@!{reg10} or {s1} w item {reg4}  w swing dam {reg5}"),
-          #(item_set_swing_damage_type, ":item_id", 2),
-          (item_get_slot, ":thrustdamage", ":item_id", "slot_item_thrust_damage"),
-          (val_div, ":thrustdamage", 2),
-          (item_set_thrust_damage, ":item_id", ":thrustdamage"),
-          (item_set_thrust_damage_type, ":item_id", 2),
-          (assign, reg6, ":thrustdamage"),
-          (assign, reg7, ":item_id"),
-          # (display_message, "@!{reg10}or {s1} w item {reg7}  w thrust dam {reg6}"),
-          #(item_slot_ge, ":swap_id", slot_item_swing_damage, 513),
-          # (item_get_slot, ":damage", ":item_id", slot_item_thrust_damage),
-          # (this_or_next|eq, ":damage", 0), #no thrust capability
-          # (this_or_next|eq, ":damage", 256), #defined as (0, flag)
-          # (gt, ":damage", 512),
-
-          # (assign, ":item_no", ":item_id"),
-          # (assign, ":end", -1),
-          # (agent_unequip_item, ":agent_no", ":item_id"),
-          # (agent_equip_item, ":agent_no", ":swap_id"),
-          # (agent_force_rethink, ":agent_no"),
-          # (assign, reg11, ":agent_no"),
-###new WSE operations
-          # (item_set_swing_damage, ":damage", 2),
-          # (item_set_swing_damage_type, ":item_no", 2),
-          # (item_set_thrust_damage_type, ":item_no", 2),
-        #   (assign, reg12, ":item_no"),
-        #   (display_message, "@toggling agent {reg11} on rethink to wp {reg12}"),
-         (try_end),
-      (try_end),
-  (try_end),
+#     (try_begin), #make use of the other item slots
+#       (eq, ":order_no", mordr_use_any_weapon), #just plain swapping
+#       #(assign, ":useblunts",0),
+#       # (item_get_slot, ":swap_no", ":item_no", "slot_item_alternate"),
+#       # (gt, ":swap_no", 1),
+#       # (agent_unequip_item, ":agent_no", ":item_no"),
+#       # (agent_equip_item, ":agent_no", ":swap_no"),
+#       # (agent_set_wielded_item, ":agent_no", ":swap_no", 0),
+#       # (store_mission_timer_a, ":timer_a"),
+#       # (val_add, ":timer_a", 1000),
+#       # (agent_set_slot, ":agent_no", slot_agent_last_weapon_toggled, ":timer_a"),
+#     (else_try),
+#       #(neq,":useblunts",1),
+#       (eq, ":order_no", mordr_use_blunt_weapons), #switching to blunt modes only
+#       #(assign, ":useblunts",1),
+#       (neg|item_slot_ge, ":item_no", 'slot_item_swing_damage', 525), #not already holding blunt
+#       #check inventory to see if weapon can be toggled
+#       (assign, ":end", ek_head),
+#       (str_store_agent_name, s10, ":agent_no"),
+#       (assign, reg10, ":agent_no"),
+#       (str_store_string, s10, "@{reg10}={s10}:blunt"),
+#       (try_for_range, ":item_slot", ek_item_0, ":end"),
+#         (agent_get_item_slot, ":item_id", ":agent_no", ":item_slot"),
+#         (gt, ":item_id", 0),
+#
+#         (item_get_type, ":item_itp", ":item_id"),
+#         (is_between, ":item_itp", itp_type_one_handed_wpn, itp_type_arrows),
+#         (assign, reg2, ":item_id"),
+#         #(neq, ":item_itp",itp_staff), ###gdw help for staffs  ERROR: invalid opcode -2147483648   -2147483648 ##all staffs should have swing damage over 13
+#         (neg|item_slot_ge, ":item_id", "slot_item_swing_damage", 522), #let engine set wielded
+#         #(neg|item_slot_gt, ":item_id", slot_item_thrust_damage, 523), #let engine set wielded
+#         (str_store_item_name, s1, ":item_id"),
+#         (item_get_slot, reg9, ":item_id", "slot_item_swing_damage"),
+#         (item_get_slot, reg8, ":item_id", "slot_item_thrust_damage"),
+#         # (str_store_string, s10, "@{s10},checking {s1} with {reg10} dmg"),
+#         # (display_message, "@!{reg10} is agent {s10} w item tdam {reg9}  w swing dam {reg8}"),
+#         #(item_get_slot, ":swap_id", ":item_id", "slot_item_alternate"), ##identify the alternate with swapid
+#         #(gt, ":swap_id", 1),
+#         #(str_store_string, s10, "@{s10} and alt"),
+# ###new WSE operations
+#         (try_begin),
+#           (item_get_slot, ":swdamage", ":item_id", "slot_item_swing_damage"),
+#           (assign, ":item_no", ":item_id"),
+#           (val_div, ":swdamage", 3),
+#           (val_mul, ":swdamage", 2),
+#           (item_set_swing_damage, ":item_no",":swdamage"),
+#           (item_set_swing_damage_type, ":item_no", 2),
+#           (assign, reg4, ":item_no"),
+#           (assign, reg5, ":swdamage"),
+#
+#           #(item_set_slot, ":item_id", slot_item_swing_damage, ":sdamage"),
+#           #(item_get_slot, reg3, ":item_id", "slot_item_swing_damage"),
+#           # (display_message, "@!{reg10} or {s1} w item {reg4}  w swing dam {reg5}"),
+#           #(item_set_swing_damage_type, ":item_id", 2),
+#           (item_get_slot, ":thrustdamage", ":item_id", "slot_item_thrust_damage"),
+#           (val_div, ":thrustdamage", 2),
+#           (item_set_thrust_damage, ":item_id", ":thrustdamage"),
+#           (item_set_thrust_damage_type, ":item_id", 2),
+#           (assign, reg6, ":thrustdamage"),
+#           (assign, reg7, ":item_id"),
+#           # (display_message, "@!{reg10}or {s1} w item {reg7}  w thrust dam {reg6}"),
+#           #(item_slot_ge, ":swap_id", slot_item_swing_damage, 513),
+#           # (item_get_slot, ":damage", ":item_id", slot_item_thrust_damage),
+#           # (this_or_next|eq, ":damage", 0), #no thrust capability
+#           # (this_or_next|eq, ":damage", 256), #defined as (0, flag)
+#           # (gt, ":damage", 512),
+#
+#           # (assign, ":item_no", ":item_id"),
+#           # (assign, ":end", -1),
+#           # (agent_unequip_item, ":agent_no", ":item_id"),
+#           # (agent_equip_item, ":agent_no", ":swap_id"),
+#           # (agent_force_rethink, ":agent_no"),
+#           # (assign, reg11, ":agent_no"),
+# ###new WSE operations
+#           # (item_set_swing_damage, ":damage", 2),
+#           # (item_set_swing_damage_type, ":item_no", 2),
+#           # (item_set_thrust_damage_type, ":item_no", 2),
+#         #   (assign, reg12, ":item_no"),
+#         #   (display_message, "@toggling agent {reg11} on rethink to wp {reg12}"),
+#          (try_end),
+#       (try_end),
+#   (try_end),
 (try_end),
   ]
 )

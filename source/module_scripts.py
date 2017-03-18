@@ -7498,24 +7498,34 @@ scripts = [
         (troop_add_merchandise, "trp_temp_troop", itp_type_goods, ":plunder_amount"),
         (val_add, ":num_looted_items", ":plunder_amount"),
       (try_end),
- #      ##Trophies calculation: (50% base chance + loot skill * 4) for every 10 enemies
-		(try_begin),
-		(store_party_size_wo_prisoners, ":enemies_count", ":enemy_party"),
-		(val_div, ":enemies_count", 10),
-		(party_get_skill_level, ":player_party_looting", "p_main_party", "skl_looting"),
-		(val_mul, ":player_party_looting", 4),
-		(assign, ":trophy_chance", 50),
-		(val_add, ":trophy_chance", ":player_party_looting"),
-		(try_for_range, ":i_try", 0, ":enemies_count"),
-		  (store_random_in_range, ":roll", 0, 100),
-		  (try_begin),
-		    (gt, ":trophy_chance", ":roll"),
-		    (val_add, ":num_looted_items", 1),
-		    (troop_add_item, "trp_player", "itm_trophy_a"),
-		  (try_end),
-		(try_end),
-		(try_end),
-##End trophies calculation
+
+      ##Trophies calculation: (40% base chance + loot skill * 4) for every 10 enemies (Lesser trophy)
+      ##(4% base chance + loot skill) for evey 10 enemies (Medium trophy)
+      (try_begin),
+      (store_party_size_wo_prisoners, ":enemies_count", ":enemy_party"),
+      (val_div, ":enemies_count", 10),
+      (party_get_skill_level, ":player_party_looting", "p_main_party", "skl_looting"),
+      (assign, ":medium_trophy_chance", 4),
+      (val_add, ":medium_trophy_chance", ":player_party_looting"),
+      (val_mul, ":player_party_looting", 4),
+      (assign, ":trophy_chance", 40),
+      (val_add, ":trophy_chance", ":player_party_looting"),
+      (try_for_range, ":i_try", 0, ":enemies_count"),
+        (store_random_in_range, ":roll", 0, 100),
+        (try_begin),
+          (gt, ":trophy_chance", ":roll"),
+          (val_add, ":num_looted_items", 1),
+          (troop_add_item, "trp_temp_troop", "itm_trophy_a"),
+        (try_end),
+        (try_begin),
+          (gt, ":medium_trophy_chance", ":roll"),
+          (val_add, ":num_looted_items", 1),
+          (troop_add_item, "trp_temp_troop", "itm_trophy_b"),
+        (try_end),
+      (try_end),
+      (try_end),
+      ##End trophies calculation
+
       #Now loot the defeated party
       (store_mul, ":loot_probability", player_loot_share, 8),#gdw3
       (val_mul, ":loot_probability", "$g_strength_contribution_of_player"),
