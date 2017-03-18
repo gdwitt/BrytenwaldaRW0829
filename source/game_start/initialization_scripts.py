@@ -2713,9 +2713,9 @@ scripts = [
         (item_set_slot, "itm_book_weapon_mastery", "slot_item_intelligence_requirement", 9),
         (item_set_slot, "itm_book_engineering", "slot_item_intelligence_requirement", 12),
         (item_set_slot, "itm_book_surgery", "slot_item_intelligence_requirement", 9),   #gdw10
-        ##reference books below
- (item_set_slot, "itm_book_trade_reference", "slot_item_intelligence_requirement", 9),
- (item_set_slot, "itm_book_looting_reference", "slot_item_intelligence_requirement", 7),
+                ##reference books below
+         (item_set_slot, "itm_book_trade_reference", "slot_item_intelligence_requirement", 9),
+         (item_set_slot, "itm_book_looting_reference", "slot_item_intelligence_requirement", 8),
         (item_set_slot, "itm_book_firstaid_reference", "slot_item_intelligence_requirement", 9),#gdw10
         (item_set_slot, "itm_book_training", "slot_item_intelligence_requirement", 9),#gdw10
         

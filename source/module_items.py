@@ -214,10 +214,10 @@ items = [
 ["book_training","Epitoma Rei Militaris (training)", [("book_open",0)], itp_type_book, 0, 3300,weight(2)|abundance(60),imodbits_none],
 #Reference books
 #This book must be at the beginning of reference books
-["book_wound_treatment_reference","De Materia Medica, of Dioscorides", [("book_c",0)], itp_type_book, 0, 3300,weight(2)|abundance(60),imodbits_none],
-["book_looting_reference","Swords of King Arthur's Court", [("book_c",0)], itp_type_book, 0, 3000,weight(2)|abundance(60),imodbits_none],
-["book_firstaid_reference","Convalescence shortened", [("book_c",0)], itp_type_book, 0, 3300,weight(2)|abundance(60),imodbits_none],
-["book_trade_reference","Merchant's Ledger", [("book_open",0)], itp_type_book, 0, 3200,weight(2)|abundance(60),imodbits_none],
+["book_wound_treatment_reference","De Materia Medica, of Dioscorides", [("book_c",0)], itp_type_book, 0, 3200,weight(2)|abundance(60),imodbits_none],
+["book_looting_reference","Swords of King Arthur's Court", [("book_c",0)], itp_type_book, 0, 3700,weight(2)|abundance(60),imodbits_none],
+["book_firstaid_reference","Convalescence shortened", [("book_c",0)], itp_type_book, 0, 3200,weight(2)|abundance(60),imodbits_none],
+["book_trade_reference","Merchant's Ledger", [("book_open",0)], itp_type_book, 0, 3700,weight(2)|abundance(60),imodbits_none], ##gives 2 trade
 #chief cambiados libros acaba
 #puesto chief quest
 ["book_slot","Read Latin Every Day to Remember", [("book_open",0)], itp_type_book, 0, 500,weight(2)|abundance(60),imodbits_none],#set to musketfor now#only available from abbots
