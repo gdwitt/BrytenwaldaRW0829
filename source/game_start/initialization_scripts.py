@@ -2528,6 +2528,12 @@ scripts = [
         (item_set_slot, "itm_leatherwork", "slot_item_overhead_per_run", 43),
         (item_set_slot, "itm_leatherwork", "slot_item_base_price", 400),  #chief cambia
         (item_set_slot, "itm_leatherwork", "slot_item_enterprise_building_cost", 15000),  #chief cambia
+#gdw jewelry 31817
+        (item_set_slot, "itm_jewelry", "slot_item_urban_demand", 4),  #luxury
+          (item_set_slot, "itm_jewelry", "slot_item_rural_demand", -1),
+          (item_set_slot, "itm_jewelry", "slot_item_desert_demand", -1),
+          (item_set_slot, "itm_jewelry", "slot_item_production_slot", "slot_center_pottery_kilns"),
+          (item_set_slot, "itm_jewelry", "slot_item_production_string", "str_kilns"),
 
         (item_set_slot, "itm_raw_leather", "slot_item_urban_demand", 8),
         (item_set_slot, "itm_raw_leather", "slot_item_rural_demand", 0),
@@ -2713,9 +2719,9 @@ scripts = [
         (item_set_slot, "itm_book_weapon_mastery", "slot_item_intelligence_requirement", 9),
         (item_set_slot, "itm_book_engineering", "slot_item_intelligence_requirement", 12),
         (item_set_slot, "itm_book_surgery", "slot_item_intelligence_requirement", 9),   #gdw10
-        ##reference books below
- (item_set_slot, "itm_book_trade_reference", "slot_item_intelligence_requirement", 9),
- (item_set_slot, "itm_book_looting_reference", "slot_item_intelligence_requirement", 7),
+                ##reference books below
+         (item_set_slot, "itm_book_trade_reference", "slot_item_intelligence_requirement", 9),
+         (item_set_slot, "itm_book_looting_reference", "slot_item_intelligence_requirement", 8),
         (item_set_slot, "itm_book_firstaid_reference", "slot_item_intelligence_requirement", 9),#gdw10
         (item_set_slot, "itm_book_training", "slot_item_intelligence_requirement", 9),#gdw10
         

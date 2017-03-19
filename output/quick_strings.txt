@@ -275,11 +275,6 @@ qstr_{!}DEBUG____Total_pr {!}DEBUG_--_Total_production_for_{s4}:_{reg4}
 qstr_{!}DEBUG____Total_ru {!}DEBUG_--_Total_rural_production_for_{s4}_region:_{reg4}
 qstr_{!}DEBUG____Total_tr {!}DEBUG_--_Total_trade_for_{s4}:_{reg4}
 qstr_{!}DEBUG____Total_at {!}DEBUG_--_Total_attacks_for_{s4}:_{reg4}
-qstr__Special_Training_st _Special_Training_started
-qstr_Training_continues Training_continues
-qstr__Tactics_training_st _Tactics_training_started
-qstr__Military_training_s _Military_training_started
-qstr__Attribute_and_Weapo _Attribute_and_Weapon_training_started
 qstr_{s16}_and_{s15} {s16}_and_{s15}
 qstr_{!}{s16}_{s15} {!}{s16},_{s15}
 qstr_{!}current_town_was_ {!}current_town_was_{reg3},_now_moved_to_{s5}
@@ -910,7 +905,7 @@ qstr_Division_{reg0}:_ret Division_{reg0}:_returning_after_destroying_enemy_{s1}
 qstr_Division_{reg0}:_cav Division_{reg0}:_cavalry_formation_disassembled.
 qstr_You_unleash_a_fearso You_unleash_a_fearsome_cry!
 qstr_You_rally_your_men!_ You_rally_your_men!_(wounded_troops_recover_{reg1}_%_hitpoints)
-qstr_{reg10}={s10}:blunt {reg10}={s10}:blunt
+qstr_{!}DEBUG___{reg4}_to {!}DEBUG_--{reg4}_toggling_weapon
 qstr__You_have_beaten_the _You_have_beaten_the_old_hero,_you_have_begun_your_journey_to_the_legend.
 qstr__Bandits_strike_you_ _Bandits_strike_you_with_anger_and_you_fall_into_a_puddle_of_blood._They_think_you're_dead...
 qstr__The_bandits_and_sla _The_bandits_and_slavers_have_been_dealt_with._Get_the_prisoners_and_leave_through_the_air_shaft.
@@ -1438,10 +1433,10 @@ qstr_Advantages_in_certai Advantages_in_certain_skills
 qstr__Donkeys:_Improve_fo _Donkeys:_Improve_foraging_skill.
 qstr_Requires_{reg1}_inte Requires_{reg1}_intelligence_to_read
 qstr_Reading_Progress:_{r Reading_Progress:_{reg1}%
-qstr_wound_treament wound_treament
-qstr_first_aid first-aid
-qstr_trade_skill trade-skill
-qstr_looting looting
+qstr_wound_treament+1 wound_treament+1
+qstr_first_aid+1 first-aid+1
+qstr_trade_skill+2 trade-skill+2
+qstr_looting+2 looting+2
 qstr_persuasion+2 persuasion+2
 qstr_You_can_read._Just_s You_can_read._Just_sell_this.
 qstr_+1_to_{s1}_while_in_ +1_to_{s1}_while_in_inventory
@@ -2409,9 +2404,12 @@ qstr_Bounty_of_food. Bounty_of_food.
 qstr_You_have_found_lefto You_have_found_leftovers_of_a_recent_battle._Searching_the_bodies,_you_managed_to_find_200_scillingas.
 qstr_Minor_accident: Minor_accident:
 qstr_Your_troops_lose_3_m Your_troops_lose_3_morale_from_no_night_rest._morale_modifier_weariness={reg0}.
+qstr_morale_lost_to_{reg0 morale_lost_to_{reg0}_from_no_rest.
 qstr_Your_troops_feel_ref Your_troops_feel_refreshed_from_the_center_rest_8._morale_modifier_weariness={reg0}
+qstr_Your_troops_feel_refr Your_troops_feel_refreshed_from_the_center_DAY_rest_5._morale_modifier_weariness={reg0}
 qstr_Your_troops_troops_g Your_troops_troops_gain_morale_from_night_rest._morale_modifier_weariness={reg0}.
 qstr_Your_troops_troops_ga Your_troops_troops_gain_morale_from_day_rest._morale_modifier_weariness={reg0}.
+qstr_Your_troops_feel_refre Your_troops_feel_refreshed_from_the_day_rest_8._morale_modifier_weariness={reg0}
 qstr_end_of_script_morale end_of_script_morale_modifier_weariness={reg0}
 qstr_encumbrancelevel_3_f encumbrancelevel_3_from_no_rest.
 qstr_encumbrancelevel_2_f encumbrancelevel_2_from_little_rest.
@@ -2435,6 +2433,8 @@ qstr_You_caught_some_fish You_caught_some_fish.
 qstr_Due_to_insufficient_ Due_to_insufficient_space,_you_had_to_throw_the_fish_back_into_the_ocean
 qstr_All_you_caught_were_ All_you_caught_were_some_seaweeds.
 qstr_Oops:_your_mercenary Oops:_your_mercenary_captain_kills_his_prisoners_to_he_can_move_faster.
+qstr_The_training_started The_training_started
+qstr_The_training_complet The_training_completed!
 qstr_Your_recruiter_who_wa Your_recruiter_who_was_commissioned_to_recruit_{reg10}_recruits_to_{s13}_has_been_killed!
 qstr_{s13}_has_been_taken {s13}_has_been_taken_by_the_enemy_and_your_recruiter_who_was_commissioned_to_recruit_{reg10}_recruits_vanished_without_a_trace!
 qstr_ERROR_IN_THE_RECRUIT ERROR_IN_THE_RECRUITER_KIT_SIMPLE_TRIGGERS!

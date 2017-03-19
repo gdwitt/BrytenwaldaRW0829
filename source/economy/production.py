@@ -344,8 +344,13 @@ scripts = [
             (eq, ":cur_good", "itm_raw_dyes"),      
             (party_get_slot, ":base_production", ":center_no", "slot_center_kirmiz_farms"),
             (val_div, ":base_production", 20),
-
-##            
+                #Other artisanal goods
+      (else_try),
+        (eq, ":cur_good", "itm_jewelry"), #560 is total demand   #eco note
+        (party_get_slot, ":base_production", ":center_no", "slot_center_pottery_kilns"),
+        (val_mul, ":base_production", 9), #was 5
+        
+##            f
 ##        (else_try),
 ##            (eq, ":cur_good", "itm_silver"),      
 ##            (party_get_slot, ":base_production", ":center_no", "slot_center_acres_dates"),

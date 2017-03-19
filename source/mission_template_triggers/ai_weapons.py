@@ -150,6 +150,7 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
           #Swap
           (agent_unequip_item, ":agent_no", ":item_id", ":item_slot"),
           (agent_equip_item, ":agent_no", ":alternative_weapon", ":item_slot"),
+
           (agent_set_wielded_item, ":agent_no", ":alternative_weapon"),
 
           #Debuging shit
@@ -174,6 +175,14 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
             (assign, ":item_id", -1), #Slot will not be overwritten
             memorizeInventory(),
           (try_end),
+
+          (try_begin),
+            (gt, "$cheat_mode", 0),
+            (assign, reg4, ":agent_no"),
+            (display_message, "@{!}DEBUG --{reg4} toggling weapon"),
+        (try_end),
+        (try_end),
+
 
         (try_end),
       (try_end),

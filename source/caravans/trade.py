@@ -244,12 +244,24 @@ scripts = [
           (store_sub, ":price_dif", ":destination_price", ":origin_price"),
 
           (try_begin), #weight luxury goods double
-            (this_or_next|eq, ":cur_goods", "itm_spice"),
-            (eq, ":cur_goods", "itm_velvet"),
+            # Following products changed for vc:
+            (this_or_next|eq, ":cur_goods", "itm_wine"),  #eco note
+            (this_or_next|eq, ":cur_goods", "itm_jewelry"),
+            (eq, ":cur_goods", "itm_silver"),
             (val_mul, ":price_dif", 2),
           (try_end),
           (val_add, ":cur_town_score", ":price_dif"),
         (try_end),
+      ###vc code
+      (assign, ":count", 0),
+        (try_for_parties, ":caravans"),
+          (party_slot_eq, ":caravans", "slot_party_type", spt_kingdom_caravan),
+          (party_get_slot, ":destination", ":caravans", "slot_party_ai_object"),
+          (eq, ":destination", ":cur_town"),
+          (val_add, ":count", 1),
+        (try_end),
+        ##############
+        (le, ":count", 3),
         (gt, ":cur_town_score", ":best_town_score"),
         (assign, ":best_town_score", ":cur_town_score"),
         (assign, ":result", ":cur_town"),
