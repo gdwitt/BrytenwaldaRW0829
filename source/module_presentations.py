@@ -8708,6 +8708,13 @@ The attackers attempted to sweep the decks free of the enemy without damaging th
         (position_set_x, pos1, 500),
         (position_set_y, pos1, 25),
         (overlay_set_position, "$g_presentation_obj_1", pos1),
+		
+        #Sladki
+        ## roll
+        (create_game_button_overlay, "$g_presentation_obj_2", "@Roll"),
+        (position_set_x, pos1, 500),
+        (position_set_y, pos1, 75),
+        (overlay_set_position, "$g_presentation_obj_2", pos1),
 
         (create_text_overlay, reg1, "@This is the gambling screen. Hold down control key while clicking on an item to purchase or sell it.", tf_double_space|tf_scrollable),
         (position_set_x, pos1, 425),
@@ -8953,6 +8960,14 @@ The attackers attempted to sweep the decks free of the enemy without damaging th
           (eq, ":object", "$g_presentation_obj_1"),
           (presentation_set_duration, 0),
           (mission_enable_talk),
+        (try_end),
+		
+        #Sladki
+        #Refresh inventory
+        (try_begin),
+          (eq, ":object", "$g_presentation_obj_2"),
+          (call_script, "script_refresh_mystic_merchant_items", "trp_especial_merchant"),
+          (start_presentation, "prsnt_gambling"),
         (try_end),
        
         (troop_get_inventory_capacity, ":capacity", "trp_player"),
@@ -10059,8 +10074,14 @@ The attackers attempted to sweep the decks free of the enemy without damaging th
 		(position_set_y,pos2,1200),
 		(overlay_set_position,"$g_presentation_obj_7",pos1),
 		(overlay_set_size,"$g_presentation_obj_7",pos2),
-					
-        ]),
+		
+  #Sladki
+  #Select nearest button
+  (create_game_button_overlay, "$g_presentation_obj_8", "@Nearest"),
+  (position_set_x, pos1, 200),
+  (position_set_y, pos1, 400),
+  (overlay_set_position, "$g_presentation_obj_8", pos1),
+  ]),
 
       (ti_on_presentation_event_state_change,
        [(store_trigger_param_1, ":object"),
@@ -10084,7 +10105,23 @@ The attackers attempted to sweep the decks free of the enemy without damaging th
 				(overlay_set_text,"$g_presentation_obj_9", "@_ {reg2} Km",tf_center_justify),
 				(party_set_slot,"p_main_party","slot_loot_wagon_target","$g_presentation_obj_1_val"),
 			(try_end),			
-		(try_end),		
+		(try_end),
+		
+  #Sladki "select nearest" button
+  (try_begin),
+    (eq, ":object", "$g_presentation_obj_8"),
+    #Find nearest
+    (store_distance_to_party_from_party, ":min_distance", "p_town_1", "p_main_party"),
+    (assign, ":nearest_town", "p_town_1"),
+    (try_for_range, ":i_town", "p_town_2", "p_castle_1"),
+      (store_distance_to_party_from_party, ":distance", ":i_town", "p_main_party"),
+      (lt, ":distance", ":min_distance"),
+      (assign, ":min_distance", ":distance"),
+      (assign, ":nearest_town", ":i_town"),
+    (try_end),
+    (party_set_slot, "p_main_party", "slot_loot_wagon_target", ":nearest_town"),
+    (start_presentation, "prsnt_loot_choose_town"),
+  (try_end),
         ]),
       ]),	  
 
