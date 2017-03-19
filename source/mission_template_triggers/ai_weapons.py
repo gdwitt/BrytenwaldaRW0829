@@ -11,23 +11,20 @@ from source.module_constants import *
 
 from source.statement import StatementBlock
 
-divisionSelected = ":sblunt_division%d_selected"
+
 inventorySlot = "slot_agent_sblunt_invslot_%d"
 
-def setDivisionSelectedClear() :
-  block = []
-  for division in range(9): block += [(assign, divisionSelected % division, 0),]
-  return StatementBlock(*block)
 
-def setDivisionSelected() :
-  block = []
+def setWeaponOrderAny() :
+  block = [(set_show_messages, 0),]
   for division in range(9):
     block += [
       (try_begin),
-        (eq, ":division_no", division),
-        (assign, divisionSelected % division, 1),
+        (class_is_listening_order, ":team_id", division),
+        (team_give_order, ":team_id", division, mordr_use_any_weapon),
       (try_end),
     ]
+  block += [(set_show_messages, 1),]
   return StatementBlock(*block)
 
 def memorizeInventory() :
@@ -92,16 +89,6 @@ def updateInventoryDebug() :
     ]
   return StatementBlock(*block)
 
-def setWeaponOrderAny() :
-  block = []
-  for division in range(9):
-    block += [
-      (try_begin),
-        (eq, divisionSelected % division, 1),
-        (team_give_order, ":team_id", division, mordr_use_any_weapon),
-      (try_end),
-    ]
-  return StatementBlock(*block)
 
 #Sladki
 #Reworked trigger
@@ -116,9 +103,6 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
   (store_trigger_param_2, ":agent_id"), #Leader
   (agent_get_team, ":team_id", ":agent_id"),
 
-  #Workaround shit to make sure that only divisions who is selected and have troops will be ordered
-  setDivisionSelectedClear(),
-
   (try_for_agents, ":agent_no"),
     (agent_is_active, ":agent_no"),
     (agent_is_human, ":agent_no"),
@@ -128,9 +112,6 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
     (eq, ":team_no", ":team_id"),
     (agent_get_division, ":division_no", ":agent_no"),
     (class_is_listening_order, ":team_id", ":division_no"), #"class" is "division"
-
-    #Mark the troop division as selected
-    setDivisionSelected(),
 
     #Reassign vars
     (assign, ":inventory_action", 0),
