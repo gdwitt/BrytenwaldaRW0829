@@ -1040,9 +1040,9 @@ items = [
 [],['fac_merc1','fac_merc2']],
 ##Female Noble Armor
 
-["scale_greykhergitfemale", "Byzantine Scale Armor p",[("scale_shirt_a",0)],pnbl,0,4330,weight(16)|abundance(60)|head_armor(0)|body_armor(44)|leg_armor(10)|difficulty(16),imodbits_armor,
+["scale_greykhergitfemale", "Byzantine Scale Armor p",[("scale_shirt_a",0)],pnbl,0,4330,weight(16)|abundance(60)|head_armor(0)|body_armor(44)|leg_armor(10)|difficulty(9),imodbits_armor,
 [],['fac_merc1','fac_merc2','fac_merc3','fac_merc4']],
-["scale_greywhitefemale", "Byzantine Scale Armor p",[("scale_shirt_c",0)],pnbl,0,4330,weight(16)|abundance(60)|head_armor(0)|body_armor(44)|leg_armor(10)|difficulty(16),imodbits_armor,
+["scale_greywhitefemale", "Byzantine Scale Armor p",[("scale_shirt_c",0)],pnbl,0,4330,weight(16)|abundance(60)|head_armor(0)|body_armor(44)|leg_armor(10)|difficulty(8),imodbits_armor,
 [],['fac_merc1','fac_merc2','fac_merc3','fac_merc4']],
 # ["scale_greyvestt2", "Scale Armor", [("khergit_scale_a",0)], pnbl ,0, 3130 , weight(12)|abundance(60)|head_armor(0)|body_armor(42)|leg_armor(6)|difficulty(11) ,imodbits_armor,
 # [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
@@ -1867,10 +1867,10 @@ items = [
 #scba problem acaba
 ["bamburghsword1t2", "le_bamburghsword", [("le_bamburghsword",0),("sword_medieval_b_scabbard2", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 950 , weight(1.25)|difficulty(8)|spd_rtng(86) | weapon_length(94)|swing_damage(33 , cut) | thrust_damage(17 , pierce),imodbits_sword,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
-["bamburghsword1t2_alt", "le_bamburghsword", [("le_bamburghsword",0),("sword_medieval_b_scabbard2", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 950 , weight(1.25)|difficulty(8)|spd_rtng(82) | weapon_length(95)|swing_damage(35 , cut) | thrust_damage(14 , pierce),imodbits_sword ],
+["bamburghsword1t2_alt", "le_bamburghsword", [("le_bamburghsword",0),("sword_medieval_b_scabbard2", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 950 , weight(1.25)|difficulty(8)|spd_rtng(82) | weapon_length(95)|swing_damage(35 , blunt) | thrust_damage(0 , blunt),imodbits_sword ],
 ["bamburghsword2t2", "Engle Rich Sword", [("BamburghSword2",0),("sword_medieval_b_scabbard2", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 998 , weight(1.25)|difficulty(8)|spd_rtng(82) | weapon_length(96)|swing_damage(35 , cut) | thrust_damage(15 , pierce),imodbits_sword,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
-["bamburghsword2t2_alt", "Sword", [("BamburghSword2",0),("sword_medieval_b_scabbard2", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 998 , weight(1.25)|difficulty(8)|spd_rtng(82) | weapon_length(95)|swing_damage(36 , cut) | thrust_damage(14 , pierce),imodbits_sword ],
+["bamburghsword2t2_alt", "Sword", [("BamburghSword2",0),("sword_medieval_b_scabbard2", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 998 , weight(1.25)|difficulty(8)|spd_rtng(82) | weapon_length(95)|swing_damage(17 , blunt) | thrust_damage(0 , blunt),imodbits_sword ],
 #leave the last few swords for mod-integration
 #Invasores
 #basica
@@ -1891,13 +1891,13 @@ items = [
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
 
 #sin uso
-["nobleman_sword", "Briton Nobleman Spatha", [("RichSpatha",0),("RichSpatha_scab", ixmesh_carry)], itp_type_two_handed_wpn|itp_primary|itp_secondary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.45)|difficulty(8)|spd_rtng(81) | weapon_length(97)|swing_damage(36 , cut) | thrust_damage(14 , pierce),imodbits_sword_high,
+["nobleman_sword", "Briton Nobleman Spatha", [("RichSpatha",0),("RichSpatha_scab", ixmesh_carry)], itp_type_two_handed_wpn|itp_primary|itp_secondary|itp_next_item_as_melee, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.45)|difficulty(8)|spd_rtng(81) | weapon_length(97)|swing_damage(36 , cut) | thrust_damage(14 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["nobleman_sword_alt", "Nobleman Spatha", [("RichSpatha",0),("RichSpatha_scab", ixmesh_carry)], itp_type_two_handed_wpn|itp_primary|itp_secondary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.25)|difficulty(8)|spd_rtng(82) | weapon_length(90)|swing_damage(38 , cut) | thrust_damage(19 , pierce),imodbits_sword_high, ],
+["nobleman_sword_alt", "Nobleman Spatha", [("RichSpatha",0),("RichSpatha_scab", ixmesh_carry)], itp_type_two_handed_wpn|itp_primary|itp_secondary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.25)|difficulty(8)|spd_rtng(82) | weapon_length(90)|swing_damage(20 , blunt) | thrust_damage(0 , blunt),imodbits_sword_high, ],
 
 ["angle_swordt3", "Angle Rich Sword", [("Sword4",0),("RichSpatha_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1060 , weight(1.25)|difficulty(9)|spd_rtng(86) | weapon_length(94)|swing_damage(33 , cut) | thrust_damage(19 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
-["angle_swordt3_alt", "Angle Rich Sword", [("Sword4",0),("RichSpatha_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1060 , weight(1.25)|difficulty(9)|spd_rtng(82) | weapon_length(90)|swing_damage(36 , cut) | thrust_damage(19 , pierce),imodbits_sword_high, ],
+["angle_swordt3_alt", "Angle Rich Sword", [("Sword4",0),("RichSpatha_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1060 , weight(1.25)|difficulty(9)|spd_rtng(82) | weapon_length(90)|swing_damage(21 , blunt) | thrust_damage(0 , blunt),imodbits_sword_high, ],
 
 ## tropas de elite
 ["richsword2", "Rich Sword", [("le_richsword2",0),("RichSword3_scab", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 940 , weight(1.25)|difficulty(9)|spd_rtng(84) | weapon_length(91)|swing_damage(31 , cut) | thrust_damage(19 , pierce),imodbits_sword_high,
@@ -1906,7 +1906,7 @@ items = [
 #sin uso
 ["richlongsword2", "German Longsword", [("le_richsword2",0),("RichSword3_scab", ixmesh_carry)], itp_type_two_handed_wpn|itp_primary|itp_secondary|itp_next_item_as_melee, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.25)|difficulty(7)|spd_rtng(81) | weapon_length(97)|swing_damage(36 , cut) | thrust_damage(16 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
-["richlongsword2_alt", "German Longsword", [("le_richsword2",0),("RichSword3_scab", ixmesh_carry)], itp_type_two_handed_wpn|itp_primary|itp_secondary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.25)|difficulty(7)|spd_rtng(82) | weapon_length(96)|swing_damage(37 , cut) | thrust_damage(17 , pierce),imodbits_sword_high, ],
+["richlongsword2_alt", "German Longsword", [("le_richsword2",0),("RichSword3_scab", ixmesh_carry)], itp_type_two_handed_wpn|itp_primary|itp_secondary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.25)|difficulty(7)|spd_rtng(82) | weapon_length(96)|swing_damage(17 , blunt) | thrust_damage(5 , blunt),imodbits_sword_high, ],
 
 
 #sutton hoo sword, reyes y nobles anglos, sajones y jutos
@@ -1944,14 +1944,14 @@ items = [
 ["sciansword", "scianlong", [("scianlong",0),("scianlong", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip, 900 , weight(1.21)|difficulty(6)|spd_rtng(84) | weapon_length(93)|swing_damage(28 , cut) | thrust_damage(22 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 
-["scianswordbone", "Scian Long Bone", [("scianlongbone",0),("scianlongbone", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip, 910 , weight(1.25)|difficulty(6)|spd_rtng(89) | weapon_length(85)|swing_damage(25 , cut) | thrust_damage(25 , pierce),imodbits_sword_high,
+["scianswordbone", "Scian Long Bone", [("scianlongbone",0),("scianlongbone", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip, 910 , weight(1.25)|difficulty(6)|spd_rtng(89) | weapon_length(85)|swing_damage(19 , blunt) | thrust_damage(0 , blunt),imodbits_sword_high,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 
  #comun
  #britones, irlandeses y pictos
 ["irish_longsword", "Celt Long Sword", [("irish_long_sword",0),("irish_long_sword", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip, 1100 , weight(2.25)|difficulty(11)|spd_rtng(78) | weapon_length(99)|swing_damage(38 , cut) | thrust_damage(13 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["irish_longsword_alt", "Celt Long Sword", [("irish_long_sword",0),("irish_long_sword", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary|itp_secondary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip, 1100 , weight(1.25)|difficulty(8)|spd_rtng(81) | weapon_length(99)|swing_damage(34 , cut) | thrust_damage(8 , pierce),imodbits_sword_high, ],
+["irish_longsword_alt", "Celt Long Sword", [("irish_long_sword",0),("irish_long_sword", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary|itp_secondary, itc_longsword|itcf_carry_sword_left_hip, 1100 , weight(1.25)|difficulty(8)|spd_rtng(81) | weapon_length(99)|swing_damage(24 , blunt) | thrust_damage(8 , blunt),imodbits_sword_high, ],
 
 #corta
 ["irish_shsword",   "Godelic Short Sword", [("irish_sword",0),("irish_sword", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_seax|itcf_carry_sword_left_hip, 810 , weight(0.8)|difficulty(2)|spd_rtng(92) | weapon_length(73)|swing_damage(20 , cut) | thrust_damage(31 , pierce),imodbits_sword,
@@ -1963,24 +1963,24 @@ items = [
 ["godelic_shsword",   "Celtic2", [("Celtic2",0),("Celtic2", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_seax|itcf_carry_sword_left_hip, 820 , weight(0.8)|difficulty(2)|spd_rtng(92) | weapon_length(72)|swing_damage(21 , cut) | thrust_damage(30 , pierce),imodbits_sword,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 
-["rich_shswordt3",   "Rich Short Sword", [("le_pictishsword5",0),("le_pictishsword5", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_seax|itcf_carry_sword_left_hip, 990 , weight(0.8)|difficulty(2)|spd_rtng(92) | weapon_length(77)|swing_damage(24 , cut) | thrust_damage(30 , pierce),imodbits_sword,
+["rich_shswordt3",   "Rich Short Sword", [("le_pictishsword5",0),("le_pictishsword5", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_next_item_as_melee, itc_seax|itcf_carry_sword_left_hip, 990 , weight(0.8)|difficulty(2)|spd_rtng(92) | weapon_length(77)|swing_damage(24 , cut) | thrust_damage(30 , pierce),imodbits_sword,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["rich_shswordt3_alt",   "Rich Short Sword", [("le_pictishsword5",0),("le_pictishsword5", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_seax|itcf_carry_sword_left_hip, 990 , weight(0.8)|difficulty(2)|spd_rtng(92) | weapon_length(70)|swing_damage(22 , cut) | thrust_damage(33 , pierce),imodbits_sword,],
+["rich_shswordt3_alt",   "Rich Short Sword", [("le_pictishsword5",0),("le_pictishsword5", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_seax|itcf_carry_sword_left_hip, 990 , weight(0.8)|difficulty(2)|spd_rtng(92) | weapon_length(70)|swing_damage(22 , blunt) | thrust_damage(33 , blunt),imodbits_sword,],
 #larga
 ["pictish_longsword1", "Pictish Longsword", [("Pictish_Longsword",0),("Scab_Pictish_Longsword", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_secondary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1105 , weight(1.3)|difficulty(10)|spd_rtng(81) | weapon_length(99)|swing_damage(37 , cut) | thrust_damage(14 , pierce),imodbits_sword,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 ["pictish_longsword1_alt", "Pictish Longsword", [("Pictish_Longsword",0),("Scab_Pictish_Longsword", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary|itp_secondary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1105 , weight(1.3)|difficulty(8)|spd_rtng(81) | weapon_length(99)|swing_damage(34 , cut) | thrust_damage(13 , pierce),imodbits_sword,],
 
 #media
-["godelic_swordt2",   "Godelic Sword", [("Celtic1",0),("CelticShort1_1_Scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_seax|itcf_carry_sword_left_hip, 930 , weight(2)|difficulty(8)|spd_rtng(85) | weapon_length(83)|swing_damage(29 , cut) | thrust_damage(24 , pierce),imodbits_sword,
+["godelic_swordt2",   "Godelic Sword", [("Celtic1",0),("CelticShort1_1_Scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_next_item_as_melee, itc_seax|itcf_carry_sword_left_hip, 930 , weight(2)|difficulty(8)|spd_rtng(85) | weapon_length(83)|swing_damage(29 , cut) | thrust_damage(24 , pierce),imodbits_sword,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 
-["godelic_swordt3",   "Godelic Sword", [("irishword2",0),("gallic_sword_scabbard_2", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_seax|itcf_carry_sword_left_hip, 1030 , weight(1)|difficulty(6)|spd_rtng(85) | weapon_length(87)|swing_damage(30 , cut) | thrust_damage(25 , pierce),imodbits_sword,
+["godelic_swordt3",   "Godelic Sword", [("irishword2",0),("gallic_sword_scabbard_2", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_seax|itcf_carry_sword_left_hip, 1030 , weight(1)|difficulty(6)|spd_rtng(85) | weapon_length(87)|swing_damage(22 , blunt) | thrust_damage(0 , blunt),imodbits_sword,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 #tipica
-["pommel_swordt2", "Wooden pommel Sword", [("CelticV2_1",0),("CelticV2_1_scab", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 960 , weight(1.25)|difficulty(8)|spd_rtng(92) | weapon_length(90)|swing_damage(33 , cut) | thrust_damage(14 , pierce),imodbits_sword_high,
+["pommel_swordt2", "Wooden pommel Sword", [("CelticV2_1",0),("CelticV2_1_scab", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 960 , weight(1.25)|difficulty(8)|spd_rtng(92) | weapon_length(90)|swing_damage(33 , cut) | thrust_damage(14 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["pommel_swordt2_alt", "Wooden pommel Sword", [("CelticV2_1",0),("CelticV2_1_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 960 , weight(1.25)|difficulty(8)|spd_rtng(81) | weapon_length(90)|swing_damage(35 , cut) | thrust_damage(15 , pierce),imodbits_sword_high,],
+["pommel_swordt2_alt", "Wooden pommel Sword", [("CelticV2_1",0),("CelticV2_1_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 960 , weight(1.25)|difficulty(8)|spd_rtng(81) | weapon_length(90)|swing_damage(15, blunt) | thrust_damage(5 , blunt),imodbits_sword_high,],
 
 
 ["pommel_swordt3", "Long wooden pommel Sword", [("CelticV2_2",0),("CelticV2_2_scab", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1070 , weight(1.25)|difficulty(8)|spd_rtng(89) | weapon_length(95)|swing_damage(34 , cut) | thrust_damage(14 , pierce),imodbits_sword_high,
@@ -1998,11 +1998,11 @@ items = [
 #irlandeses y pictos nobles y rey
 ["pict_princep_swordt3res", "resNorthern Princep Sword", [("Pict_sword",0),("Scab_Pict_Sword", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1060 , weight(1.25)|difficulty(9)|spd_rtng(89) | weapon_length(91)|swing_damage(33 , cut) | thrust_damage(20 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["pict_princep_swordt3res_alt", "resNorthern Princep Sword", [("Pict_sword",0),("Scab_Pict_Sword", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1080 , weight(1.25)|difficulty(9)|spd_rtng(82) | weapon_length(90)|swing_damage(36 , cut) | thrust_damage(20 , pierce),imodbits_sword_high,],
+["pict_princep_swordt3res_alt", "resNorthern Princep Sword", [("Pict_sword",0),("Scab_Pict_Sword", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1080 , weight(1.25)|difficulty(9)|spd_rtng(82) | weapon_length(90)|swing_damage(36 , blunt) | thrust_damage(20 , blunt),imodbits_sword_high,],
 
 ["espada_kirkburn", "Nobleman Sword", [("Kirkburn",0),("Kirkburn_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip|itp_next_item_as_melee, 1080 , weight(1.25)|difficulty(9)|spd_rtng(82) | weapon_length(90)|swing_damage(36 , cut) | thrust_damage(18 , pierce),imodbits_sword_high,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["espada_kirkburn_alt", "Nobleman Sword", [("Kirkburn",0),("Kirkburn_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1080 , weight(1.25)|difficulty(9)|spd_rtng(82) | weapon_length(90)|swing_damage(36 , cut) | thrust_damage(18 , pierce),imodbits_sword_high,],
+["espada_kirkburn_alt", "Nobleman Sword", [("Kirkburn",0),("Kirkburn_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1080 , weight(1.25)|difficulty(9)|spd_rtng(82) | weapon_length(90)|swing_damage(16 , blunt) | thrust_damage(0 , blunt),imodbits_sword_high,],
 
 # #champion sword para determinada elite o unidad, es una espada a dos manos
 ["celticlongsword2ht3", "Goidel Champion Sword", [("gaelic_champion_sword",0),("gaelic_champion_sword", ixmesh_carry)], itp_merchandise|itp_type_two_handed_wpn| itp_two_handed|itp_primary|itp_cant_use_on_horseback|itp_next_item_as_melee, itc_greatsword|itcf_carry_sword_back,
@@ -2018,7 +2018,7 @@ items = [
 ["espada_beowulf", "Hrunting", [("beowulfsword",0),("beowulfsword_scab", ixmesh_carry)], itp_type_one_handed_wpn|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip,
  1260 , weight(1.25)|difficulty(12)|spd_rtng(85) | weapon_length(97)|swing_damage(42 , cut) | thrust_damage(25 , pierce),imodbits_sword_high],
 ["espada_beowulf_alt", "Hrunting", [("beowulfsword",0),("beowulfsword_scab", ixmesh_carry)], itp_type_two_handed_wpn| itp_two_handed|itp_primary, itc_longsword|itcf_carry_sword_left_hip,
- 1260 , weight(1.25)|difficulty(12)|spd_rtng(85) | weapon_length(97)|swing_damage(42 , cut) | thrust_damage(25 , pierce),imodbits_sword_high],
+ 1260 , weight(1.25)|difficulty(12)|spd_rtng(85) | weapon_length(97)|swing_damage(32 , blunt) | thrust_damage(15 , blunt),imodbits_sword_high],
 ["espada_hispania","Erudino", [("le_pictishsword6",0),("le_pictishsword6", ixmesh_carry)], itp_type_one_handed_wpn|itp_always_loot|itp_primary|itp_next_item_as_melee, itc_longsword|itcf_carry_sword_left_hip,
  1118 , weight(1.25)|difficulty(10)|spd_rtng(82) | weapon_length(85)|swing_damage(24 , cut) | thrust_damage(35 , pierce),imodbits_sword_high], #chief cambiado
 ["espada_hispania_alt","Erudino", [("le_pictishsword6",0),("le_pictishsword6", ixmesh_carry)], itp_type_one_handed_wpn|itp_always_loot|itp_primary, itc_longsword|itcf_carry_sword_left_hip,1118 , weight(1.25)|difficulty(10)|spd_rtng(82) | weapon_length(85)|swing_damage(24 , cut) | thrust_damage(35 , pierce),imodbits_sword_high], #chief cambiado
@@ -2139,15 +2139,15 @@ items = [
 ["axe3","Sharp Hatchet",[("axefaradon2",0)],itp_axe1ha,itc_axe1h,490,weight(1.5)|difficulty(6)|spd_rtng(85)|weapon_length(61)|swing_damage(27,pierce)|thrust_damage(0,pierce),imodbits_axe],
 ["axe3_alt","Sharp Hatchet",[("axefaradon2",0)],itp_axe1halt,itc_axe1h,490,weight(1.5)|difficulty(6)|spd_rtng(85)|weapon_length(61)|swing_damage(21,blunt)|thrust_damage(0,pierce),imodbits_axe],
 ["axe2_crude","Crude Axe",[("axe_2",0)],itp_axe1ha,itc_axe1h,455,weight(2.1)|difficulty(8)|spd_rtng(71)|weapon_length(72)|swing_damage(31,pierce)|thrust_damage(0,pierce),imodbits_axe],
-["axe2_crude_alt","Crude Axe",[("axe_2",0)],itp_axe1halt,itc_axe1h,455,weight(2.1)|difficulty(8)|spd_rtng(71)|weapon_length(72)|swing_damage(26,blunt)|thrust_damage(0,pierce),imodbits_axe],
+["axe2_crude_alt","Crude Axe",[("axe_2",0)],itp_axe1halt,itc_axe1h,455,weight(2.1)|difficulty(8)|spd_rtng(71)|weapon_length(72)|swing_damage(26,blunt)|thrust_damage(0,blunt),imodbits_axe],
 ["axe4","Fighting Axe",[("axe_c",0)],itp_axe1ha,itc_axe1h,490,weight(1.5)|difficulty(7)|spd_rtng(83)|weapon_length(70)|swing_damage(28,pierce)|thrust_damage(0,pierce),imodbits_axe],
-["axe4_alt","Fighting Axe",[("axe_c",0)],itp_axe1halt,itc_axe1h,490,weight(1.5)|difficulty(7)|spd_rtng(83)|weapon_length(70)|swing_damage(22,blunt)|thrust_damage(0,pierce),imodbits_axe],
+["axe4_alt","Fighting Axe",[("axe_c",0)],itp_axe1halt,itc_axe1h,490,weight(1.5)|difficulty(7)|spd_rtng(83)|weapon_length(70)|swing_damage(22,blunt)|thrust_damage(0,blunt),imodbits_axe],
 #differentmesh!!alert
 ["axe2","Cheapaxe",[("gallic_axe_1",0)],itp_axe1ha,itc_axe1h,400,weight(1.5)|difficulty(5)|spd_rtng(75)|weapon_length(71)|swing_damage(27,pierce)|thrust_damage(0,pierce),imodbits_axe,],
 ["axe2_alt","Cheapaxe",[("gallic_axe_1",0)],itp_axe1halt,itc_axe1h,400,weight(1.5)|difficulty(5)|spd_rtng(75)|weapon_length(71)|swing_damage(21,blunt)|thrust_damage(0,pierce),imodbits_axe,],
 #invasores#t2=29-32 avg speed 80 length73 cost 530
 ["axe_englet2","EngleAxe",[("axefaradon3",0)],itp_axe1ha,itc_axe1h,528,weight(2)|difficulty(7)|spd_rtng(81)|weapon_length(74)|swing_damage(29,pierce)|thrust_damage(0,pierce),imodbits_axe,[],['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5','fac_kingdom_9','fac_kingdom_13','fac_kingdom_14']],
-["axe_englet2_alt","EngleAxe",[("axefaradon3",0)],itp_axe1halt,itc_axe1h,528,weight(2)|difficulty(7)|spd_rtng(81)|weapon_length(74)|swing_damage(23,blunt)|thrust_damage(0,pierce),imodbits_axe,],
+["axe_englet2_alt","EngleAxe",[("axefaradon3",0)],itp_axe1halt,itc_axe1h,528,weight(2)|difficulty(7)|spd_rtng(81)|weapon_length(74)|swing_damage(23,blunt)|thrust_damage(0,blunt),imodbits_axe,],
 ["axe_longfrankisht3",    "Frankish Long Axe",[("vikingaxeb",0)],itp_axe1ha,itc_axe1h,651,weight(2.5)|difficulty(9)|spd_rtng(75)|weapon_length(83)|swing_damage(33,pierce)|thrust_damage(0 , pierce),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5']],
 ["axe_longfrankisht3_alt","Frankish Long Axe a",[("vikingaxeb",0)],itp_axe1halt,itc_axe1h,481,weight(2)|difficulty(9)|spd_rtng(79)|weapon_length(80)|swing_damage(26,blunt)|thrust_damage(0 , blunt),imodbits_axe,],
 ["axe_britonbattlet2",   "Frankish Axe", [("frankish_Axe2",0)],itp_axe1ha,itc_axe1h,550 , weight(2)|difficulty(7)|spd_rtng(80) | weapon_length(77)|swing_damage(29 , pierce) | thrust_damage(0 , blunt),imodbits_axe, [], ['fac_kingdom_1','fac_kingdom_2','fac_kingdom_3','fac_kingdom_4','fac_kingdom_5']],
@@ -2357,7 +2357,7 @@ items = [
 ["maul_blunt", "Maul_1h", [("maul_b",0)], itp_axe1h|itp_type_two_handed_wpn, itc_bln,550, weight(3.5)|difficulty(9)|spd_rtng(70)|weapon_length(83)|swing_damage(33,blunt)|thrust_damage(0,blunt), imodbits_axe, [], ['fac_kingdom_20','fac_kingdom_17','fac_kingdom_19','fac_kingdom_27','fac_kingdom_28','fac_kingdom_29','fac_kingdom_30','fac_kingdom_31'] ],
 ["greathammer", "Great Hammer", [("maul_d",0)], itp_sleg,itc_sleg, 530, weight(3.9)|difficulty(11)|spd_rtng(84)|weapon_length(81)|swing_damage(36,blunt)|thrust_damage(0,blunt), imodbits_sword, [], ['fac_kingdom_20','fac_kingdom_17','fac_kingdom_19','fac_kingdom_27','fac_kingdom_28','fac_kingdom_29','fac_kingdom_30','fac_kingdom_31'] ],
 ["greathammerlong","Great LongHammer", [("maul_d",0)], itp_sleg,itc_sleg,699, weight(4.3)|difficulty(12)|spd_rtng(80) | weapon_length(89)|swing_damage(39 , blunt) | thrust_damage(0 , blunt),imodbits_sword,[], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["militaryhammer", "military_hammer", [("military_hammer",0)], itp_bln, itc_bln, 1, weight(3)|abundance(60)|head_armor(0)|body_armor(0)|leg_armor(1), imodbits_mace],
+["militaryhammer", "Military_hammer", [("military_hammer",0)], itp_axe1h, itc_bln, 1, weight(3)|abundance(60)|head_armor(0)|body_armor(0)|leg_armor(1), imodbits_mace],
 ["minershammer", "Crude 1H Pick", [("rusty_pick",0)], itp_type_two_handed_wpn|itp_primary|itp_secondary|itp_merchandise |itp_next_item_as_melee, itc_morningstar|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 960, weight(1.3)|difficulty(8)|spd_rtng(82)|weapon_length(99)|swing_damage(36,blunt)|thrust_damage(12,blunt), imodbits_axe, [], ['fac_kingdom_20','fac_kingdom_17','fac_kingdom_19','fac_kingdom_27','fac_kingdom_28','fac_kingdom_29','fac_kingdom_30','fac_kingdom_31'] ],
 ["minershammer_alt", "rHammer Pick", [("maul_b",0)],itp_2haxb,itc_2hax, 960, weight(1.3)|difficulty(8)|spd_rtng(82)|weapon_length(99)|swing_damage(36,blunt)|thrust_damage(12,blunt), imodbits_axe, [], ['fac_kingdom_20','fac_kingdom_17','fac_kingdom_19','fac_kingdom_27','fac_kingdom_28','fac_kingdom_29','fac_kingdom_30','fac_kingdom_31'] ],
 ["fightingpickhammer", "Fighting Pick", [("rusty_pick",0)], itp_type_two_handed_wpn|itp_primary|itp_secondary |itp_next_item_as_melee, itc_morningstar|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 960, weight(1.3)|difficulty(8)|spd_rtng(82)|weapon_length(99)|swing_damage(36,blunt)|thrust_damage(12,blunt), imodbits_axe, [], ['fac_kingdom_20','fac_kingdom_17','fac_kingdom_19','fac_kingdom_27','fac_kingdom_28','fac_kingdom_29','fac_kingdom_30','fac_kingdom_31'] ],
@@ -2385,40 +2385,44 @@ items = [
                                                       
 ["spear1",   "Spear", [("spjot",0)], itp_spear, itc_spear, 400 , weight(1.4)|abundance(60)|difficulty(7)|spd_rtng(90) | weapon_length(133)|swing_damage(15, blunt) | thrust_damage(26 , pierce),imodbits_polearm ],
 
-["spear2",   "Medium Spear", [("saxon2hspear",0)], itp_test2hspear, itc_spear, 400 , weight(1.4)|abundance(6)|spd_rtng(90) | weapon_length(144)|swing_damage(20, blunt) | thrust_damage(22, pierce),imodbits_polearm ],
+["spear2",   "Medium Spear", [("saxon2hspear",0)], itp_spear, itc_spear, 400 , weight(1.4)|abundance(6)|spd_rtng(90) | weapon_length(144)|swing_damage(20, blunt) | thrust_damage(22, pierce),imodbits_polearm ],
 ["spearlight",   "Light Spear", [("hoggkesja",0)], itp_spear, itc_spear, 165 , weight(1.3)|abundance(67)|difficulty(6)|spd_rtng(102) | weapon_length(125)|swing_damage(13, blunt) | thrust_damage(27 , pierce),imodbits_polearm ],
 ["spearboar",   "Boar Spear", [("svia2",0)], itp_spear, itc_spear, 521 , weight(2)|abundance(60)|difficulty(8)|spd_rtng(84) | weapon_length(131)|swing_damage(19 , blunt) | thrust_damage(26, pierce),imodbits_polearm ],
 #long spear
 ["spearlong",   "Basic Cav Spear", [("spjotkesja",0)], itp_spear, itc_spear, 480 , weight(2.10)|abundance(50)|difficulty(8)|spd_rtng(99) | weapon_length(185)|swing_damage(12 , blunt) | thrust_damage(30 , pierce),imodbits_polearm ],
-["spearwarlong",   "Long War Spear", [("langr_bryntvari",0)], itp_pike, itc_pike, 570, weight(3.08)|abundance(60)|difficulty(10)|spd_rtng(92) | weapon_length(200)|swing_damage(12 , blunt) | thrust_damage(33 , pierce),imodbits_polearm ],
+["spearwarlong",   "Long War Spear", [("langr_bryntvari",0)], itp_spear, itc_pike, 570, weight(3.08)|abundance(60)|difficulty(10)|spd_rtng(92) | weapon_length(200)|swing_damage(12 , blunt) | thrust_damage(33 , pierce),imodbits_polearm ],
 #britones lanzas#gdw use the hasta mesh for another speartier2blades
-["spear_hasta",   "Hasta", [("hasta",0)], itp_spear, itc_spear, 540, weight(3)|difficulty(10)|spd_rtng(88) | weapon_length(145)|swing_damage(17 , blunt) | thrust_damage(28 , pierce),imodbits_polearm,
+["spear_hasta",   "Hasta", [("hasta",0)], itp_bladespear, itc_spear, 540, weight(3)|difficulty(10)|spd_rtng(88) | weapon_length(145)|swing_damage(17 , blunt) | thrust_damage(28 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["spear_blade1t2",   "Blade Spear", [("ped_heavy_spear_long",0)], itp_bladespear, itc_bladespear, 595 , weight(2.5)|difficulty(10)|spd_rtng(88) | weapon_length(132)|swing_damage(23 , cut) | thrust_damage(23 , pierce),imodbits_polearm,
+["spear_hasta_alt",   "Hasta", [("hasta",0)], itp_spearalt, itc_spear, 540, weight(3)|difficulty(10)|spd_rtng(88) | weapon_length(145)|swing_damage(19 , blunt) | thrust_damage(3 , blunt),imodbits_polearm,
+[], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
+["spear_blade1t2",   "Blade Spear", [("ped_heavy_spear_long",0)], itp_bladespear, itc_bladespear, 595 , weight(2.5)|difficulty(10)|spd_rtng(88) | weapon_length(132)|swing_damage(29 , cut) | thrust_damage(5 , blunt),imodbits_polearm,
+[], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
+["spear_blade1t2_alt",   "Blade Spear", [("ped_heavy_spear_long",0)], itp_spearalt, itc_spear, 540, weight(3)|difficulty(10)|spd_rtng(88) | weapon_length(145)|swing_damage(19 , blunt) | thrust_damage(3 , blunt),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
 ["spear_blade2t2",   "Roman long hasta 2", [("roman_spear_2",0)], itp_bladespear, itc_bladespear, 569 , weight(3)|difficulty(10)|spd_rtng(86)|abundance(20) | weapon_length(148)|swing_damage(20 , cut) | thrust_damage(26 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["spear_blade2t2_alt",   "Roman long hasta 2alt", [("roman_spear_2",0)], itp_spearalt, itc_staff, 567 , weight(3)|difficulty(10)|spd_rtng(86)|abundance(20) | weapon_length(148)|swing_damage(19, blunt) | thrust_damage(11 , pierce),imodbits_polearm],
+["spear_blade2t2_alt",   "Roman long hasta 2alt", [("roman_spear_2",0)], itp_spearalt, itc_staff, 567 , weight(3)|difficulty(10)|spd_rtng(86)|abundance(20) | weapon_length(148)|swing_damage(19, blunt) | thrust_damage(11 , blunt),imodbits_polearm],
 # #spear de dos manos britona
 ["spear_briton2ht3",   "Briton Two-Handed Blade Spear", [("langr_hoggspjott1",0)], itp_bladespear, itc_bladespear, 690 , weight(3)|abundance(20)|difficulty(11)|spd_rtng(88) | weapon_length(137)|swing_damage(24 , cut) | thrust_damage(25 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["spear_briton2ht3_alt",   "Briton Two-Handed Blade Spear", [("langr_hoggspjott1",0)], itp_spearalt, itc_bladespear, 690 , weight(3)|abundance(20)|difficulty(11)|spd_rtng(88) | weapon_length(137)|swing_damage(20 , blunt) | thrust_damage(9 , pierce),imodbits_polearm],
+["spear_briton2ht3_alt",   "Briton Two-Handed Blade Spear", [("langr_hoggspjott1",0)], itp_spearalt, itc_bladespear, 690 , weight(3)|abundance(20)|difficulty(11)|spd_rtng(88) | weapon_length(137)|swing_damage(20 , blunt) | thrust_damage(9 , blunt),imodbits_polearm],
 ["spear_britonshortt2",   "Briton Short Spear", [("01atgeirr1",0)], itp_spear, itc_spear, 380 , weight(1.1)|abundance(40)|difficulty(7)|spd_rtng(112) | weapon_length(118)|swing_damage(13 , blunt) | thrust_damage(31 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
 ["spear_britonmedt2",  "Briton Medium Spear", [("02spjot",0)], itp_spear, itc_spear, 430 , weight(1.4)|abundance(40)|difficulty(8)|spd_rtng(94) | weapon_length(142)|swing_damage(15 , blunt) | thrust_damage(30 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
 ["spear_britonlight",   "Briton Light Spear", [("01krokaspjott2",0)], itp_spear, itc_spear, 250 , weight(0.7)|abundance(66)|difficulty(6)|spd_rtng(105) | weapon_length(119)|swing_damage(11 , blunt) | thrust_damage(30 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["spear_briton_longt2", "Briton Cav Spear", [("01langr_bryntvari",0)], itp_pike, itc_spear, 525 , weight(3)|abundance(47)|difficulty(10)|spd_rtng(91) | weapon_length(190)|swing_damage(13 , blunt) | thrust_damage(32 , pierce),imodbits_polearm,
+["spear_briton_longt2", "Briton Cav Spear", [("01langr_bryntvari",0)], itp_spear, itc_spear, 525 , weight(3)|abundance(47)|difficulty(10)|spd_rtng(91) | weapon_length(190)|swing_damage(13 , blunt) | thrust_damage(32 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["longspeart3",   "Briton Pike", [("02spjotkesja",0)], itp_spear, itc_spear, 540 , weight(2.55)|abundance(50)|difficulty(8)|spd_rtng(90) | weapon_length(230)|swing_damage(14 , blunt) | thrust_damage(34 , pierce),imodbits_polearm,
+["longspeart3",   "Briton Pike", [("02spjotkesja",0)], itp_pike, itc_spear, 540 , weight(2.55)|abundance(50)|difficulty(8)|spd_rtng(90) | weapon_length(230)|swing_damage(14 , blunt) | thrust_damage(34 , pierce),imodbits_polearm,
 [], ['fac_kingdom_6', 'fac_kingdom_7', 'fac_kingdom_8', 'fac_kingdom_10', 'fac_kingdom_11', 'fac_kingdom_12', 'fac_kingdom_15', 'fac_kingdom_16', 'fac_kingdom_18', 'fac_kingdom_21', 'fac_kingdom_22', 'fac_kingdom_23', 'fac_kingdom_24', 'fac_kingdom_25', 'fac_kingdom_26']],
-["longspeart3_alt",   "Long Spear", [("02spjotkesja",0)], itp_spearalt, itc_staff, 180 , weight(2.55)|abundance(60)|difficulty(8)|spd_rtng(90) | weapon_length(230)|swing_damage(16 , blunt) | thrust_damage(9 , pierce),imodbits_polearm],
+["longspeart3_alt",   "Long Spear", [("02spjotkesja",0)], itp_spearalt, itc_staff, 180 , weight(2.55)|abundance(60)|difficulty(8)|spd_rtng(90) | weapon_length(230)|swing_damage(16 , blunt) | thrust_damage(9 , blunt),imodbits_polearm],
 # #saxon 2 h spear, lanza a dos manos
 ["twohand_speart3",   "Saxon Two-Handed Blade Spear", [("saxon2hspear",0)], itp_bladespear, itc_bladespear, 600 , weight(3)|difficulty(11)|spd_rtng(88) | weapon_length(139)|swing_damage(23 , cut) | thrust_damage(25 , pierce),imodbits_polearm,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
 #spear 2 h cstadi con hoja larga como cuchilla
-["twohand_speart3_alt",   "Two-Handed Spear", [("saxon2hspear",0)], itp_spearalt, itc_staff, 400 , weight(4)|difficulty(0)|spd_rtng(85) | weapon_length(199)|swing_damage(21 , blunt) | thrust_damage(9 , pierce),imodbits_polearm],
+["twohand_speart3_alt",   "Two-Handed Spear", [("saxon2hspear",0)], itp_spearalt, itc_staff, 400 , weight(4)|difficulty(0)|spd_rtng(85) | weapon_length(199)|swing_damage(21 , blunt) | thrust_damage(9 , blunt),imodbits_polearm],
 ["saxon_medium_speart2", "Saxon Spear", [("saxon_spear",0)], itp_spear, itc_spear, 480, weight(2)|difficulty(8)|spd_rtng(89)|weapon_length(140)|swing_damage(15,blunt)|thrust_damage(30,pierce), imodbits_polearm,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
  #1 manoasdfasdf
@@ -2426,13 +2430,13 @@ items = [
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
 ["engle_speart2",   "Saxon Spear", [("saxon_spear",0)], itp_spear, itc_spear, 510 , weight(2)|difficulty(10)|spd_rtng(88) | weapon_length(149)|swing_damage(15 , blunt) | thrust_damage(32 , pierce),imodbits_polearm,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
-["germanlongspeart2",   "Saxon Long Spear", [("langr_svia",0)],itp_spear, itc_spear, 590 , weight(3)|difficulty(10)|spd_rtng(89) | weapon_length(220)|swing_damage(15 , blunt) | thrust_damage(30 , pierce),imodbits_polearm,
+["germanlongspeart2",   "Saxon Long Spear", [("langr_svia",0)],itp_pike, itc_spear, 590 , weight(3)|difficulty(10)|spd_rtng(89) | weapon_length(220)|swing_damage(15 , blunt) | thrust_damage(30 , pierce),imodbits_polearm,
 [], ['fac_kingdom_1', 'fac_kingdom_2', 'fac_kingdom_3', 'fac_kingdom_4', 'fac_kingdom_5', 'fac_kingdom_9', 'fac_kingdom_13', 'fac_kingdom_14']],
 ["germanlongspeart2_alt",   "Saxon Long Spear", [("langr_svia",0)],itp_spearalt, itc_staff, 500 , weight(3.25)|difficulty(8)|spd_rtng(95) | weapon_length(235)|swing_damage(17 , blunt) | thrust_damage(9 , pierce),imodbits_polearm],
 # Goedendag Irish y pictos
 ["hunting_spear", "Hunting Spear", [("04hoggkesja",0)], itp_spear, itc_spear, 160 , weight(1.7)|abundance(60)|difficulty(6)|spd_rtng(97) | weapon_length(125)|swing_damage(14 , blunt) | thrust_damage(26 , pierce),imodbits_polearm,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["medium_speaript3",   "Elite Gael Med Spear", [("02bryntvari",0)], itp_spear, itc_spear, 580 , weight(2.25)|difficulty(9)|abundance(20)|spd_rtng(93) | weapon_length(140)|swing_damage(16 , blunt) | thrust_damage(32 , pierce),imodbits_polearm,
+["medium_speaript3",   "Elite Gael Med Spear", [("02bryntvari",0)], itp_pike, itc_spear, 580 , weight(2.25)|difficulty(9)|abundance(20)|spd_rtng(93) | weapon_length(140)|swing_damage(16 , blunt) | thrust_damage(32 , pierce),imodbits_polearm,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 ["medium_speaript3_alt",   "Medium Spear", [("02bryntvari",0)], itp_spearalt, itc_staff,580 , weight(2.25)|difficulty(6)|spd_rtng(93) | weapon_length(140)|swing_damage(17 , blunt) | thrust_damage(9 , pierce),imodbits_polearm],
 ["pictish_boar_speart2",   "Pictish Boar Spear", [("02svia2",0)], itp_spear, itc_spear,425 , weight(3)|abundance(50)|difficulty(8)|spd_rtng(88) | weapon_length(135)|swing_damage(18 , blunt) | thrust_damage(27 , pierce),imodbits_polearm,
@@ -2442,17 +2446,17 @@ items = [
 ["warspear_godelict3_alt",   "Godelic Elite Spear", [("03bryntvari",0)], itp_spearalt, itc_staff, 180 , weight(2.25)|difficulty(6)|spd_rtng(95) | weapon_length(152)|swing_damage(17 , blunt) | thrust_damage(9 , pierce),imodbits_polearm],
 ["spear_lightgael",   "Godelic Light Spear", [("05hoggkesja",0)], itp_spear, itc_spear,160 , weight(1.7)|abundance(60)|difficulty(6)|spd_rtng(115) | weapon_length(117)|swing_damage(12 , blunt) | thrust_damage(28 , pierce),imodbits_polearm,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["long_speaript2",   "Godelic Pike", [("fjadraspjot",0)], itp_pike, itc_spear, 440 , weight(4)|abundance(60)|difficulty(9)|spd_rtng(92) | weapon_length(225)|swing_damage(15 , blunt) | thrust_damage(30 , pierce),imodbits_polearm,
+["long_speaript2",   "Godelic Pike", [("fjadraspjot",0)], itp_spear, itc_spear, 440 , weight(4)|abundance(60)|difficulty(9)|spd_rtng(92) | weapon_length(225)|swing_damage(15 , blunt) | thrust_damage(30 , pierce),imodbits_polearm,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
 ["spearslot1",   "Third testSpear", [("spjot",0)], itp_test1hspear, itc_spear, 460 , weight(2.25)|abundance(0)|difficulty(6)|spd_rtng(90) | weapon_length(144)|swing_damage(13 , blunt) | thrust_damage(28 , pierce),imodbits_polearm ],
 ["spearslot2", "Fifth testspear", [("02svia2",0)],itp_spearalt, itc_spear, 199, weight(2.25)|abundance(0)|difficulty(6)|spd_rtng(90) | weapon_length(144)|swing_damage(13 , blunt) | thrust_damage(30 , pierce), imodbits_polearm ],
 #long meshes: saxon2hspear saxon_spear  01langr_bryntvari  hasta  spjotkesja-longspear
-["spear_cavalrylance1",   "Dawn Ray Cav", [("krokaspjott1",0)], itp_spear, itc_spear, 580, weight(2.55)|abundance(20)|spd_rtng(96) | weapon_length(185)|swing_damage(13 , blunt) | thrust_damage(32 , pierce),imodbit_balanced ],
+["spear_cavalrylance1",   "Dawn Ray Cav", [("krokaspjott1",0)], itp_pike, itc_spear, 580, weight(2.55)|abundance(20)|spd_rtng(96) | weapon_length(185)|swing_damage(13 , blunt) | thrust_damage(32 , pierce),imodbit_balanced ],
 ["spear_cavalrylance1_alt",   "Dawn Ray Cav", [("krokaspjott1",0)], itp_spearalt, itc_staff, 260 , weight(2.55)|abundance(20)|spd_rtng(96) | weapon_length(185)|swing_damage(14 , blunt) | thrust_damage(13 , pierce),imodbit_balanced ],
 #lanzas magicas especiales reyes y nobles  #short meshes: 02svia2  05bryntvari2  svia2 04hoggkesja-  01krokaspjott2
-["spear_elitequest1",   "rHope LongWarrior", [("02krokaspjott1",0)], itp_spearalt, itc_spear, 360 , weight(2.55)|difficulty(5)|spd_rtng(90) | weapon_length(185)|swing_damage(13 , blunt) | thrust_damage(30 , pierce),imodbit_balanced ],
+["spear_elitequest1",   "rHope LongWarrior", [("02krokaspjott1",0)], itp_pike, itc_spear, 360 , weight(2.55)|difficulty(5)|spd_rtng(90) | weapon_length(185)|swing_damage(13 , blunt) | thrust_damage(30 , pierce),imodbit_balanced ],
 ["spear_elitequest1_alt",   "rHopelong3", [("ped_heavy_spear_long",0)], itp_spearalt, itc_staff, 360 , weight(2.55)|difficulty(8)|spd_rtng(90) | weapon_length(185)|swing_damage(17 , blunt) | thrust_damage(31 , pierce),imodbit_balanced ],
-["spear_elitequest2",   "s7britonwarsp", [("01langr_bryntvari",0)], itp_spearalt, itc_spear, 360 , weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(200)|swing_damage(15 , blunt) | thrust_damage(33 , pierce),imodbit_balanced ],
+["spear_elitequest2",   "s7britonwarsp", [("01langr_bryntvari",0)], itp_pike, itc_spear, 360 , weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(200)|swing_damage(15 , blunt) | thrust_damage(33 , pierce),imodbit_balanced ],
 ["spear_elitequest2_alt",   "s8reBreath of Dragon", [("05bryntvari2",0)], itp_spearalt, itc_staff, 360 , weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(200)|swing_damage(15 , blunt) | thrust_damage(34 , pierce),imodbit_balanced ],
 #05bryntvari2 was breathfjadraspjot01langr_bryntvari
 ["spear_elitequest3",   "s9rRaven", [("fjadraspjot",0)], itp_test2hspear, itc_spear, 360 , weight(2.55)|difficulty(6)|spd_rtng(115) | weapon_length(144)|swing_damage(22 , blunt) | thrust_damage(18 , pierce),imodbit_balanced ],
@@ -2463,22 +2467,22 @@ items = [
 #####estandartes finales chief####
  #############################
 #sajon, anglo y juto banner
-["wessexbanner1",   "Banner", [("wessexbanner1",0)],itp_banner, itc_banner, 550 , weight(4)|difficulty(8)|spd_rtng(70) | weapon_length(148)|swing_damage(28 , blunt) | thrust_damage(10 , blunt),imodbits_polearm ], #chief cambiado
-["cavalrybannert2",   "Cavalry Banner", [("wessexbanner2",0)], itp_spear, itc_spear, 730 , weight(4)|difficulty(2)|spd_rtng(81) | weapon_length(135)|swing_damage(13 , blunt) | thrust_damage(30 , pierce),imodbits_polearm ], #chief cambiado
+["wessexbanner1",   "Banner", [("wessexbanner1",0)],itp_staff, itc_banner, 550 , weight(4)|difficulty(8)|spd_rtng(70) | weapon_length(148)|swing_damage(28 , blunt) | thrust_damage(10 , blunt),imodbits_polearm ], #chief cambiado
+["cavalrybannert2",   "Cavalry Banner", [("wessexbanner2",0)], itp_banner, itc_spear, 730 , weight(4)|difficulty(2)|spd_rtng(81) | weapon_length(135)|swing_damage(13 , blunt) | thrust_damage(30 , pierce),imodbits_polearm ], #chief cambiado
 ["cavalrybannert2_alt",   "Cavalry Banner", [("wessexbanner2",0)], itp_spearalt, itc_staff, 780 , weight(2)|difficulty(8)|spd_rtng(80) | weapon_length(135)|swing_damage(14 , blunt) | thrust_damage(9 , blunt),imodbits_polearm ], #chief cambiado
 
 ["spearbannert2",   "Fighting Banner", [("wessexbanner3",0)], itp_banner, itc_spear, 690 , weight(2)|difficulty(8)|spd_rtng(79) | weapon_length(139)|swing_damage(18 , blunt) | thrust_damage(25 , pierce),imodbits_polearm ], #chief cambiado
 ["spearbannert2_alt",   "Fighting Banner", [("wessexbanner3",0)], itp_spearalt, itc_staff, 780 , weight(2)|difficulty(8)|spd_rtng(79) | weapon_length(139)|swing_damage(19 , blunt) | thrust_damage(9 , blunt),imodbits_polearm ], #chief cambiado
 
-["spearbanner4",   "Banner", [("wessexbanner4",0)],itp_banner, itc_spear, 640 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(148)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
-["spearbanner5",   "Banner", [("wessexbanner5",0)], itp_banner, itc_spear, 648 , weight(5)|difficulty(8)|spd_rtng(75) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
-["wessexbanner6",   "Banner", [("wessexbanner6",0)], itp_banner, itc_banner, 550 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
-["wessexbanner7",   "Banner", [("wessexbanner7",0)],  itp_banner, itc_banner, 550 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6, pierce),imodbits_polearm ], #chief cambiado
-["wessexbanner8",   "Banner", [("wessexbanner8",0)],  itp_banner, itc_banner, 550 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
-["heraldicbannert3",   "Heraldic Banner", [("personalbanner",0)],itp_spear, itc_spear, 820 , weight(5)|difficulty(8)|spd_rtng(85) | weapon_length(135)|swing_damage(22 , blunt) | thrust_damage(26 , pierce),imodbits_polearm, 
+["spearbanner4",   "Banner", [("wessexbanner4",0)],itp_staff, itc_spear, 640 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(148)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
+["spearbanner5",   "Banner", [("wessexbanner5",0)], itp_staff, itc_spear, 648 , weight(5)|difficulty(8)|spd_rtng(75) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
+["wessexbanner6",   "Banner", [("wessexbanner6",0)], itp_staff, itc_banner, 550 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
+["wessexbanner7",   "Banner", [("wessexbanner7",0)],  itp_staff, itc_banner, 550 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6, pierce),imodbits_polearm ], #chief cambiado
+["wessexbanner8",   "Banner", [("wessexbanner8",0)],  itp_staff, itc_banner, 550 , weight(5)|difficulty(8)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(6 , pierce),imodbits_polearm ], #chief cambiado
+["heraldicbannert3",   "Heraldic Banner", [("personalbanner",0)],itp_banner, itc_spear, 820 , weight(5)|difficulty(8)|spd_rtng(85) | weapon_length(135)|swing_damage(22 , blunt) | thrust_damage(26 , pierce),imodbits_polearm, 
 [(ti_on_init_item, [(store_trigger_param_1, ":agent_no"),(store_trigger_param_2, ":troop_no"),(call_script, "script_shield_item_set_banner", "tableau_pavise_shield_1", ":agent_no", ":troop_no")])]],
 ["heraldicbannert3_alt",   "Heraldic Banner", [("personalbanner",0)], itp_spearalt, itc_staff, 780 , weight(2)|difficulty(8)|spd_rtng(85) | weapon_length(135)|swing_damage(24 , blunt) | thrust_damage(12 , blunt),imodbits_polearm, ],
-["wessexbanner9",   "Banner", [("wessexbanner9",0)],  itp_banner, itc_staff, 550 , weight(4)|difficulty(5)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(9, pierce),imodbits_none ], #chief cambiado
+["wessexbanner9",   "Banner", [("wessexbanner9",0)],  itp_staff, itc_staff, 550 , weight(4)|difficulty(5)|spd_rtng(70) | weapon_length(149)|swing_damage(18 , blunt) | thrust_damage(9, pierce),imodbits_none ], #chief cambiado
 #todo correcto pero problemas para ajustar textura, pasable por ahora
 
 #####estandartes finales acaba####

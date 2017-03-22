@@ -164,6 +164,14 @@ slot_agent_fatiga_inicial = 53
 ### aoe
 slot_agent_has_been_healed        = 54
 slot_agent_dinerotropas       = 55
+
+#Sladki blunt order trigger (56-59)
+slot_agent_sblunt_invslot_0 = 56
+slot_agent_sblunt_invslot_1 = 57
+slot_agent_sblunt_invslot_2 = 58
+slot_agent_sblunt_invslot_3 = 59
+
+
 ########################################################
 ##  FACTION SLOTS          #############################
 ########################################################
@@ -506,7 +514,7 @@ slot_center_volunteer_troop_amount= 93
 slot_center_ransom_broker         = 95
 slot_center_tavern_traveler       = 96
 slot_center_traveler_info_faction = 97
-slot_center_tavern_bookseller     = 98
+slot_center_tavern_bookseller     = 98146
 slot_center_tavern_minstrel       = 99
 slot_center_bardo       = 100 #puesto chief para bardos
 slot_center_sacerdote       = 101 #puesto chief para sacerdotes

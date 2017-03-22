@@ -1,4 +1,4 @@
-2468
+2473
 qstr_{reg65?my_Lady:my_Lo {reg65?my_Lady:my_Lord}
 qstr_{reg65?My_Lady:My_Lo {reg65?My_Lady:My_Lord}
 qstr_{reg65?madame:sir} {reg65?madame:sir}
@@ -555,6 +555,7 @@ qstr_You_need_more_renown You_need_more_renown_or_to_ask_the_guard.
 qstr_{!}DEBUG:_getting_me {!}DEBUG:_getting_merc_amount_in_game_menus
 qstr_{!}DEBUG:_getting_mer {!}DEBUG:_getting_merc2_amount_in_game_menus
 qstr_{!}DEBUG___Current_t {!}DEBUG_-_Current_town_is_{s3},_but_also_checking_{s4}
+qstr_Mystic_Merchant Mystic_Merchant
 qstr_The_prison_of_your_l The_prison_of_your_lair_has_low_levels_of_security._Your_captain_will_suggest_not_enclosing_lords_here!
 qstr___{reg1}_scillingas_p _({reg1}_scillingas_per_night)
 qstr_You_were_beaten._The You_were_beaten._The_peasants_are_heartened_by_their_success,_but_the_lesson_you_wanted_to_teach_them_probably_didn't_get_through...
@@ -905,7 +906,9 @@ qstr_Division_{reg0}:_ret Division_{reg0}:_returning_after_destroying_enemy_{s1}
 qstr_Division_{reg0}:_cav Division_{reg0}:_cavalry_formation_disassembled.
 qstr_You_unleash_a_fearso You_unleash_a_fearsome_cry!
 qstr_You_rally_your_men!_ You_rally_your_men!_(wounded_troops_recover_{reg1}_%_hitpoints)
+qstr_[DEBUG]_{s0}_swapped [DEBUG]_{s0}_swapped_{s1}({reg1})_with_{s2}(dmg_type:{reg2})
 qstr_{!}DEBUG___{reg4}_to {!}DEBUG_--{reg4}_toggling_weapon
+qstr_{!}DEBUG___{reg5}_fa {!}DEBUG_--{reg5}_failed_to_find_blunt
 qstr__You_have_beaten_the _You_have_beaten_the_old_hero,_you_have_begun_your_journey_to_the_legend.
 qstr__Bandits_strike_you_ _Bandits_strike_you_with_anger_and_you_fall_into_a_puddle_of_blood._They_think_you're_dead...
 qstr__The_bandits_and_sla _The_bandits_and_slavers_have_been_dealt_with._Get_the_prisoners_and_leave_through_the_air_shaft.
@@ -1080,6 +1083,7 @@ qstr_Current_Wage:_{reg23 Current_Wage:_{reg23}_denars.
 qstr_Next_Pay/Promotion_d Next_Pay/Promotion_day:_{s25}
 qstr_Army_size:_{reg26} Army_size:_{reg26}
 qstr_Commander_s_Army Commander's_Army
+qstr_Roll Roll
 qstr_This_is_the_gambling This_is_the_gambling_screen._Hold_down_control_key_while_clicking_on_an_item_to_purchase_or_sell_it.
 qstr_Money:_{s1} Money:_{s1}
 qstr_You_don_t_have_enough_m You_don't_have_enough_money.
@@ -1135,6 +1139,7 @@ qstr_Kingdom Kingdom
 qstr_Distance Distance
 qstr___{reg2}_Km __{reg2}_Km
 qstr_Select_a_town_for_th Select_a_town_for_the_supply_wagon_to_trade_with.
+qstr_Nearest Nearest
 qstr__None_ _None_
 qstr__Supply_Wagon_Manage _Supply_Wagon_Management_
 qstr__Current_Wagon_Maste _Current_Wagon_Master:^{s2}_
@@ -2403,14 +2408,14 @@ qstr_Loyalist_supporters_ Loyalist_supporters_from_a_nearby_village_have_gathere
 qstr_Bounty_of_food. Bounty_of_food.
 qstr_You_have_found_lefto You_have_found_leftovers_of_a_recent_battle._Searching_the_bodies,_you_managed_to_find_200_scillingas.
 qstr_Minor_accident: Minor_accident:
+qstr_g_resting_at_manor_= g_resting_at_manor_={reg1}_
 qstr_Your_troops_lose_3_m Your_troops_lose_3_morale_from_no_night_rest._morale_modifier_weariness={reg0}.
 qstr_morale_lost_to_{reg0 morale_lost_to_{reg0}_from_no_rest.
-qstr_Your_troops_feel_ref Your_troops_feel_refreshed_from_the_center_rest_8._morale_modifier_weariness={reg0}
-qstr_Your_troops_feel_refr Your_troops_feel_refreshed_from_the_center_DAY_rest_5._morale_modifier_weariness={reg0}
+qstr_Your_troops_feel_ref Your_troops_feel_refreshed_from_the_center_rest_6._morale_modifier_weariness={reg0}
+qstr_Your_troops_feel_refr Your_troops_feel_refreshed_from_the_center_DAY_rest_3._morale_modifier_weariness={reg0}
 qstr_Your_troops_troops_g Your_troops_troops_gain_morale_from_night_rest._morale_modifier_weariness={reg0}.
 qstr_Your_troops_troops_ga Your_troops_troops_gain_morale_from_day_rest._morale_modifier_weariness={reg0}.
-qstr_Your_troops_feel_refre Your_troops_feel_refreshed_from_the_day_rest_8._morale_modifier_weariness={reg0}
-qstr_end_of_script_morale end_of_script_morale_modifier_weariness={reg0}
+qstr_end_of_script_!!!_mo end_of_script_!!!_morale_modifier_weariness={reg0}
 qstr_encumbrancelevel_3_f encumbrancelevel_3_from_no_rest.
 qstr_encumbrancelevel_2_f encumbrancelevel_2_from_little_rest.
 qstr_encumbrancelevel_1_f encumbrancelevel_1_fromOKrest.

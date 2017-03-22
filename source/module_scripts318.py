@@ -6333,17 +6333,6 @@ scripts = [
 			(try_end),
 			(ge, ":party", 0),
 			(party_is_active, ":party"),
-
-    #Sladki troops skill multiplier
-    #Tactics, Leadership, Looting WA and FA skills modifier now depends on party size
-    #200 is party size since skills will require max count of respective "skill amplifier" troops
-    (store_party_size_wo_prisoners, ":party_size", ":party"),
-    (store_div, ":ssize_multiplier", 200, ":party_size"),	
-    (try_begin),
-      (eq, ":ssize_multiplier", 0),
-      (assign, ":ssize_multiplier", 1),
-    (try_end),
-
 			(try_begin),
 				(eq, ":skill_no", "skl_trade"),
 				(call_script, "script_get_party_troop_count", ":party", "trp_caravan_master"),
@@ -6409,10 +6398,6 @@ scripts = [
 				(assign, ":count", reg0),
 				(call_script, "script_get_party_troop_count", ":party", "trp_picto_cuerno"),
 				(val_add, ":count", reg0),
-				
-    #Sladki: take party size into account (size_multiplier)
-				(val_mul, ":count", ":ssize_multiplier"),
-				
 				(try_begin),
 					(gt, ":count", 19),#gdw
 					(val_add, ":modifier_value", 3),
@@ -6426,10 +6411,6 @@ scripts = [
 			(else_try),
 				(eq, ":skill_no", "skl_looting"),
 				(call_script, "script_get_party_troop_count", ":party", "trp_slaver_chief"),
-				
-				#Sladki: take party size into account (size_multiplier)
-				(val_mul, reg0, ":ssize_multiplier"),
-				
 				(try_begin),
 					(gt, reg0, 7),#gdw 
 					(val_add, ":modifier_value", 3),
@@ -6504,11 +6485,7 @@ scripts = [
 				(val_add, ":count", ":count_3"),			
 				(val_add, ":count", ":count_4"),			
 				(val_add, ":count", ":count_5"),			
-				(val_add, ":count", ":count_6"),	
-
-				#Sladki: take party size into account (size_multiplier)
-				(val_mul, ":count", ":ssize_multiplier"),
-				
+				(val_add, ":count", ":count_6"),			
 				(try_begin),
 					(gt, ":count", 17),#gdwraionale:wont need this bonus abovelv25
 					(val_add, ":modifier_value", 3),	
@@ -6539,11 +6516,7 @@ scripts = [
 				(val_add, ":count", ":count_3"),			
 				(val_add, ":count", ":count_4"),			
 				(val_add, ":count", ":count_5"),			
-				(val_add, ":count", ":count_6"),	
-
-				#Sladki: take party size into account (size_multiplier)
-				(val_mul, ":count", ":ssize_multiplier"),
-				
+				(val_add, ":count", ":count_6"),			
 				(try_begin),
 					(gt, ":count", 18),#gdwraionale:wont need this bonus abovelv25
 					(val_add, ":modifier_value", 3),	
@@ -6574,11 +6547,7 @@ scripts = [
 				(val_add, ":count", ":count_3"),			
 				(val_add, ":count", ":count_4"),			
 				(val_add, ":count", ":count_5"),			
-				(val_add, ":count", ":count_6"),
-
-				#Sladki: take party size into account (size_multiplier)
-				(val_mul, ":count", ":ssize_multiplier"),
-					
+				(val_add, ":count", ":count_6"),			
 				(try_begin),
 					(gt, ":count", 38),#gdwraionale:wont need this bonus abovelv25
 					(val_add, ":modifier_value", 3),	

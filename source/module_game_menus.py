@@ -702,17 +702,17 @@ town_menu_options = [
          (try_end),
 
 # ## CC gambling begin chief
-#              (try_begin),
-#                (party_get_slot, ":prosperity", "$current_town", "slot_town_prosperity"),
-#                (val_mod, ":prosperity", 24),
-#                (store_time_of_day, ":cur_hour"),
-#                (store_sub, ":difference", ":prosperity", ":cur_hour"),
-#                (is_between, ":difference", -1, 2), # -1 0 1, 1/8 probability
-#                (set_visitor, ":cur_entry", "trp_especial_merchant"),
-#                (troop_set_name, "trp_especial_merchant", "@Mystic Merchant"),
-#                (call_script, "script_refresh_mystic_merchant_items", "trp_especial_merchant"),
-#                (val_add, ":cur_entry", 1),
-#              (try_end),
+             (try_begin),
+               (party_get_slot, ":prosperity", "$current_town", "slot_town_prosperity"),
+               (val_mod, ":prosperity", 24),
+               (store_time_of_day, ":cur_hour"),
+               (store_sub, ":difference", ":prosperity", ":cur_hour"),
+               (is_between, ":difference", -1, 2), # -1 0 1, 1/8 probability
+               (set_visitor, ":cur_entry", "trp_especial_merchant"),
+               (troop_set_name, "trp_especial_merchant", "@Mystic Merchant"),
+               (call_script, "script_refresh_mystic_merchant_items", "trp_especial_merchant"),
+               (val_add, ":cur_entry", 1),
+             (try_end),
 ## CC gambling end
 
              (try_begin),

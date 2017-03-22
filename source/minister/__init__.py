@@ -286,17 +286,17 @@ def _appoint_options():
     # todo: this is an hack to solve a previous error. Consider reformulating as try_for_parties's dialog with the spouse instead of menu options
     troops_ids = [troop[0] for troop in troops]
 ##gdw removed because companion m ministers causing problems
-    # for index in range(troops_ids.index("npc1"), troops_ids.index("npc19")):##this causes problems later on when he goes on a mission
-    #     name = "trp_%s" % troops_ids[index]
-    #     option = \
-    #         ("appoint_%s" % troops_ids[index], [
-    #             (main_party_has_troop, name),
-    #             (str_store_troop_name, s10, name),
-    #             ], "Appoint {s10}", [
-    #             (assign, "$g_player_minister", name),
-    #             (jump_to_menu, "mnu_minister_confirm")
-    #         ])
-    #     options.append(option)
+    for index in range(troops_ids.index("npc1"), troops_ids.index("npc19")):##this causes problems later on when he goes on a mission
+        name = "trp_%s" % troops_ids[index]
+        option = \
+            ("appoint_%s" % troops_ids[index], [
+                (main_party_has_troop, name),
+                (str_store_troop_name, s10, name),
+                ], "Appoint {s10} (be sure to savegame first", [
+                (assign, "$g_player_minister", name),
+                (jump_to_menu, "mnu_minister_confirm")
+            ])
+        options.append(option)
 
     default = \
         ("appoint_default", [], "Appoint a prominent citizen from the area...", [

@@ -479,7 +479,7 @@ scripts = [
           (eq, ":has_horse", 1),
           (val_sub, ":random_no", ":javelin_chance"),
           (lt, ":random_no", 0),
-          (mission_tpl_entry_add_override_item, "mt_arena_melee_fight", ":i_ep", "itm_practice_staff"),
+          (mission_tpl_entry_add_override_item, "mt_arena_melee_fight", ":i_ep", "itm_practice_seaxe"), #this was at staff, but many complaints
           (mission_tpl_entry_add_override_item, "mt_arena_melee_fight", ":i_ep", ":cur_shield_item"),
 #          (mission_tpl_entry_add_override_item, "mt_arena_melee_fight", ":i_ep", "itm_shield_4a"),
         (else_try),

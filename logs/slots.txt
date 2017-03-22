@@ -301,6 +301,10 @@ agent_new_division 38
 agent_horse_stamina 39
 agent_horse_is_charging 40
 agent_volley_fire 41
+agent_sblunt_invslot_0 42
+agent_sblunt_invslot_1 43
+agent_sblunt_invslot_2 44
+agent_sblunt_invslot_3 45
 faction_ai_state 0
 faction_ai_object 1
 faction_marshall 2
