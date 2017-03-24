@@ -39,8 +39,8 @@ def isBlunt(itemId) :
     (assign, reg2, ":damage_type_thrust"),
  
     (this_or_next|eq, ":damage_type_thrust", blunt),
-    (eq, ":damage_thrust", 0), ##this will include all the axes and picks even if the swing damage is pierces. 
-    (eq, ":damage_type_swing", blunt),  ##the traditional check was (item_slot_ge, ":item_no", 'slot_item_swing_damage', 525),
+    (eq, ":damage_thrust", 0),
+    (eq, ":damage_type_swing", blunt),
  
     (display_message, "@[DEBUG] {s0} is blunt"),
   ]

@@ -7446,9 +7446,9 @@ simple_triggers = [
        (assign, reg1, 0),
       (ge, "$g_last_rest_center", 0),
       (this_or_next|party_slot_eq, "$g_last_rest_center", "slot_center_has_manor", 1),
-      (this_or_next|party_slot_eq, "$g_last_rest_center", "$current_town"), ##to do: make this separate section
-      #(is_between, "$g_last_rest_center", walled_centers_begin, walled_centers_end),
-      (is_between, "$g_last_rest_center", centers_begin, centers_end),
+      #(this_or_next|party_slot_eq, "$g_last_rest_center", "$current_town"), ##to do: make this separate section
+      (is_between, "$g_last_rest_center", walled_centers_begin, walled_centers_end),
+      #(is_between, "$g_last_rest_center", centers_begin, centers_end),
       (assign, "$g_resting_at_manor_or_walled_center", 1),
       (assign, reg1, 1),
   (try_end),   
@@ -7469,7 +7469,7 @@ simple_triggers = [
          (neq, "$g_player_besiege_town", "$g_encountered_party"),
          #(neq, "$g_player_is_captive", 1),
          (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),##get last morale penalty
-         (val_add, reg0, 3),##gdw was 1
+         (val_sub, reg0, 3),##gdw was 1
          (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
          (display_message, "@Your troops lose 3 morale from no night rest. morale_modifier_weariness={reg0}."),
          #(assign, ":lose_morale", reg0),
@@ -7483,7 +7483,7 @@ simple_triggers = [
         (eq, "$g_battle_weary",1),## see post battle from scripts battle wears party out
         (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
        #(val_max, reg0,0),##test gdw delte this
-        (val_add, reg0, 10),
+        (val_sub, reg0, 10),
        # (val_max, reg0,0),
         (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
         (assign, "$g_battle_weary",0),
@@ -7497,8 +7497,8 @@ simple_triggers = [
        #   (ge, "$g_last_rest_center", 0),
        #   (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
        #   (val_add, reg1, 2),##gdw this was 1
-       (val_min, reg0,-6),
-       (val_sub, reg0, 5),
+       (val_max, reg0,6),
+       (val_add, reg0, 6),
        
        (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
        #(call_script, "script_change_player_party_morale", reg1),
@@ -7517,9 +7517,9 @@ simple_triggers = [
        #   (ge, "$g_last_rest_center", 0),
        #   (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
        #   (val_add, reg1, 2),##gdw this was 1
-       (val_min, reg0,-6),
-       (val_sub, reg0, 3 ),
        
+       (val_add, reg0, 4),
+       (val_max, reg0,6),
        (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
        #(call_script, "script_change_player_party_morale", reg1),
        # (try_begin),
@@ -7535,8 +7535,8 @@ simple_triggers = [
      (eq, "$g_player_icon_state", pis_camping),
      (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
      #(val_min, reg0,-6),
-     (val_sub, reg0, 4),#camp less restful
-     (val_min, reg0,0),
+     (val_add, reg0, 3),#camp less restful
+     (val_max, reg0,6),
      (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
      #(call_script, "script_change_player_party_morale", 4),
      (display_message, "@Your troops troops gain morale from night rest. morale_modifier_weariness={reg0}."),
@@ -7544,8 +7544,8 @@ simple_triggers = [
      (eq, "$g_player_icon_state", pis_camping),
      (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
      #(val_max, reg0,0),##test gdw delte this
-     (val_sub, reg0, 2),#camp less restful
-     (val_min, reg0,0),
+     (val_add, reg0, 2),#camp less restful
+     (val_max, reg0,6),
      (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
      (display_message, "@Your troops troops gain morale from day rest. morale_modifier_weariness={reg0}."),
      #(call_script, "script_change_player_party_morale", 2),
@@ -7563,7 +7563,7 @@ simple_triggers = [
 
  (try_begin),##gdw new script
     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-    (gt, reg0,46),
+    (lt, reg0,-45),
     (assign, "$g_encumbrance_penalty", 3),
     (try_begin),
       (eq, "$cheat_mode", 1),
@@ -7571,8 +7571,8 @@ simple_triggers = [
     (try_end),
  (else_try),
     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-    (le, reg0,46),
-    (gt, reg0,20),
+    (ge, reg0,45),
+    (lt, reg0,20),
     (assign, "$g_encumbrance_penalty", 2),
     (try_begin),
       (ge, "$cheat_mode", 1),
@@ -7581,7 +7581,7 @@ simple_triggers = [
  (else_try),
 
     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-    (le, reg0,20),
+    (ge, reg0,20),
     #(le, reg0,18),
     (assign, "$g_encumbrance_penalty", 1),
     (try_begin),

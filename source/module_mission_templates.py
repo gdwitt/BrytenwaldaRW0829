@@ -1318,8 +1318,8 @@ mission_templates = [
         (tutorial_message_set_position, 500, 650),
         (tutorial_message_set_center_justify, 0),
         (tutorial_message_set_background, 1),
-(team_give_order, 1, grc_everyone,  mordr_use_any_weapon),
-(team_give_order, 0, grc_everyone,  mordr_use_any_weapon),
+# (team_give_order, 1, grc_everyone,  mordr_use_any_weapon),
+# (team_give_order, 0, grc_everyone,  mordr_use_any_weapon),
 (try_begin),
                         (ge, "$cheat_mode", 1),
                         (display_message, "@{!}DEBUG:calling use all weapons in battletype"),
@@ -1737,8 +1737,8 @@ mission_templates = [
     [
       (ti_on_agent_spawn, 0, 0, [],
        [
-       (team_give_order, 1, grc_everyone,  mordr_use_any_weapon),
-(team_give_order, 0, grc_everyone,  mordr_use_any_weapon),
+#        (team_give_order, 1, grc_everyone,  mordr_use_any_weapon),
+# (team_give_order, 0, grc_everyone,  mordr_use_any_weapon),
 (try_begin),
                         (ge, "$cheat_mode", 1),
                         (display_message, "@{!}DEBUG:calling use all weapons in battletype"),

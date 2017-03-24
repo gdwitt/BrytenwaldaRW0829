@@ -1,4 +1,4 @@
-2473
+2476
 qstr_{reg65?my_Lady:my_Lo {reg65?my_Lady:my_Lord}
 qstr_{reg65?My_Lady:My_Lo {reg65?My_Lady:My_Lord}
 qstr_{reg65?madame:sir} {reg65?madame:sir}
@@ -320,8 +320,8 @@ qstr_Back_to_the_beginnin Back_to_the_beginning...
 qstr_View_next_segment... View_next_segment...
 qstr_{!}__ {!}_-
 qstr_gamemenus=moralerepo gamemenus=moralereportwearinesss={reg2}
-qstr_^No_food:___{reg7} ^No_food:__-{reg7}
 qstr_{!}_+ {!}_+
+qstr_^No_food:___{reg7} ^No_food:__-{reg7}
 qstr_^Wage_debt:___{reg7} ^Wage_debt:__-{reg7}
 qstr_Current_party_morale Current_party_morale_is_{reg5}.^Current_party_morale_modifiers_are:^^Base_morale:__+{reg6}^Party_size_unmanageable:_{s2}{reg1}^Lack_of_rest:_{s3}{reg2}^Food_variety:_{s4}{reg3}{s5}{s6}^Recent_events:_{s7}{reg4}^TOTAL:__{reg5}^^^
 qstr__summodifierrs=_Curr _summodifierrs=_Current_party_morale_is_{reg5}.^Current_party_morale_modifiers_are:^^Base_morale:__+{reg6}^Party_size_unmanageable:_{s2}{reg1}^Lack_of_rest:_{s3}{reg2}^Food_variety:_{s4}{reg3}{s5}{s6}^Recent_events:_{s7}{reg4}^TOTAL:__{reg5}^^^
@@ -906,9 +906,12 @@ qstr_Division_{reg0}:_ret Division_{reg0}:_returning_after_destroying_enemy_{s1}
 qstr_Division_{reg0}:_cav Division_{reg0}:_cavalry_formation_disassembled.
 qstr_You_unleash_a_fearso You_unleash_a_fearsome_cry!
 qstr_You_rally_your_men!_ You_rally_your_men!_(wounded_troops_recover_{reg1}_%_hitpoints)
-qstr_[DEBUG]_{s0}_swapped [DEBUG]_{s0}_swapped_{s1}({reg1})_with_{s2}(dmg_type:{reg2})
-qstr_{!}DEBUG___{reg4}_to {!}DEBUG_--{reg4}_toggling_weapon
-qstr_{!}DEBUG___{reg5}_fa {!}DEBUG_--{reg5}_failed_to_find_blunt
+qstr_[DEBUG]_{s0}_is_blun [DEBUG]_{s0}_is_blunt
+qstr_[DEBUG]_{s0}_swapped [DEBUG]_{s0}_swapped_{s1}_with_{s2}
+qstr_[DEBUG]_{s0}_has_equ [DEBUG]_{s0}_has_equipped_{s1}
+qstr_[DEBUG]_{s0}_has_{re [DEBUG]_{s0}_has_{reg0}/{reg1}_blunts
+qstr_[DEBUG]_{s0}_has_une [DEBUG]_{s0}_has_unequipped_{s1}
+qstr_[DEBUG]============= [DEBUG]==========================================
 qstr__You_have_beaten_the _You_have_beaten_the_old_hero,_you_have_begun_your_journey_to_the_legend.
 qstr__Bandits_strike_you_ _Bandits_strike_you_with_anger_and_you_fall_into_a_puddle_of_blood._They_think_you're_dead...
 qstr__The_bandits_and_sla _The_bandits_and_slavers_have_been_dealt_with._Get_the_prisoners_and_leave_through_the_air_shaft.

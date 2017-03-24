@@ -1441,6 +1441,7 @@ g_player_culture 14
 g_invite_faction 14
 g_quick_battle_team_2_faction 14
 g_encounter_type 14
+g_last_rest_center 14
 sp_shield_bash_ai 14
 gk_order_hold_over_there 14
 when_f1_first_detected 14
@@ -1464,7 +1465,6 @@ companion_to_be_ransomed 15
 g_encounter_is_in_village 15
 g_enemy_fit_for_battle 15
 entry_to_town_forbidden 15
-g_last_rest_center 15
 g_heridas_chel 15
 g_presentation_obj_battle_check1 15
 g_time_since_last_talk 16
@@ -1682,9 +1682,9 @@ gk_order 297
 g_cur_month 338
 g_talk_troop_faction 358
 g_multiplayer_game_type 380
-cheat_mode 478
+cheat_mode 473
 players_kingdom 680
-current_town 771
+current_town 770
 fplayer_team_no 849
 g_encountered_party 1212
 g_talk_troop 2312

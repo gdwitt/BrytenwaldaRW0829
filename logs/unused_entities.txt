@@ -6004,7 +6004,6 @@ itm_espada_slot2
 itm_espada_slot2_alt
 itm_espada_suttonhoo_saxon_alt
 itm_fancy_cloak
-itm_fightingpickhammer
 itm_fightingpickhammer_alt
 itm_flail1_blunt_alt
 itm_flail2_blunt_alt
@@ -6059,8 +6058,6 @@ itm_mailtunic_green2
 itm_mailtunic_grn
 itm_medium_speaript3_alt
 itm_mercia_tunic10
-itm_militaryhammer
-itm_minershammer
 itm_minershammer_alt
 itm_noble_shoeswhite
 itm_nobleman_sword_alt
