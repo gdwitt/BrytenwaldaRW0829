@@ -1,4 +1,4 @@
-2476
+2475
 qstr_{reg65?my_Lady:my_Lo {reg65?my_Lady:my_Lord}
 qstr_{reg65?My_Lady:My_Lo {reg65?My_Lady:My_Lord}
 qstr_{reg65?madame:sir} {reg65?madame:sir}
@@ -319,7 +319,6 @@ qstr_No_companions_in_par No_companions_in_party!
 qstr_Back_to_the_beginnin Back_to_the_beginning...
 qstr_View_next_segment... View_next_segment...
 qstr_{!}__ {!}_-
-qstr_gamemenus=moralerepo gamemenus=moralereportwearinesss={reg2}
 qstr_{!}_+ {!}_+
 qstr_^No_food:___{reg7} ^No_food:__-{reg7}
 qstr_^Wage_debt:___{reg7} ^Wage_debt:__-{reg7}
@@ -2412,7 +2411,7 @@ qstr_Bounty_of_food. Bounty_of_food.
 qstr_You_have_found_lefto You_have_found_leftovers_of_a_recent_battle._Searching_the_bodies,_you_managed_to_find_200_scillingas.
 qstr_Minor_accident: Minor_accident:
 qstr_g_resting_at_manor_= g_resting_at_manor_={reg1}_
-qstr_Your_troops_lose_3_m Your_troops_lose_3_morale_from_no_night_rest._morale_modifier_weariness={reg0}.
+qstr_Your_troops_lose_4_m Your_troops_lose_4_morale_from_no_night_rest._morale_modifier_weariness={reg0}.
 qstr_morale_lost_to_{reg0 morale_lost_to_{reg0}_from_no_rest.
 qstr_Your_troops_feel_ref Your_troops_feel_refreshed_from_the_center_rest_6._morale_modifier_weariness={reg0}
 qstr_Your_troops_feel_refr Your_troops_feel_refreshed_from_the_center_DAY_rest_3._morale_modifier_weariness={reg0}

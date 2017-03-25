@@ -1682,7 +1682,7 @@ gk_order 297
 g_cur_month 338
 g_talk_troop_faction 358
 g_multiplayer_game_type 380
-cheat_mode 473
+cheat_mode 472
 players_kingdom 680
 current_town 770
 fplayer_team_no 849

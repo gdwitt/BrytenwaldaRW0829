@@ -5958,8 +5958,6 @@ itm_drafthorse8
 itm_dshoes2greaves_blue
 itm_dsquare_shield10
 itm_dsquare_shield4
-itm_dtab_shield_kite_a
-itm_dtab_shield_kite_b
 itm_elite1_2haxeresrv_alt
 itm_elite2_2haxeresrv_alt
 itm_elite3_2haxeresrv_alt
@@ -6013,6 +6011,7 @@ itm_gallic_horse2
 itm_german_tunic3
 itm_germanic_axelongt2_alt
 itm_germanlongspeart2_alt
+itm_germanshortspeart2_alt
 itm_germanswordt3_alt
 itm_goata
 itm_godelic_shield1a
@@ -6044,7 +6043,6 @@ itm_knislotforseax
 itm_lamellar08
 itm_lamellarallgreen
 itm_long_speaript2
-itm_longspeart3_alt
 itm_lorica_green
 itm_mailbyrniebrown
 itm_mailbyrnieolive
@@ -6121,11 +6119,6 @@ itm_siege_stones
 itm_siegebag_arrows
 itm_slingtier2
 itm_slot9bardiche
-itm_slot9fighting_pick
-itm_slot9flail_blunt
-itm_slot9flail_blunt_alt
-itm_slot9long_bardiche
-itm_slot9voulge
 itm_slot_gloveselite
 itm_slot_helm
 itm_slot_helmboar
@@ -6159,6 +6152,7 @@ itm_spear_elitequest2_alt
 itm_spear_elitequest3_alt
 itm_spear_elitequest4_alt
 itm_spear_hasta_alt
+itm_spear_hvy_alt
 itm_spearbannert2_alt
 itm_spearslot1
 itm_spearslot2
