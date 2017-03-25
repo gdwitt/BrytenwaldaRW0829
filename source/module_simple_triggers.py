@@ -7469,9 +7469,9 @@ simple_triggers = [
          (neq, "$g_player_besiege_town", "$g_encountered_party"),
          #(neq, "$g_player_is_captive", 1),
          (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),##get last morale penalty
-         (val_sub, reg0, 3),##gdw was 1
+         (val_sub, reg0, 4),##gdw was 1
          (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-         (display_message, "@Your troops lose 3 morale from no night rest. morale_modifier_weariness={reg0}."),
+         (display_message, "@Your troops lose 4 morale from no night rest. morale_modifier_weariness={reg0}."),
          #(assign, ":lose_morale", reg0),
          #(call_script, "script_change_player_party_morale", -3),
      #(try_end),

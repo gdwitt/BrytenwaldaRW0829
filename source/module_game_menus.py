@@ -2292,10 +2292,12 @@ game_menus = game_start.first_menus + [
 
     (party_get_slot, "$g_player_party_morale_modifier_weariness", "p_main_party", "slot_party_unrested_morale_penalty"),
     (assign, reg2, "$g_player_party_morale_modifier_weariness"),
-    (try_begin),
-          (ge, "$cheat_mode", 1),
-          (display_message, "@gamemenus=moralereportwearinesss={reg2}"),
-    (try_end),
+    (val_clamp, reg2, -100, 6),
+
+    # (try_begin),
+    #       (ge, "$cheat_mode", 1),
+    #       (display_message, "@gamemenus=moralereportwearinesss={reg2}"),
+    # (try_end),
     #(assign, reg2, reg0),
     (try_begin),
       (le, reg2, 0),
@@ -2303,7 +2305,7 @@ game_menus = game_start.first_menus + [
     (else_try),
       (str_store_string, s3, "str_space"),
     (try_end),
-    (val_sub, ":sum_modifiers", reg2),  ##bug fix  temporary switch  war wearniness to positive number
+    (val_add, ":sum_modifiers", reg2),  ##bug fix  temporary switch  war wearniness to positive number
 
     (try_begin),
       (gt, "$g_player_party_morale_modifier_no_food", 0),
