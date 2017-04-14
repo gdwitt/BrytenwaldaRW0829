@@ -24539,18 +24539,68 @@ scripts = [
 #   # OUTPUT: none
 	("update_mercenary_units_of_towns",
       [(try_for_range, ":town_no", towns_begin, towns_end),
+      (assign, ":troop_no", -1),
+      #(party_get_slot, ":center_culture", ":town_no", "slot_center_culture"),
+      #(troop_get_slot, ":mercstart", "$troop_trees", slot_mercenary_townsman),
+			#	(troop_get_slot, ":merc_ritter", "$troop_trees", slot_mercenary_hochmeister),
+	  (store_random_in_range,":troop_no", mercenary_troops_begin, mercenary_troops_end),
+      (party_set_slot, ":town_no", "slot_center_mercenary_troop_type", ":troop_no"),
+          #(store_random_in_range, ":amount", 2, 8),#min and max mercs,change as you want
+          #(party_set_slot, ":town_no", "slot_center_mercenary_troop_amount", ":amount"), #This adds a second mercenary to the tavern
+          #chief cambia para los capitanes mercenarios
+    (try_begin), #get amount
+      (eq, ":troop_no", "trp_mercenary_leader"),
+      #(store_random_in_range, ":amount", 1, 2), #script chief cambia el numero de mercenarios reclutables
+      	(assign, ":amount", 1),
+      (else_try),
+      (store_random_in_range, ":amount", 3, 6), #script chief cambia el numero de mercenarios reclutables
+		    
+		    ##diplomacy start+ chief
+	  #OPTIONAL CHANGE: The same way that lord party sizes increase as the player
+	  #progresses, also increase mercenary party sizes to maintain their relevance.
+		  (try_begin),
+			 (store_character_level, ":level", "trp_player"), #increase limits a little bit as the game progresses.
+			 (store_add, ":level_factor", 80, ":level"),
+	         (val_mul, ":amount", ":level_factor"),
+	         (val_div, ":amount", 80),
+		  (try_end),
+	  ##diplomacy end+
+		  (party_set_slot, ":town_no", "slot_center_mercenary_troop_amount", ":amount"),
+					(try_begin),
+					(assign, reg2, ":amount"),
+                        (ge, "$cheat_mode", 1),
+                        (display_message, "@{!}DEBUG: update mercs set 1st amount={reg2}"),
+                    (try_end),
+      	(try_end),
+    ###############################Merc groups 2 are locals gdw
+          (store_random_in_range, ":troop_no2", mercenary_troops2_begin, mercenary_troops2_end),
+          (party_set_slot, ":town_no", "slot_center_mercenary_troop_type_2", ":troop_no2"),
+          (store_random_in_range, ":amount2", 2, 7),#min and max mercs,change as you want
+          (party_set_slot, ":town_no", "slot_center_mercenary_troop_amount_2", ":amount2"),
+          (try_begin),
+                        (ge, "$cheat_mode", 1),
+                        (display_message, "@{!}DEBUG: update  mercs set 2 "),
+           (try_end),
+    (try_end),
+     ]),
+("start_update_mercenary_units_of_towns",
+      [(try_for_range, ":town_no", towns_begin, towns_end),
+      (assign, ":troop_no", -1),
+      #(party_get_slot, ":center_culture", ":town_no", "slot_center_culture"),
+      #(troop_get_slot, ":mercstart", "$troop_trees", slot_mercenary_townsman),
+			#	(troop_get_slot, ":merc_ritter", "$troop_trees", slot_mercenary_hochmeister),
 		  (store_random_in_range,":troop_no", mercenary_troops_begin, mercenary_troops_end),
           (party_set_slot, ":town_no", "slot_center_mercenary_troop_type", ":troop_no"),
-          (store_random_in_range, ":amount", 2, 8),#min and max mercs,change as you want
+          #(store_random_in_range, ":amount", 2, 8),#min and max mercs,change as you want
           #(party_set_slot, ":town_no", "slot_center_mercenary_troop_amount", ":amount"), #This adds a second mercenary to the tavern
           #chief cambia para los capitanes mercenarios
 		    (try_begin),
 		      (eq, ":troop_no", "trp_mercenary_leader"),
 		      #(store_random_in_range, ":amount", 1, 2), #script chief cambia el numero de mercenarios reclutables
-		      (eq, ":amount", 1),
+		      (assign, ":amount", 1),
 		       (else_try),
 		      (store_random_in_range, ":amount", 3, 6), #script chief cambia el numero de mercenarios reclutables
-		    (try_end),
+		    
 		    ##diplomacy start+ chief
 	  #OPTIONAL CHANGE: The same way that lord party sizes increase as the player
 	  #progresses, also increase mercenary party sizes to maintain their relevance.
@@ -24562,10 +24612,14 @@ scripts = [
 	  (try_end),
 	  ##diplomacy end+
 		  (party_set_slot, ":town_no", "slot_center_mercenary_troop_amount", ":amount"),
+
 					(try_begin),
+					(assign, reg2, ":amount"),
                         (ge, "$cheat_mode", 1),
-                        (display_message, "@{!}DEBUG: update mercs set 1 "),
+                        (display_message, "@{!}DEBUG: update mercs set 1 amount {reg2}"),
                     (try_end),
+     (try_end),
+    ###############################Merc groups 2 are locals gdw
           (store_random_in_range, ":troop_no2", mercenary_troops2_begin, mercenary_troops2_end),
           (party_set_slot, ":town_no", "slot_center_mercenary_troop_type_2", ":troop_no2"),
           (store_random_in_range, ":amount2", 2, 7),#min and max mercs,change as you want
@@ -52731,6 +52785,9 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
           (item_get_type, reg1, ":item"),
           (eq, reg1, itp_type_polearm),
           (assign, ":target_division", sdt_polearm),
+        (try_end),
+       	(else_try),##gdw temporary bug fix no where else troop_set_class used
+           (assign, ":target_division", grc_infantry),
         (try_end),
       (try_end),
       

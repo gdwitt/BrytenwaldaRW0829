@@ -506,7 +506,7 @@ formations_triggers = [
                 (class_is_listening_order, "$fplayer_team_no", ":division"),
                 (store_add, ":slot", "slot_faction_d0_mem_relative_x_flag", ":division"),    #use as flag
                 (faction_set_slot, "fac_player_faction", ":slot", 0),
-
+#vc uses (call_script, "script_default_division_placements"),
                 (store_add, ":slot", "slot_team_d0_size", ":division"),
                 (team_slot_ge, "$fplayer_team_no", ":slot", 1),
                 (store_add, ":slot", "slot_team_d0_type", ":division"),

@@ -1798,10 +1798,10 @@ items = [
 
 # ###armas de no filo, porras, mazas madera etc... finalizadas
 #  #######################
-["club_stick",   "Wooden Stick", [("wooden_stick",0)], itp_clb, itc_cleaver,15 , weight(3)|difficulty(0)|spd_rtng(85) | weapon_length(88)|swing_damage(15 , blunt) | thrust_damage(0 , blunt),imodbits_none ], #chief cambiado
-["clubsmooth",   "Club", [("club",0)], itp_clb, itc_cleaver,70 , weight(1.0)|difficulty(5)|spd_rtng(101) | weapon_length(60)|swing_damage(13 , blunt) | thrust_damage(0 , blunt),imodbits_none ], #cambiado chief
-["club_one",   "Club", [("club_one",0)], itp_clb, itc_cleaver, 110 , weight(2)|difficulty(6)|spd_rtng(90) | weapon_length(68)|swing_damage(14 , blunt) | thrust_damage(0 , blunt),imodbits_none ],
-["clubcudgel",   "Wooden Club", [("palka2",0)], itp_clb, itc_cleaver, 120 , weight(2)|difficulty(6)|spd_rtng(87) | weapon_length(68)|swing_damage(16 , blunt) | thrust_damage(0 , blunt),imodbits_axe ], #chief cambiado
+["club_stick",   "Wooden Stick", [("wooden_stick",0)], itp_clb, itc_cleaver,15 , weight(3)|difficulty(0)|spd_rtng(85) | weapon_length(88)|swing_damage(13 , blunt) | thrust_damage(0 , blunt),imodbits_none ], #chief cambiado
+["clubsmooth",   "Club", [("club",0)], itp_clb, itc_cleaver,70 , weight(1.0)|difficulty(5)|spd_rtng(101) | weapon_length(60)|swing_damage(11 , blunt) | thrust_damage(0 , blunt),imodbits_none ], #cambiado chief
+["club_one",   "Club", [("club_one",0)], itp_clb, itc_cleaver, 110 , weight(2)|difficulty(6)|spd_rtng(90) | weapon_length(68)|swing_damage(12 , blunt) | thrust_damage(0 , blunt),imodbits_none ],
+["clubcudgel",   "Wooden Club", [("palka2",0)], itp_clb, itc_cleaver, 120 , weight(2)|difficulty(6)|spd_rtng(87) | weapon_length(68)|swing_damage(14 , blunt) | thrust_damage(0 , blunt),imodbits_axe ], #chief cambiado
 ["club3",   "Wooden Club", [("palka3",0)], itp_clb, itc_cleaver,160 , weight(2)|difficulty(6)|spd_rtng(70) | weapon_length(78)|swing_damage(16 , blunt) | thrust_damage(0 , blunt),imodbits_none ], #chief cambiado
 # ["club4de",   "deWooden Club", [("palka4",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise|itp_primary|itp_secondary|itp_wooden_parry|itp_wooden_attack, itc_axe1h, 
 # 100 , weight(2)|difficulty(0)|spd_rtng(87) | weapon_length(65)|swing_damage(20 , blunt) | thrust_damage(0 , pierce),imodbits_none ], #chief cambiado
@@ -2204,7 +2204,7 @@ items = [
 ["heavypickaxe", "Heavy Pickaxe 1-2h", [("rusty_pick",0)], itp_2hax,itc_sleg, 960, weight(1.3)|difficulty(8)|spd_rtng(82)|weapon_length(99)|swing_damage(36,pierce)|thrust_damage(12,blunt), imodbits_mace, [], ['fac_kingdom_20','fac_kingdom_17','fac_kingdom_19','fac_kingdom_27','fac_kingdom_28','fac_kingdom_29','fac_kingdom_30','fac_kingdom_31'] ],
 ["heavypickaxe_alt", "rHeavy Pickaxe 1-2h", [("maul_b",0)], itp_2haxb,itc_sleg, 960, weight(1.3)|difficulty(8)|spd_rtng(82)|weapon_length(99)|swing_damage(36,blunt)|thrust_damage(12,blunt), imodbits_mace, [], ['fac_kingdom_20','fac_kingdom_17','fac_kingdom_19','fac_kingdom_27','fac_kingdom_28','fac_kingdom_29','fac_kingdom_30','fac_kingdom_31'] ],
 #####################
-["maul1h_blunt", "Small Maul", [("axehammer_1",0)],itp_bln, itc_clb, 300 , weight(2.5)|difficulty(7)|spd_rtng(82) | weapon_length(78)|swing_damage(27 , blunt) | thrust_damage(0 , blunt),imodbits_axe ],
+["maul1h_blunt", "Small Maul", [("axehammer_1",0)],itp_clb, itc_bln, 300 , weight(2.5)|difficulty(7)|spd_rtng(82) | weapon_length(78)|swing_damage(27 , blunt) | thrust_damage(0 , blunt),imodbits_axe ],
 ["ironhammerlong", "Long Iron Hammer", [("axehammer_2",0)], itp_clb, itc_bln, 407 , weight(2.4)|difficulty(8)|spd_rtng(79) | weapon_length(91)|swing_damage(29 , blunt) | thrust_damage(0 , blunt),imodbits_axe ],
 ["commonhammer_blunt",   "Basic Axe Hammer", [("axehammer",0)], itp_clb, itc_cleaver,208 , weight(2)|difficulty(6)|spd_rtng(88) | weapon_length(72)|swing_damage(22 , blunt) | thrust_damage(0 , blunt),imodbits_axe],
 ["flail1_blunt", "Cavalry_Flail", [("mace_pear",0)], itp_bln, itc_bln, 966, weight(3.7)|abundance(11)|difficulty(9)|spd_rtng(76)|weapon_length(102)|swing_damage(30,blunt)|thrust_damage(0,blunt), imodbits_mace, 
@@ -2448,22 +2448,22 @@ items = [
 ["warspear_godelict3_alt",   "Godelic Elite Spear", [("03bryntvari",0)], itp_spearalt, itc_staff, 180 , weight(2.25)|difficulty(6)|spd_rtng(95) | weapon_length(152)|swing_damage(17 , blunt) | thrust_damage(9 , pierce),imodbits_polearm],
 ["spear_lightgael",   "Godelic Light Spear", [("05hoggkesja",0)], itp_test2hspear, itc_spear,160 , weight(1.7)|abundance(60)|difficulty(6)|spd_rtng(115) | weapon_length(117)|swing_damage(12 , blunt) | thrust_damage(28 , pierce),imodbits_polearm,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["spear_lightgael",   "Gael Staff Spear", [("02spjotkesja",0)], itp_spearalt, itc_staff, 180 , weight(2.55)|abundance(60)|difficulty(8)|spd_rtng(90) | weapon_length(117)|swing_damage(17 , blunt) | thrust_damage(9 , blunt),imodbits_polearm],
+["spear_lightgael_alt",   "Gael Staff Spear", [("02spjotkesja",0)], itp_spearalt, itc_staff, 180 , weight(2.55)|abundance(60)|difficulty(8)|spd_rtng(90) | weapon_length(117)|swing_damage(17 , blunt) | thrust_damage(9 , blunt),imodbits_polearm],
 ["long_speaript2",   "Godelic Pike", [("fjadraspjot",0)], itp_spear, itc_spear, 440 , weight(4)|abundance(60)|difficulty(9)|spd_rtng(92) | weapon_length(225)|swing_damage(15 , blunt) | thrust_damage(30 , pierce),imodbits_polearm,
 [], ['fac_kingdom_20', 'fac_kingdom_17', 'fac_kingdom_19', 'fac_kingdom_27', 'fac_kingdom_28', 'fac_kingdom_29', 'fac_kingdom_30', 'fac_kingdom_31']],
-["spearslot1",   "Third testSpear", [("spjot",0)], itp_test1hspear, itc_spear, 460 , weight(2.25)|abundance(0)|difficulty(6)|spd_rtng(90) | weapon_length(144)|swing_damage(13 , blunt) | thrust_damage(28 , pierce),imodbits_polearm ],
-["spearslot2", "Fifth testspear", [("02svia2",0)],itp_spearalt, itc_spear, 199, weight(2.25)|abundance(0)|difficulty(6)|spd_rtng(90) | weapon_length(144)|swing_damage(13 , blunt) | thrust_damage(30 , pierce), imodbits_polearm ],
+["spearslot1",   "Third testSpear", [("spjot",0)], itp_test1hspear, itc_spear, 460 , weight(2.25)|abundance(0)|difficulty(6)|spd_rtng(90) | weapon_length(144)|swing_damage(23 , blunt) | thrust_damage(28 , pierce),imodbits_polearm ],
+["spearslot2", "Fifth testspear", [("02svia2",0)],itp_spearalt, itc_spear, 199, weight(2.25)|abundance(0)|difficulty(6)|spd_rtng(90) | weapon_length(144)|swing_damage(13 , blunt) | thrust_damage(50 , pierce), imodbits_polearm ],
 #long meshes: saxon2hspear saxon_spear  01langr_bryntvari  hasta  spjotkesja-longspear
 ["spear_cavalrylance1",   "Dawn Ray Cav", [("krokaspjott1",0)], itp_pike, itc_spear, 580, weight(2.55)|abundance(20)|spd_rtng(96) | weapon_length(185)|swing_damage(13 , blunt) | thrust_damage(32 , pierce),imodbit_balanced ],
 ["spear_cavalrylance1_alt",   "Dawn Ray Cav", [("krokaspjott1",0)], itp_spearalt, itc_staff, 260 , weight(2.55)|abundance(20)|spd_rtng(96) | weapon_length(185)|swing_damage(14 , blunt) | thrust_damage(13 , pierce),imodbit_balanced ],
 #lanzas magicas especiales reyes y nobles  #short meshes: 02svia2  05bryntvari2  svia2 04hoggkesja-  01krokaspjott2
 ["spear_elitequest1",   "rHope LongWarrior", [("02krokaspjott1",0)], itp_pike, itc_spear, 360 , weight(2.55)|difficulty(5)|spd_rtng(90) | weapon_length(185)|swing_damage(13 , blunt) | thrust_damage(30 , pierce),imodbit_balanced ],
 ["spear_elitequest1_alt",   "rHopelong3", [("ped_heavy_spear_long",0)], itp_spearalt, itc_staff, 360 , weight(2.55)|difficulty(8)|spd_rtng(90) | weapon_length(185)|swing_damage(17 , blunt) | thrust_damage(31 , pierce),imodbit_balanced ],
-["spear_elitequest2",   "s7britonwarsp", [("01langr_bryntvari",0)], itp_pike, itc_spear, 360 , weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(200)|swing_damage(15 , blunt) | thrust_damage(33 , pierce),imodbit_balanced ],
-["spear_elitequest2_alt",   "s8reBreath of Dragon", [("05bryntvari2",0)], itp_spearalt, itc_staff, 360 , weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(200)|swing_damage(15 , blunt) | thrust_damage(34 , pierce),imodbit_balanced ],
+["spear_elitequest2",   "s7britonwarsp", [("01langr_bryntvari",0)], itp_pike, itc_spear, 360 , weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(200)|swing_damage(15 , blunt) | thrust_damage(43 , pierce),imodbit_balanced ],
+["spear_elitequest2_alt",   "s8reBreath of Dragon", [("05bryntvari2",0)], itp_spearalt, itc_staff, 360 , weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(200)|swing_damage(25 , blunt) | thrust_damage(34 , pierce),imodbit_balanced ],
 #05bryntvari2 was breathfjadraspjot01langr_bryntvari
-["spear_elitequest3",   "s9rRaven", [("fjadraspjot",0)], itp_test2hspear, itc_spear, 360 , weight(2.55)|difficulty(6)|spd_rtng(115) | weapon_length(144)|swing_damage(22 , blunt) | thrust_damage(18 , pierce),imodbit_balanced ],
-["spear_elitequest3_alt",   "s10roman", [("roman_spear_2",0)], itp_spearalt, itc_staff, 360 , weight(2.55)|difficulty(6)|spd_rtng(115) | weapon_length(144)|swing_damage(20 , blunt) | thrust_damage(25 , pierce),imodbit_balanced ],
+["spear_elitequest3",   "s9rRaven", [("fjadraspjot",0)], itp_test2hspear, itc_spear, 360 , weight(2.55)|difficulty(6)|spd_rtng(115) | weapon_length(144)|swing_damage(22 , blunt) | thrust_damage(38 , pierce),imodbit_balanced ],
+["spear_elitequest3_alt",   "s10roman", [("roman_spear_2",0)], itp_spearalt, itc_staff, 360 , weight(2.55)|difficulty(6)|spd_rtng(115) | weapon_length(144)|swing_damage(31 , blunt) | thrust_damage(0 , pierce),imodbit_balanced ],
 #lanzas especiales chief
 ["spear_elitequest4","Neko's Spear", [("krokaspjott1",0)] , itp_spearunique, itc_spear, 1060,weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(180)|swing_damage(14 , blunt) | thrust_damage(32 , pierce),imodbit_balanced ], #chief cambiado
 ["spear_elitequest4_alt","Neko's Spear", [("krokaspjott1",0)] , itp_spearalt, itc_staff, 1060,weight(2.55)|difficulty(6)|spd_rtng(90) | weapon_length(180)|swing_damage(14 , blunt) | thrust_damage(32 , pierce),imodbit_balanced ], #chief cambiado

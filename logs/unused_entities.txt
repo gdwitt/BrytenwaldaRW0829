@@ -6141,7 +6141,6 @@ itm_slotsquareshield_celtyckie
 itm_slotsword2
 itm_slotsword2_alt
 itm_slottwo_handed_cleaver
-itm_spear_blade1t2
 itm_spear_blade1t2_alt
 itm_spear_blade2t2_alt
 itm_spear_briton2ht3_alt
@@ -6153,6 +6152,7 @@ itm_spear_elitequest3_alt
 itm_spear_elitequest4_alt
 itm_spear_hasta_alt
 itm_spear_hvy_alt
+itm_spear_lightgael_alt
 itm_spearbannert2_alt
 itm_spearslot1
 itm_spearslot2

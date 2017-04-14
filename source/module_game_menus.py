@@ -581,21 +581,23 @@ town_menu_options = [
          (val_add, ":cur_entry", 1),
           (try_begin),
                   (ge, "$cheat_mode", 1),
-                  (display_message, "@{!}DEBUG: getting merc amount in game menus"),
+                  (display_message, "@{!}DEBUG: getting merc1 amount in game menus"),
            (try_end),
         (try_end),
       #(try_end),
         (party_get_slot, ":mercenary_troop2", "$current_town", "slot_center_mercenary_troop_type_2"),  #Adds a menu for the second group of mercenaries in the tavern
+             (assign, reg4, ":mercenary_troop2"),
+             (try_begin),
+                  (ge, "$cheat_mode", 1),
+                  (display_message, "@{!}DEBUG: merc2 is a {reg4}"),
+           (try_end),
              (party_get_slot, ":mercenary_amount2", "$current_town", "slot_center_mercenary_troop_amount_2"),
              (try_begin),
                (gt, ":mercenary_amount2", 0),
                (gt, ":mercenary_troop2", 0),
                (set_visitor, ":cur_entry", ":mercenary_troop2"),
                (val_add, ":cur_entry", 1),
-               (try_begin),
-                  (ge, "$cheat_mode", 1),
-                  (display_message, "@{!}DEBUG: getting merc2 amount in game menus"),
-           (try_end),
+               
              (try_end),
 ##Floris
              # (party_get_slot, ":mercenary_troop2", "$current_town", "slot_center_mercenary_troop_type_2"),  #Adds a menu for the second group of mercenaries in the tavern
@@ -701,18 +703,18 @@ town_menu_options = [
            (val_add, ":cur_entry", 1),
          (try_end),
 
-# ## CC gambling begin chief
-             (try_begin),
-               (party_get_slot, ":prosperity", "$current_town", "slot_town_prosperity"),
-               (val_mod, ":prosperity", 24),
-               (store_time_of_day, ":cur_hour"),
-               (store_sub, ":difference", ":prosperity", ":cur_hour"),
-               (is_between, ":difference", -1, 2), # -1 0 1, 1/8 probability
-               (set_visitor, ":cur_entry", "trp_especial_merchant"),
-               (troop_set_name, "trp_especial_merchant", "@Mystic Merchant"),
-               (call_script, "script_refresh_mystic_merchant_items", "trp_especial_merchant"),
-               (val_add, ":cur_entry", 1),
-             (try_end),
+# ## CC gambling begin chief  ##gdw remove for bug purposess
+             # (try_begin),
+             #   (party_get_slot, ":prosperity", "$current_town", "slot_town_prosperity"),
+             #   (val_mod, ":prosperity", 24),
+             #   (store_time_of_day, ":cur_hour"),
+             #   (store_sub, ":difference", ":prosperity", ":cur_hour"),
+             #   (is_between, ":difference", -1, 2), # -1 0 1, 1/8 probability
+             #   (set_visitor, ":cur_entry", "trp_especial_merchant"),
+             #   (troop_set_name, "trp_especial_merchant", "@Mystic Merchant"),
+             #   (call_script, "script_refresh_mystic_merchant_items", "trp_especial_merchant"),
+             #   (val_add, ":cur_entry", 1),
+             # (try_end),
 ## CC gambling end
 
              (try_begin),

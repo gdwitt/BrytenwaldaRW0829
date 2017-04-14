@@ -68,7 +68,7 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
       #(neq,":useblunts",1),
       (eq, ":order_no", mordr_use_blunt_weapons), #switching to blunt modes only
       #(assign, ":useblunts",1),
-      (neg|item_slot_ge, ":item_no", 'slot_item_swing_damage', 525), #not already holding blunt
+      (neg|item_slot_ge, ":item_no", 'slot_item_swing_damage', 512), #not already holding blunt
       #check inventory to see if weapon can be toggled
       (assign, ":end", ek_head),
       (str_store_agent_name, s10, ":agent_no"),
@@ -82,11 +82,11 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
         (is_between, ":item_itp", itp_type_one_handed_wpn, itp_type_arrows),
         (assign, reg2, ":item_id"),
         #(neq, ":item_itp",itp_staff), ###gdw help for staffs  ERROR: invalid opcode -2147483648   -2147483648 ##all staffs should have swing damage over 13
-        (neg|item_slot_ge, ":item_id", "slot_item_swing_damage", 522), #let engine set wielded
+        (neg|item_slot_ge, ":item_id", "slot_item_swing_damage", 512), #let engine set wielded
         #(neg|item_slot_gt, ":item_id", slot_item_thrust_damage, 523), #let engine set wielded
         (str_store_item_name, s1, ":item_id"),
-        (item_get_slot, reg9, ":item_id", "slot_item_swing_damage"),
-        (item_get_slot, reg8, ":item_id", "slot_item_thrust_damage"),
+        (item_get_slot, ":swdamage", ":item_id", "slot_item_swing_damage"),
+        (item_get_slot, ":thdamage", ":item_id", "slot_item_thrust_damage"),
         (str_store_string, s10, "@{s10},checking {s1} with {reg10} dmg"),
         (display_message, "@!{reg10} is agent {s10} w item tdam {reg9}  w swing dam {reg8}"),
         #(item_get_slot, ":swap_id", ":item_id", "slot_item_alternate"), ##identify the alternate with swapid
@@ -94,12 +94,19 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
         #(str_store_string, s10, "@{s10} and alt"),
 ###new WSE operations
         (try_begin),
-          (item_get_slot, ":swdamage", ":item_id", "slot_item_swing_damage"),
+          #(item_get_slot, ":swdamage", ":item_id", "slot_item_swing_damage"),
+          
           (assign, ":item_no", ":item_id"),
-          (val_div, ":swdamage", 3),
-          (val_mul, ":swdamage", 2),
-          (item_set_swing_damage, ":item_no",":swdamage"),
-          (item_set_swing_damage_type, ":item_no", 2),
+          #(val_div, ":swdamage", 3),
+          #(val_mul, ":swdamage", 2),
+          (item_get_swing_damage_type, ":damage_type_swing", ":item_id"),
+          (assign, reg0, ":damage_type_swing"),
+          (eq, ":damage_type_thrust", thrust),
+      
+          #(item_set_swing_damage, ":item_no",":swdamage"),
+          #(item_set_swing_damage_type, ":item_no", 2),
+          
+          (item_set_slot, ":item_id", "slot_item_swing_damage", ":sdamage"),
           (assign, reg4, ":item_no"),
           (assign, reg5, ":swdamage"),
           

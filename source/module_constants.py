@@ -501,14 +501,14 @@ slot_town_arena_melee_3_team_size = 85
 slot_town_arena_melee_cur_tier    = 86
 ##slot_town_arena_template	  = 87
 ##below is traditionally 90 and 91 but I am trying to fix a double merc bug gdw72416
-slot_center_npc_volunteer_troop_type   = 901
-slot_center_npc_volunteer_troop_amount = 910
-slot_center_mercenary_troop_type  = 90
-slot_center_mercenary_troop_amount= 91
-slot_center_mercenary_troop_type_2 = 901 #use another number if this one is already being used
-slot_center_mercenary_troop_amount_2 = 902 #use another number if this one is already being used
-slot_center_volunteer_troop_type  = 92
-slot_center_volunteer_troop_amount= 93
+slot_center_npc_volunteer_troop_type   = 89
+slot_center_npc_volunteer_troop_amount = 90
+slot_center_mercenary_troop_type  = 89
+slot_center_mercenary_troop_amount= 90
+slot_center_mercenary_troop_type_2 = 91 #use another number if this one is already being used
+slot_center_mercenary_troop_amount_2 = 92 #use another number if this one is already being used
+slot_center_volunteer_troop_type  = 93
+slot_center_volunteer_troop_amount= 94
 
 #slot_center_companion_candidate   = 75
 slot_center_ransom_broker         = 95
@@ -1798,7 +1798,7 @@ tavern_travelers_end = tavern_booksellers_begin
 ransom_brokers_begin = "trp_ransom_broker_1"
 ransom_brokers_end = tavern_travelers_begin
 
-mercenary_troops_begin = "trp_merc_infantryt2"
+mercenary_troops_begin = "trp_townsman"
 mercenary_troops_end = "trp_mercenaries_end"
 
 mercenary_troops2_begin = "trp_engle_footmant2m"

@@ -568,7 +568,7 @@ scripts = [
             (spawn_around_party, ":cur_village", "pt_looters"),
         (try_end),
 
-        (call_script, "script_update_mercenary_units_of_towns"),
+        (call_script, "script_start_update_mercenary_units_of_towns"),
         (try_begin),
                         (ge, "$cheat_mode", 1),
                         (display_message, "@{!}DEBUG:initializing mercs in gamestartscript"),
