@@ -28038,15 +28038,15 @@ Farewell, anrag, you had your chance and wasted it. Good Luck.", "close_window",
 #chief acaba flirteo
 #tavern talk con mistico mercader chief
    ## CC gambling begin
-  ['trp_especial_merchant', "start", [],
-   "Good day {sir/madam}, I have some unidentify items with me. I will sell these items to you by the base price of them. You probably buy an item with a good prefix by a low price or buy an item with a bad prefix by a hight price. Do you want to try your fortune?", "mystic_merchant_talk", []],
-  [anyone|plyr, "mystic_merchant_talk", [], "That sounds good. I want to have a try.", "close_window",
-    [
-      (mission_disable_talk),
-      (start_presentation, "prsnt_gambling"),
-    ]
-  ],
-  [anyone|plyr, "mystic_merchant_talk", [], "Farewell.", "close_window", []],
+  # ['trp_especial_merchant', "start", [],
+  #  "Good day {sir/madam}, I have some unidentified items with me. I will sell these items to you by the base price of them. You probably buy an item with a good prefix by a low price or buy an item with a bad prefix by a hight price. Do you want to try your fortune? If you do your game might crash, so please go back and save.", "mystic_merchant_talk", []],
+  # [anyone|plyr, "mystic_merchant_talk", [], "That sounds good. I want to have a try.", "close_window",
+  #   [
+  #     (mission_disable_talk),
+  #     (start_presentation, "prsnt_gambling"),
+  #   ]
+  # ],
+  #[anyone|plyr, "mystic_merchant_talk", [], "Farewell.", "close_window", []],
 ## CC gambling end
 #Tavern Talk (with troops) floris scripts removed
  #Tavern Talk (with troops)
@@ -28806,16 +28806,16 @@ Farewell, anrag, you had your chance and wasted it. Good Luck.", "close_window",
   [LazyFlag('trp_druidleader')|plyr, "druid_talk", [(neq, "$g_sod_faith", 2),],
    "I wish to be taught about the old Celtic gods so that I might honor them (Conversion to Celtic Cult).", "druid_ayuda", [
        (assign, "$g_sod_faith", 2),
-       (display_message, "@You are now a Celtic pagan. Follower of Old Celtic gods."),
-          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_1", -3), #la q designemos
-          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_13", -3), #la q designemos
-          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_9", -2), #la q designemos
-          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_14", -2), #la q designemos
+       (display_message, "@You are now a pagan. Follower of Old Celtic gods."),
+          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_1", -5), #la q designemos
+          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_13", -5), #la q designemos
+          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_9", -4), #la q designemos
+          (call_script, "script_change_player_relation_with_faction", "fac_kingdom_14", -4), #la q designemos
           (call_script, "script_change_player_relation_with_faction", "fac_kingdom_18", 4), #la q designemos
           (call_script, "script_change_player_relation_with_faction", "fac_kingdom_19", 4), #la q designemos
           (call_script, "script_change_player_relation_with_faction", "fac_kingdom_20", 4), #la q designemos
-          (call_script, "script_change_player_relation_with_faction", "fac_christians", -2), #la q designemos
-          (call_script, "script_change_player_relation_with_faction", "fac_pagans", -1), #la q designemos
+          (call_script, "script_change_player_relation_with_faction", "fac_christians", -5), #la q designemos
+          (call_script, "script_change_player_relation_with_faction", "fac_pagans", -2), #la q designemos
   ]],
   [LazyFlag('trp_druidleader')|plyr, "druid_talk", [(neq, "$g_sod_faith", 2),],
    "I wish to be taught about the old Celtic gods so that I might honor them but I will remain loyal to my fathers' gods.", "druid_ayuda", [
@@ -34089,7 +34089,6 @@ They are extremely valuable items and you will probably face many hardships to f
 ##                                                                                                                          (encounter_attack,0)]],
 ##  [anyone|plyr, "reinforcements_attack", [], "All right, continue your travels! But do not tell anyone that you have seen me!", "close_window",[]],
 ####chief acaba####
-
 ##########Training start##############################################################################################
 #(store_conversation_troop,reg(1)),
 #                     (is_between,reg(1),arena_masters_begin,arena_masters_end),
@@ -34142,7 +34141,7 @@ They are extremely valuable items and you will probably face many hardships to f
                                          (try_begin),
                                              (store_character_level, ":npc_level", "$g_cur_npc"),
                                              (store_mul, "$g_study_price", ":npc_level", 4),
-                                             (val_mul, "$g_study_price", 320),                                              
+                                             (val_mul, "$g_study_price", 500),                                              
                                              (assign, reg0, "$g_study_price"),
                                          (try_end),
                                      ], "The cost of training will be {reg0} scillingas. No sneaking out of town is allowed; you will lose your investment.", "ms_npc_agree_disagree", []],  

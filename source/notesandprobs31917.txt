@@ -1,0 +1,77 @@
+	734 936 8835
+
+(try_begin),
+            (gt, "$cheat_mode", 0),
+            (assign, reg4, "$talk_context"),
+            (display_message, "@{!}DEBUG -- Talk context: {reg4}"),
+        (try_end),
+[anyone|plyr,"merchant_talk", [(eq,"$talk_context", tc_party_encounter),(lt, "$g_talk_troop_faction_relation", 0)],
+   "Not so fast. First, hand over all your goods and money.", "talk_caravan_enemy_2",[]],
+30362
+item_no
+
+
+D:\My Documents\GitHub\Brytenwalda\BrytenwaldaRW0829 - Copy>python -m compile
+WARNING:root: String "rebellion_agree_pitiless" is duplicated
+WARNING:root: String "rebellion_agree_cunning" is duplicated
+WARNING:root: String "rebellion_agree_sadistic" is duplicated
+WARNING:root: String "rebellion_agree_goodnatured" is duplicated
+WARNING:root: String "rebellion_agree_upstanding" is duplicated
+WARNING:root: String "wife" is duplicated
+WARNING:root: String "husband" is duplicated
+WARNING:root: String "father" is duplicated
+WARNING:root: String "mother" is duplicated
+WARNING:root: String "daughter" is duplicated
+WARNING:root: String "son" is duplicated
+WARNING:root: String "sister" is duplicated
+WARNING:root: String "brother" is duplicated
+WARNING:root: String "trade_explanation_dates" is duplicated
+WARNING:root: String "s15" is duplicated
+WARNING:root: String "he" is duplicated
+WARNING:root: String "she" is duplicated
+WARNING:root: String "whereabouts_unknown" is duplicated
+WARNING:root: String "reason_high_price" is duplicated
+ERROR:root: Local variable "qst_mod_trouble" in "Dialog[hareck_troublemakers_17 -> close_window][consequences]" used but not assigned
+ERROR:root: Local variable "qst_mod_trouble" in "Dialog[geoffrey_duelling -> close_window][conditions]" used but not assigned
+WARNING:root: Local variable "item_no" unused at statement "MissionTemplate.lead_charge.Trigger(-71.0 0.0 0.0)[consequences]"
+WARNING:root: Local variable "item_no" unused at statement "MissionTemplate.lead_charge_ambush.Trigger(-71.0 0.0 0.0)[consequences]"
+WARNING:root: Local variable "item_no" unused at statement "MissionTemplate.lead_charge_ambushed.Trigger(-71.0 0.0 0.0)[consequences]"
+WARNING:root: Local variable "item_no" unused at statement "MissionTemplate.quick_battle_battle.Trigger(-71.0 0.0 0.0)[consequences]"
+WARNING:root: Local variable "item_no" unused at statement "MissionTemplate.entrenched_encounter.Trigger(-71.0 0.0 0.0)[consequences]"
+WARNING:root: Local variable "i_try" unused at statement "party_calculate_loot"
+WARNING:root: Local variable "stack_no" unused at statement "restore_wagon_troops"
+
+D:\My Documents\GitHub\Brytenwalda\BrytenwaldaRW0829 - Copy>echo.
+
+
+D:\My Documents\GitHub\Brytenwalda\BrytenwaldaRW0829 - Copy>echo ______________________________
+______________________________
+
+D:\My Documents\GitHub\Brytenwalda\BrytenwaldaRW0829 - Copy>echo.
+
+
+D:\My Documents\GitHub\Brytenwalda\BrytenwaldaRW0829 - Copy>echo Script processing has ended.
+Script processing has ended.
+
+D:\My Documents\GitHub\Brytenwalda\BrytenwaldaRW0829 - Copy>echo Press any key to exit. . .
+Press any key to exit. . .
+
+D:\My Documents\GitHub\Brytenwalda\BrytenwaldaRW0829 - Copy>pause1>nul
+
+london has staffs for polearm tournament wweapon vs swords
+military hammer hovers in front spelled lower case super slow speed
+connor has testPitchfork
+canterbury have 1 white and two burgundy jersetys in tournament
+large bag of round shield
+lack of rest on morale report "Lack of rest:" should show positive sign
+
++1 to wound treatment +1 while de materia
+
+leather girded noble tunic is wrong image
+@Sladki	AI blunt order totally reworked  …			384a533
+ @Sladki	AI Blunt script code refactored			038edb1
+ @Sladki	Amount of some kinds of "skill amplifiy" troops to have effect now de…  …			b7c23b8
+ @Sladki	Mystic merchant and loot wagon screens improvements  …
+
+
+ test troop set class working in initialization

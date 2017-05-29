@@ -2432,6 +2432,9 @@ slot_item_leg_armor	= slot_item_swing_damage
 slot_item_horse_speed	= slot_item_needs_two_hands
 slot_item_horse_armor	= slot_item_thrust_damage
 slot_item_horse_charge	= slot_item_swing_damage
+##from VC for best_melee_weapon
+Outfit_Thorax_Length = 60  #length dark ages human thorax
+Outfit_Fast_Weapon_Speed = 100
 # # Autoloot end
 #################Lgoli resume
 #positions used through formations and AI triggers

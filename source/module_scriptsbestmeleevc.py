@@ -13,7 +13,7 @@ from header_map_icons import *
 from header_presentations import *
 
 from module_constants import *
-from module_items import *
+from module_items import items
 
 from . import economy, enterprise, tournaments, game_start, companions , caravans
 import notes
@@ -7485,7 +7485,7 @@ scripts = [
 	  (this_or_next|party_slot_eq, "$g_enemy_party", "slot_party_type", spt_merchant_caravan), #Floris Seafaring / Seatrade chief
       (this_or_next|party_slot_eq, "$g_enemy_party", "slot_party_type", spt_bandit_lair),
         (party_slot_eq, "$g_enemy_party", "slot_party_type", spt_village_farmer),
-        (store_mul, ":plunder_amount", player_loot_share, 34),#gdw30
+        (store_mul, ":plunder_amount", player_loot_share, 40),#gdw30
         (val_mul, ":plunder_amount", "$g_strength_contribution_of_player"),
         (val_div, ":plunder_amount", 100),
         (val_div, ":plunder_amount", ":num_player_party_shares"),
@@ -7495,7 +7495,6 @@ scripts = [
           (reset_item_probabilities, 100),
           (assign, ":range_min", trade_goods_begin),
           (assign, ":range_max", trade_goods_end),
-          (val_mul, ":plunder_amount", 4),
         (else_try),
           (party_slot_eq, "$g_enemy_party", "slot_party_type", spt_bandit_lair),
           (val_div, ":plunder_amount", 2),
@@ -7531,22 +7530,18 @@ scripts = [
         (val_add, ":num_looted_items", ":plunder_amount"),
       (try_end),
 
-      
+      ##Trophies calculation: (40% base chance + loot skill * 4) for every 10 enemies (Lesser trophy)
       ##(4% base chance + loot skill) for evey 10 enemies (Medium trophy)
       (try_begin),
       (store_party_size_wo_prisoners, ":enemies_count", ":enemy_party"),
-      (val_div, ":enemies_count", 3),
+      (val_div, ":enemies_count", 10),
       (party_get_skill_level, ":player_party_looting", "p_main_party", "skl_looting"),
-      (assign, ":medium_trophy_chance", 2),
+      (assign, ":medium_trophy_chance", 4),
       (val_add, ":medium_trophy_chance", ":player_party_looting"),
-      (val_add, ":medium_trophy_chance",":enemies_count"),
-     ##Trophies calculation: (20% base chance + loot skill * 2+count) for every 10 enemies (Lesser trophy)
-      (val_mul, ":player_party_looting", 2),
-
-      (assign, ":trophy_chance", 20),
-      (val_add, ":trophy_chance",":enemies_count"),
+      (val_mul, ":player_party_looting", 4),
+      (assign, ":trophy_chance", 40),
       (val_add, ":trophy_chance", ":player_party_looting"),
-      #(try_for_range, ":i_try", 0, ":enemies_count"), ##compiler says itry unused
+      (try_for_range, ":i_try", 0, ":enemies_count"), ##compiler says itry unused
         (store_random_in_range, ":roll", 0, 100),
         (try_begin),
           (gt, ":trophy_chance", ":roll"),
@@ -7558,16 +7553,16 @@ scripts = [
           (val_add, ":num_looted_items", 1),
           (troop_add_item, "trp_temp_troop", "itm_trophy_b"),
         (try_end),
-      #(try_end),
+      (try_end),
       (try_end),
       ##End trophies calculation
 
       #Now loot the defeated party
-      (store_mul, ":loot_probability", player_loot_share, 6),#gdw3
+      (store_mul, ":loot_probability", player_loot_share, 8),#gdw3
       (val_mul, ":loot_probability", "$g_strength_contribution_of_player"),
       (party_get_skill_level, ":player_party_looting", "p_main_party", "skl_looting"),
       (val_add, ":player_party_looting", 1),##so get minimal amount at beginning
-      (val_mul, ":player_party_looting", 3),#gdwneed to use the skill somehow was (val_add, ":player_party_looting", 10),
+      (val_mul, ":player_party_looting", 5),#gdwneed to use the skill somehow was (val_add, ":player_party_looting", 10),
       (val_mul, ":loot_probability", ":player_party_looting"),
       (val_div, ":loot_probability", 10),
       (val_div, ":loot_probability", ":num_player_party_shares"),
@@ -53187,11 +53182,10 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
           (eq, reg1, itp_type_polearm),
           (assign, ":target_division", sdt_polearm),
         (try_end),
-      (else_try),##gdw temporary bug fix no where else troop_set_class used remove this once script is set
-      ##TODO I believe flags guarantee_horse and guarantee_ranged define the classes internally juju70 on theforge
+       	(else_try),##gdw temporary bug fix no where else troop_set_class used
            (assign, ":target_division", grc_infantry),
+        (try_end),
       (try_end),
-      #(try_end),
       
       (assign, reg0, ":target_division"),]),
 	   
@@ -53269,7 +53263,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(this_or_next|ge, ":rank", ":square_dimension"),
 					(this_or_next|eq, ":column", 1),
 					(ge, ":column", ":square_dimension"),
-					(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),## if in front of formation, use any weapon and don't force length
+					(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 0),
 				(else_try),
 					(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
@@ -53280,7 +53274,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 						(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
 						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
 					(else_try),
-						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),##forcing length
+						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 					(try_end),
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
 					(agent_set_defend_action, ":agent", -2, ":reform_interval_thousandths"),
@@ -53960,16 +53954,37 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	(try_end),
   ]),
 
+	# script_cf_is_weapon_ranged by motomataru
+  # Input: weapon ID, flag 0/1 to consider thrown weapons
+  # Output: T/F
+  ("cf_is_weapon_ranged", [(store_script_param, ":weapon", 1),
+      (store_script_param, ":include_thrown", 2),
+      
+      (assign, ":test_val", 0),
+      (try_begin),
+        (ge, ":weapon", 0),
+        (item_get_type, ":type", ":weapon"),
+        (try_begin),
+          (this_or_next | eq, ":type", itp_type_bow),
+          (this_or_next | eq, ":type", itp_type_crossbow),
+          (this_or_next | eq, ":type", itp_type_pistol),
+          (eq, ":type", itp_type_musket),
+          (assign, ":test_val", 1),
+        (else_try),
+          (eq, ":type", itp_type_thrown),
+          (neq, ":include_thrown", 0),
+          (assign, ":test_val", 1),
+        (try_end),
+      (try_end),
+      
+      (neq, ":test_val", 0),]),
   # script_equip_best_melee_weapon by motomataru
   # Input: agent id, flag to force shield, flag to force for length ALONE, current fire order
   # Output: none
   ("equip_best_melee_weapon", [(store_script_param, ":agent", 1),
       (store_script_param, ":force_shield", 2),
-      (store_script_param, ":force_length", 3), ##0 means don't
+      (store_script_param, ":force_length", 3),
       (store_script_param, ":fire_order", 4),
-
-# aordr_fire_at_will      = 0 from header mission templates
-# aordr_hold_your_fire    = 1
       
       (agent_get_wielded_item, ":cur_wielded", ":agent", 0),
       (try_begin),
@@ -53999,7 +54014,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
         (try_end),
         #select weapon
         (try_begin),
-          (eq, ":weapon", "itm_no_item"),#initialize weapon to nothing
+          (eq, ":weapon", "itm_no_item"),
           (assign, ":cur_score", 0),
           (try_for_range, ":item_slot", ek_item_0, ek_head),
             (agent_get_item_slot, ":item", ":agent", ":item_slot"),
@@ -54009,30 +54024,28 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
             
             (try_begin),
               (item_has_property, ":item", itp_two_handed),
-              (assign, reg0, 1),##reg0=1 signifies it needs two hand no shield
+              (assign, reg0, 1),
             (else_try),
               (assign, reg0, 0),
             (try_end),
             
             (this_or_next | eq, reg0, 0),##is not two-handed
-            (this_or_next | eq, ":force_shield", 0),##no order to use shield
-            (eq, ":shield", "itm_no_item"),#does not have a shield
+            (this_or_next | eq, ":force_shield", 0),
+            (eq, ":shield", "itm_no_item"),#not shield
             
-            (try_begin),##if ranged, get out of the list check
+            (try_begin),
               (call_script, "script_cf_is_weapon_ranged", ":item", 1),
               
-            (else_try),#else we have melee weapons
+            (else_try),
               (try_begin),
-                (neq, ":force_length", 0),#in formation with spears could say eq forcelength=1
+                (neq, ":force_length", 0),#in formation with spears
                 (item_get_weapon_length, ":item_length", ":item"),
                 (try_begin),
-                  (lt, ":cur_score", ":item_length"),##shouldn't always be the case we assigned uit to 0
-                  #since we are looping through, this will pick the longest weeapon
-                  (assign, ":cur_score", ":item_length"), #the score is the length
+                  (lt, ":cur_score", ":item_length"),
+                  (assign, ":cur_score", ":item_length"),
                   (assign, ":weapon", ":item"),
                 (try_end),
               (else_try),
-              	#(assign, ":cur_score", 0),
                 (agent_get_troop_id, ":troop_id", ":agent"),
                 (troop_is_guarantee_horse, ":troop_id"),
                 (agent_get_horse, ":horse", ":agent"),
@@ -54043,13 +54056,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
                   (item_get_type, ":weapon_type", ":item"),
                   (eq, ":weapon_type", itp_type_one_handed_wpn),
                   (item_get_swing_damage, ":swing", ":item"),
-                  (item_get_swing_damage, ":thrust", ":item"),
-                  (val_mul, ":thrust",3),
-                  (val_div, ":thrust",5),
-                  (store_add, ":combdamage",":thrust",":swing"),
-                  (lt, ":cur_score", ":combdamage"),
-                  (assign, ":cur_score", ":combdamage"),
-                  #(gt, ":swing", 19),
+                  (gt, ":swing", 19),
                   (assign, ":weapon", ":item"),
                 (try_end),
               (else_try),
@@ -54076,12 +54083,12 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
         (try_begin),
           (neq, ":cur_wielded", ":weapon"),
           (try_begin),
-            (gt, ":shield", "itm_no_item"),
+            (gt, ":shield", itm_no_item),
             (agent_get_wielded_item, reg0, ":agent", 1),
             (neq, reg0, ":shield"),	#reequipping secondary will UNequip (from experience)
             (agent_set_wielded_item, ":agent", ":shield"),
           (try_end),
-          (gt, ":weapon", "itm_no_item"),
+          (gt, ":weapon", itm_no_item),
           (agent_set_wielded_item, ":agent", ":weapon"),
         (try_end),
       (try_end),]),

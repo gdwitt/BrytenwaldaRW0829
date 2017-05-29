@@ -5078,8 +5078,6 @@ dlga_50
 dlga_500
 dlga_5000
 dlga_5001
-dlga_5002
-dlga_5003
 dlga_501
 dlga_502
 dlga_503
@@ -6141,6 +6139,7 @@ itm_slotsquareshield_celtyckie
 itm_slotsword2
 itm_slotsword2_alt
 itm_slottwo_handed_cleaver
+itm_spathasword_alt
 itm_spear_blade1t2_alt
 itm_spear_blade2t2_alt
 itm_spear_briton2ht3_alt
@@ -7866,6 +7865,7 @@ script_cf_select_random_town_at_peace_with_faction_in_trade_route
 script_cf_select_random_walled_center_with_faction_and_less_strength_priority
 script_cf_troop_check_troop_is_enemy
 script_cf_troop_get_random_leaded_walled_center_with_less_strength_priority
+script_equip_best_melee_weaponold
 script_event_player_vacation
 script_faction_last_reconnoitered_center
 script_find_travel_location

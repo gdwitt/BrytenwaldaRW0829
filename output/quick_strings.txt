@@ -1,4 +1,4 @@
-2475
+2505
 qstr_{reg65?my_Lady:my_Lo {reg65?my_Lady:my_Lord}
 qstr_{reg65?My_Lady:My_Lo {reg65?My_Lady:My_Lord}
 qstr_{reg65?madame:sir} {reg65?madame:sir}
@@ -227,7 +227,7 @@ qstr_Well_done_{sir/madam Well_done,_{sir/madam}._Keep_the_money_and_wine_coming
 qstr_We_are_at_your_servi We_are_at_your_service,_{sir/madam}._Point_us_in_the_direction_of_those_who_need_hurting,_and_we'll_do_the_rest.
 qstr__You_are_now_a_chris _You_are_now_a_christian.
 qstr_You_are_now_a_pagan. You_are_now_a_pagan._Follower_of_Woden_and_Germanic_gods.
-qstr_You_are_now_a_pagan._ You_are_now_a_pagan._Follower_of_Old_Celtic_gods.
+qstr_You_are_now_a_Celtic You_are_now_a_Celtic_pagan._Follower_of_Old_Celtic_gods.
 qstr__Men_and_women_gathe _Men_and_women_gather_around_you_in_strange_chants.
 qstr__The_Druid_pronounce _The_Druid_pronounces_your_name_and_cuts_a_small_gash_on_the_right_chest_of_the_prisoner_now_on_the_ground.
 qstr__Close_your_eyes_and _Close_your_eyes_and_receive_the_blessing_of_the_gods_and_goddesses.
@@ -275,6 +275,11 @@ qstr_{!}DEBUG____Total_pr {!}DEBUG_--_Total_production_for_{s4}:_{reg4}
 qstr_{!}DEBUG____Total_ru {!}DEBUG_--_Total_rural_production_for_{s4}_region:_{reg4}
 qstr_{!}DEBUG____Total_tr {!}DEBUG_--_Total_trade_for_{s4}:_{reg4}
 qstr_{!}DEBUG____Total_at {!}DEBUG_--_Total_attacks_for_{s4}:_{reg4}
+qstr__Special_Training_st _Special_Training_started
+qstr_Training_continues Training_continues
+qstr__Tactics_training_st _Tactics_training_started
+qstr__Military_training_s _Military_training_started
+qstr__Attribute_and_Weapo _Attribute_and_Weapon_training_started
 qstr_{s16}_and_{s15} {s16}_and_{s15}
 qstr_{!}{s16}_{s15} {!}{s16},_{s15}
 qstr_{!}current_town_was_ {!}current_town_was_{reg3},_now_moved_to_{s5}
@@ -810,6 +815,12 @@ qstr_{!}DEBUG:_tax_paid_is {!}DEBUG:_tax_paid_is_5%:{reg3}
 qstr_^String_report:a_pro ^String_report:a_profit_of_{reg11}_scillingas.
 qstr_{!}DEBUG:_Total_earn {!}DEBUG:_Total_earnings:{reg11}_for_the_caravan_not_including_setup_fee_
 qstr_You_got_keys_of_dung You_got_keys_of_dungeon.
+qstr_[DEBUG]_{s0}_is_blun [DEBUG]_{s0}_is_blunt
+qstr_[DEBUG]_{s0}_swapped [DEBUG]_{s0}_swapped_{s1}_with_{s2}
+qstr_[DEBUG]_{s0}_has_equ [DEBUG]_{s0}_has_equipped_{s1}
+qstr_[DEBUG]_{s0}_has_{re [DEBUG]_{s0}_has_{reg0}/{reg1}_blunts
+qstr_[DEBUG]_{s0}_has_une [DEBUG]_{s0}_has_unequipped_{s1}
+qstr_[DEBUG]============= [DEBUG]==========================================
 qstr_{!}DEBUG:calling_use {!}DEBUG:calling_use_all_weapons_in_battletype
 qstr__Scout_report:___Sir _Scout_report:_--Sir,_be_careful!_The_enemy_is_on_the_other_side_of_the_estuary.--^^One_of_your_men_sighes:_--This_site_is_beautiful._It's_a_shame_that_soon_the_water_will_run_stained_with_blood.--^^(press_K_to_finish_reading)
 qstr__Scout_report:_Sir_b _Scout_report:_Sir,_be_careful!_The_enemy_is_on_the_other_side_of_the_estuary.
@@ -904,12 +915,6 @@ qstr_Division_{reg0}:_ret Division_{reg0}:_returning_after_destroying_enemy_{s1}
 qstr_Division_{reg0}:_cav Division_{reg0}:_cavalry_formation_disassembled.
 qstr_You_unleash_a_fearso You_unleash_a_fearsome_cry!
 qstr_You_rally_your_men!_ You_rally_your_men!_(wounded_troops_recover_{reg1}_%_hitpoints)
-qstr_[DEBUG]_{s0}_is_blun [DEBUG]_{s0}_is_blunt
-qstr_[DEBUG]_{s0}_swapped [DEBUG]_{s0}_swapped_{s1}_with_{s2}
-qstr_[DEBUG]_{s0}_has_equ [DEBUG]_{s0}_has_equipped_{s1}
-qstr_[DEBUG]_{s0}_has_{re [DEBUG]_{s0}_has_{reg0}/{reg1}_blunts
-qstr_[DEBUG]_{s0}_has_une [DEBUG]_{s0}_has_unequipped_{s1}
-qstr_[DEBUG]============= [DEBUG]==========================================
 qstr__You_have_beaten_the _You_have_beaten_the_old_hero,_you_have_begun_your_journey_to_the_legend.
 qstr__Bandits_strike_you_ _Bandits_strike_you_with_anger_and_you_fall_into_a_puddle_of_blood._They_think_you're_dead...
 qstr__The_bandits_and_sla _The_bandits_and_slavers_have_been_dealt_with._Get_the_prisoners_and_leave_through_the_air_shaft.
@@ -1774,6 +1779,33 @@ qstr_You_have_rejoined_yo You_have_rejoined_your_commander!
 qstr_{s3}_{s2} {s3},_{s2}
 qstr_The_equipment_of_a_{ The_equipment_of_a_{s1}:_{s2}is_assigned_to_you.
 qstr_The_equipment_of_a_{s The_equipment_of_a_{s1}:_{s2}is_taken_from_you.
+qstr_Lame Lame
+qstr_Swaybacked Swaybacked
+qstr_Timid Timid
+qstr_Meek Meek
+qstr_Stubborn Stubborn
+qstr_Heavy Heavy
+qstr_Spirited Spirited
+qstr_Champion Champion
+qstr_Cracked Cracked
+qstr_Battered Battered
+qstr_Thick Thick
+qstr_Reinforced Reinforced
+qstr_Rusty Rusty
+qstr_Tattered Tattered
+qstr_Ragged Ragged
+qstr_Crude Crude
+qstr_Sturdy Sturdy
+qstr_Hardened Hardened
+qstr_Lordly Lordly
+qstr_Broken Broken
+qstr_Bent Bent
+qstr_Chipped Chipped
+qstr_Strong Strong
+qstr_Balanced Balanced
+qstr_Tempered Tempered
+qstr_Masterwork Masterwork
+qstr_Large_Bag_of Large_Bag_of
 qstr_Your_reputation_has_ Your_reputation_has_increased_{reg12},_and_it_is_{reg13}_now.
 qstr_Your_reputation_has_d Your_reputation_has_decreased_{reg12},_and_it_is_{reg13}_now.
 qstr_People_think_neither People_think_neither_better_or_worse_of_you.
@@ -2440,8 +2472,6 @@ qstr_You_caught_some_fish You_caught_some_fish.
 qstr_Due_to_insufficient_ Due_to_insufficient_space,_you_had_to_throw_the_fish_back_into_the_ocean
 qstr_All_you_caught_were_ All_you_caught_were_some_seaweeds.
 qstr_Oops:_your_mercenary Oops:_your_mercenary_captain_kills_his_prisoners_to_he_can_move_faster.
-qstr_The_training_started The_training_started
-qstr_The_training_complet The_training_completed!
 qstr_Your_recruiter_who_wa Your_recruiter_who_was_commissioned_to_recruit_{reg10}_recruits_to_{s13}_has_been_killed!
 qstr_{s13}_has_been_taken {s13}_has_been_taken_by_the_enemy_and_your_recruiter_who_was_commissioned_to_recruit_{reg10}_recruits_vanished_without_a_trace!
 qstr_ERROR_IN_THE_RECRUIT ERROR_IN_THE_RECRUITER_KIT_SIMPLE_TRIGGERS!
