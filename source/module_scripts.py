@@ -53269,17 +53269,17 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(this_or_next|ge, ":rank", ":square_dimension"),
 					(this_or_next|eq, ":column", 1),
 					(ge, ":column", ":square_dimension"),
-					(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),## if in front of formation, use any weapon and don't force length
+					(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),## if in front of formation, use any weapon and don't force length
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 0),
 				(else_try),
 					(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 					(try_begin),
-						(neq, ":closest_enemy", -1),
-						(agent_get_position, pos0, ":closest_enemy"),
-						(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-						(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
-					(else_try),
+					# 	(neq, ":closest_enemy", -1),
+					# 	(agent_get_position, pos0, ":closest_enemy"),
+					# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+					# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+					# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),#gdw
+					# (else_try),
 						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),##forcing length
 					(try_end),
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -53364,17 +53364,17 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(try_begin),
 						(this_or_next|eq, ":column", 1),
 						(ge, ":column", ":rank_dimension"),
-						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
+						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 						(agent_set_slot, ":agent", "slot_agent_inside_formation", 0),
 					(else_try),
 						(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 						(try_begin),
-							(neq, ":closest_enemy", -1),
-							(agent_get_position, pos0, ":closest_enemy"),
-							(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-							(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
-						(else_try),
+						# 	(neq, ":closest_enemy", -1),
+						# 	(agent_get_position, pos0, ":closest_enemy"),
+						# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+						# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+						# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
+						# (else_try),
 							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 						(try_end),
 						(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -53463,12 +53463,12 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(else_try),
 						(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 						(try_begin),
-							(neq, ":closest_enemy", -1),
-							(agent_get_position, pos0, ":closest_enemy"),
-							(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-							(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
-						(else_try),
+						# 	(neq, ":closest_enemy", -1),
+						# 	(agent_get_position, pos0, ":closest_enemy"),
+						# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+						# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+						# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
+						# (else_try),
 							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 						(try_end),
 						(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -53564,12 +53564,12 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(eq, ":min_len_non_shielded", -1),	#haven't looped through agents at least once since rank 2
 					(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 					(try_begin),
-						(neq, ":closest_enemy", -1),
-						(agent_get_position, pos0, ":closest_enemy"),
-						(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-						(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
-					(else_try),
+					# 	(neq, ":closest_enemy", -1),
+					# 	(agent_get_position, pos0, ":closest_enemy"),
+					# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+					# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+					# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
+					# (else_try),
 						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 					(try_end),
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -53997,6 +53997,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
             (assign, ":weapon", ":item"),	#use thrown weapons first
           (try_end),
         (try_end),
+
         #select weapon
         (try_begin),
           (eq, ":weapon", "itm_no_item"),#initialize weapon to nothing
@@ -54022,16 +54023,33 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
               (call_script, "script_cf_is_weapon_ranged", ":item", 1),
               
             (else_try),#else we have melee weapons
-              (try_begin),
-                (neq, ":force_length", 0),#in formation with spears could say eq forcelength=1
-                (item_get_weapon_length, ":item_length", ":item"),
-                (try_begin),
-                  (lt, ":cur_score", ":item_length"),##shouldn't always be the case we assigned uit to 0
-                  #since we are looping through, this will pick the longest weeapon
-                  (assign, ":cur_score", ":item_length"), #the score is the length
-                  (assign, ":weapon", ":item"),
-                (try_end),
-              (else_try),
+              
+               (try_begin),
+                 (neq, ":force_length", 0),#in formation with spears could say eq forcelength=1
+                  (assign, ":cur_score", 0),
+	                # (agent_get_troop_id, ":troop_id", ":agent"),
+	                # (troop_is_guarantee_horse, ":troop_id"),
+	                # (agent_get_horse, ":horse", ":agent"),
+	                # (le, ":horse", 0),##not on horse
+	                (try_for_range, ":item_slot", ek_item_0, ek_head),
+	                  (agent_get_item_slot, ":item", ":agent", ":item_slot"),
+	                  (gt, ":item", "itm_no_item"),
+
+	                  # (item_get_type, ":weapon_type", ":item"),
+	                  # (eq, ":weapon_type", itp_type_one_handed_wpn),
+	                  (item_get_swing_damage, ":swing", ":item"),
+	                  (item_get_thrust_damage, ":thrust", ":item"),
+	                  (item_get_weapon_length, ":item_length", ":item"),
+	                  (val_div, ":item_length",2),
+	                  (val_add, ":thrust",":swing"),
+	                  (store_add, ":combdamage",":thrust",":item_length"),
+	                  
+	                  (lt, ":cur_score", ":combdamage"),
+	                  (assign, ":cur_score", ":combdamage"),
+	                  #(gt, ":swing", 19),
+	                  (assign, ":weapon", ":item"),
+                	(try_end),
+              (else_try),##dehorsed cavalry
               	#(assign, ":cur_score", 0),
                 (agent_get_troop_id, ":troop_id", ":agent"),
                 (troop_is_guarantee_horse, ":troop_id"),
@@ -54043,20 +54061,14 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
                   (item_get_type, ":weapon_type", ":item"),
                   (eq, ":weapon_type", itp_type_one_handed_wpn),
                   (item_get_swing_damage, ":swing", ":item"),
-                  (item_get_swing_damage, ":thrust", ":item"),
-                  (val_mul, ":thrust",3),
-                  (val_div, ":thrust",5),
-                  (store_add, ":combdamage",":thrust",":swing"),
-                  (lt, ":cur_score", ":combdamage"),
-                  (assign, ":cur_score", ":combdamage"),
-                  #(gt, ":swing", 19),
+                  (gt, ":swing",18),
                   (assign, ":weapon", ":item"),
                 (try_end),
-              (else_try),
+			 (else_try),
                 (agent_get_troop_id, ":troop_id", ":agent"),
                 (assign, ":imod", imod_plain),
                 (try_begin),    #only heroes have item modifications
-                  (troop_is_hero, ":troop_id"),
+                  #(troop_is_hero, ":troop_id"),
                   (try_for_range, ":troop_item_slot",  ek_item_0, ek_head),    # heroes have only 4 possible weapons (equipped)
                     (troop_get_inventory_slot, reg0, ":troop_id", ":troop_item_slot"),  #Find Item Slot with same item ID as Equipped Weapon
                     (eq, reg0, ":item"),

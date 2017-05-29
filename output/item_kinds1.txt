@@ -354,7 +354,7 @@ itemsfile version 3
  54 59 61 70
 0
 
- itm_jewelry Jewelry Jewelry 1  vc_jewelry 0  65547 0 550 0 5.000000 5 0 0 0 0 0 0 0 0 100 0 0
+ itm_jewelry Jewelry Jewelry 1  vc_jewelry 0  65547 0 550 0 5.000000 25 0 0 0 0 0 0 0 0 100 0 0
  5
  42 48 57 62 67
 0
@@ -4039,102 +4039,102 @@ itemsfile version 3
  0
 0
 
- itm_spear_hvy Heavy_Spear Heavy_Spear 1  fjadraspjot 0  675610628 22236529535487232 430 8202 4.000000 60 0 0 0 9 0 86 0 145 0 280 529
+ itm_spear_hvy Heavy_Staff_Spear Heavy_Staff_Spear 1  fjadraspjot 0  675610628 22236529535487232 440 8202 4.000000 60 0 0 0 9 0 86 0 145 0 280 530
  0
 0
 
- itm_spear_hvy_alt Staff_Spear Staff_Spear 1  svia2 0  138739716 22236529535487232 521 8202 2.000000 60 0 0 0 8 0 84 0 131 0 522 529
+ itm_spear_hvy_alt Staff_Spear Staff_Spear 1  svia2 0  138739716 22236529535487232 521 8202 2.000000 60 0 0 0 8 0 84 0 131 0 524 530
  0
 0
 
- itm_spear1 Spear Spear 1  spjot 0  138739716 22236529535487232 400 8202 1.250000 60 0 0 0 7 0 90 0 133 0 282 527
+ itm_spear1 Spear Spear 1  spjot 0  138739716 22236529535487232 370 8202 1.250000 60 0 0 0 7 0 90 0 133 0 282 527
  0
 0
 
- itm_spear2 Medium_Spear Medium_Spear 1  saxon2hspear 0  138739716 22236529535487232 400 8202 1.250000 6 0 0 0 0 0 90 0 144 0 278 532
+ itm_spear2 Medium_Spear Medium_Spear 1  saxon2hspear 0  138739716 22236529535487232 420 8202 1.250000 6 0 0 0 0 0 90 0 144 0 283 528
  0
 0
 
- itm_spearlight Light_Spear Light_Spear 1  hoggkesja 0  138739716 22236529535487232 165 8202 1.250000 67 0 0 0 6 0 102 0 125 0 283 525
+ itm_spearlight Light_Spear Light_Spear 1  hoggkesja 0  138739716 22236529535487232 265 8202 1.250000 67 0 0 0 6 0 103 0 125 0 281 523
  0
 0
 
- itm_spearboar Boar_Spear Boar_Spear 1  svia2 0  138739716 22236529535487232 521 8202 2.000000 60 0 0 0 8 0 84 0 131 0 282 531
+ itm_spearboar Boar_Spear Boar_Spear 1  svia2 0  138739716 22236529535487232 521 8202 2.000000 60 0 0 0 8 0 84 0 131 0 283 529
  0
 0
 
- itm_spearlong Basic_Cav_Spear Basic_Cav_Spear 1  spjotkesja 0  138739716 22236529535487232 480 8202 2.000000 50 0 0 0 8 0 99 0 185 0 286 524
+ itm_spearlong Basic_Cav_Spear Basic_Cav_Spear 1  spjotkesja 0  138739716 22236529535487232 480 8202 2.000000 50 0 0 0 8 0 90 0 185 0 287 524
  0
 0
 
- itm_spearwarlong Long_War_Spear Long_War_Spear 1  langr_bryntvari 0  138739716 22236523361468672 570 8202 3.000000 60 0 0 0 10 0 92 0 200 0 289 524
+ itm_spearwarlong Long_War_Spear Long_War_Spear 1  langr_bryntvari 0  138739716 22236523361468672 570 8202 3.000000 60 0 0 0 10 0 92 0 200 0 290 524
  0
 0
 
- itm_spear_hasta Hasta Hasta 1  hasta 0  677707780 22236529535487232 540 8202 3.000000 100 0 0 0 10 0 88 0 145 0 284 529
+ itm_spear_hasta Hasta Hasta 1  hasta 0  677707780 22236529535487232 540 8202 3.000000 100 0 0 0 10 0 88 0 141 0 284 530
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_hasta_alt Hasta Hasta 1  hasta 0  138805252 22236529535487232 540 8202 3.000000 100 0 0 0 10 0 88 0 145 0 515 531
+ itm_spear_hasta_alt Hasta Hasta 1  hasta 0  138805252 22236529535487232 540 8202 3.000000 100 0 0 0 10 0 88 0 145 0 517 531
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_blade1t2 Blade_Spear Blade_Spear 1  ped_heavy_spear_long 0  677707780 22236529334160640 595 8202 2.500000 100 0 0 0 10 0 88 0 132 0 517 29
+ itm_spear_blade1t2 Blade_Spear Blade_Spear 1  ped_heavy_spear_long 0  677707780 22236529334160640 595 8202 2.500000 100 0 0 0 10 0 89 0 132 0 278 27
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_blade1t2_alt Blade_Spear Blade_Spear 1  ped_heavy_spear_long 0  138805252 22236529535487232 540 8202 3.000000 100 0 0 0 10 0 88 0 145 0 512 529
+ itm_spear_blade1t2_alt Blade_Spear Blade_Spear 1  ped_heavy_spear_long 0  138805252 22236529535487232 540 8202 3.000000 100 0 0 0 10 0 88 0 145 0 517 528
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_blade2t2 Roman_long_hasta_2 Roman_long_hasta_2 1  roman_spear_2 0  677707780 22236529334160640 569 8202 3.000000 20 0 0 0 10 0 86 0 148 0 282 20
+ itm_spear_blade2t2 Roman_long_hasta_2 Roman_long_hasta_2 1  roman_spear_2 0  677707780 22236529334160640 569 8202 3.000000 20 0 0 0 10 0 86 0 145 0 283 20
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_blade2t2_alt Roman_long_hasta_2alt Roman_long_hasta_2alt 1  roman_spear_2 0  138805252 4222131026005760 567 8202 3.000000 20 0 0 0 10 0 86 0 148 0 523 531
+ itm_spear_blade2t2_alt Roman_long_hasta_2alt Roman_long_hasta_2alt 1  roman_spear_2 0  138805252 4222131026005760 567 8202 3.000000 20 0 0 0 10 0 86 0 145 0 527 531
  0
 0
 
- itm_spear_briton2ht3 Briton_Two-Handed_Blade_Spear Briton_Two-Handed_Blade_Spear 1  langr_hoggspjott1 0  677707780 22236529334160640 690 8202 3.000000 20 0 0 0 11 0 88 0 137 0 281 24
+ itm_spear_briton2ht3 Briton_Two-Handed_Blade_Spear Briton_Two-Handed_Blade_Spear 1  langr_hoggspjott1 0  677707780 22236529334160640 690 8202 3.000000 20 0 0 0 11 0 89 0 137 0 283 23
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_briton2ht3_alt Briton_Two-Handed_Blade_Spear Briton_Two-Handed_Blade_Spear 1  langr_hoggspjott1 0  138805252 22236529334160640 690 8202 3.000000 20 0 0 0 11 0 88 0 137 0 522 534
+ itm_spear_briton2ht3_alt Briton_Two-Handed_Blade_Spear Briton_Two-Handed_Blade_Spear 1  langr_hoggspjott1 0  138805252 22236529334160640 690 8202 3.000000 20 0 0 0 11 0 88 0 137 0 521 536
  0
 0
 
- itm_spear_britonshortt2 Briton_Short_Spear Briton_Short_Spear 1  01atgeirr1 0  138739716 22236529535487232 380 8202 1.000000 40 0 0 0 7 0 112 0 118 0 287 525
+ itm_spear_britonshortt2 Briton_Short_Spear Briton_Short_Spear 1  01atgeirr1 0  138739716 22236529535487232 380 8202 1.000000 40 0 0 0 7 0 112 0 118 0 283 524
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_britonmedt2 Briton_Medium_Spear Briton_Medium_Spear 1  02spjot 0  138739716 22236529535487232 430 8202 1.250000 40 0 0 0 8 0 94 0 142 0 286 527
+ itm_spear_britonmedt2 Briton_Medium_Spear Briton_Medium_Spear 1  02spjot 0  138739716 22236529535487232 430 8202 1.250000 40 0 0 0 8 0 94 0 142 0 285 527
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_britonlight Briton_Light_Spear Briton_Light_Spear 1  01krokaspjott2 0  138739716 22236529535487232 250 8202 0.500000 66 0 0 0 6 0 105 0 119 0 286 523
+ itm_spear_britonlight Briton_Light_Spear Briton_Light_Spear 1  01krokaspjott2 0  138739716 22236529535487232 250 8202 0.500000 66 0 0 0 6 0 105 0 119 0 284 522
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_spear_briton_longt2 Briton_Cav_Spear Briton_Cav_Spear 1  01langr_bryntvari 0  138739716 22236529535487232 525 8202 3.000000 47 0 0 0 10 0 91 0 190 0 288 525
+ itm_spear_briton_longt2 Briton_Cav_Spear Briton_Cav_Spear 1  01langr_bryntvari 0  138739716 22236529535487232 525 8202 3.000000 47 0 0 0 10 0 91 0 190 0 289 525
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_longspeart3 Briton_Pike Briton_Pike 1  02spjotkesja 0  138739716 22236529535487232 540 8202 2.500000 50 0 0 0 8 0 90 0 230 0 290 526
+ itm_longspeart3 Briton_Pike Briton_Pike 1  02spjotkesja 0  138739716 22236529535487232 540 8202 2.500000 50 0 0 0 8 0 90 0 230 0 291 526
  15
  47 48 49 51 52 53 56 57 59 62 63 64 65 66 67
 0
 
- itm_twohand_speart3 Saxon_Two-Handed_Blade_Spear Saxon_Two-Handed_Blade_Spear 1  saxon2hspear 0  677707780 22236529334160640 600 8202 3.000000 100 0 0 0 11 0 88 0 139 0 281 23
+ itm_twohand_speart3 Saxon_Two-Handed_Blade_Spear Saxon_Two-Handed_Blade_Spear 1  saxon2hspear 0  677707780 22236529334160640 600 8202 3.000000 100 0 0 0 11 0 89 0 139 0 284 23
  8
  42 43 44 45 46 50 54 55
 0
@@ -4143,31 +4143,31 @@ itemsfile version 3
  0
 0
 
- itm_saxon_medium_speart2 Saxon_Spear Saxon_Spear 1  saxon_spear 0  138739716 22236529535487232 480 8202 2.000000 100 0 0 0 8 0 89 0 140 0 286 527
+ itm_saxon_medium_speart2 Saxon_Spear Saxon_Spear 1  saxon_spear 0  138739716 22236529535487232 480 8202 2.000000 100 0 0 0 8 0 89 0 140 0 287 527
  8
  42 43 44 45 46 50 54 55
 0
 
- itm_germanshortspeart2 German_Short_Spear German_Short_Spear 1  atgeirr1 0  675610628 22236529535487232 480 8202 0.500000 60 0 0 0 7 0 118 0 116 0 287 524
+ itm_germanshortspeart2 German_Short_Spear German_Short_Spear 1  atgeirr1 0  675610628 22236529535487232 480 8202 0.500000 60 0 0 0 7 0 118 0 116 0 283 524
  8
  42 43 44 45 46 50 54 55
 0
 
- itm_germanshortspeart2_alt German_Staff_Spear German_Staff_Spear 1  02spjotkesja 0  138805252 4222131026005760 180 8202 2.500000 60 0 0 0 8 0 90 0 117 0 521 529
+ itm_germanshortspeart2_alt German_Staff_Spear German_Staff_Spear 1  02spjotkesja 0  138805252 4222131026005760 180 8202 2.500000 60 0 0 0 8 0 90 0 116 0 515 528
  0
 0
 
- itm_engle_speart2 Saxon_Spear Saxon_Spear 1  saxon_spear 0  138739716 22236529535487232 510 8202 2.000000 100 0 0 0 10 0 88 0 149 0 288 527
+ itm_engle_speart2 Engle_Spear Engle_Spear 1  saxon_spear 0  138739716 22236529535487232 510 8202 2.000000 100 0 0 0 10 0 88 0 149 0 290 527
  8
  42 43 44 45 46 50 54 55
 0
 
- itm_germanlongspeart2 Saxon_Long_Spear Saxon_Long_Spear 1  langr_svia 0  675610628 22236529535487232 590 8202 3.000000 100 0 0 0 10 0 89 0 220 0 286 527
+ itm_germanlongspeart2 Saxon_Long_Spear Saxon_Long_Spear 1  langr_svia 0  675610628 22236529535487232 590 8202 3.000000 100 0 0 0 10 0 82 0 190 0 291 527
  8
  42 43 44 45 46 50 54 55
 0
 
- itm_germanlongspeart2_alt Saxon_Long_Spear Saxon_Long_Spear 1  langr_svia 0  138805252 4222131026005760 500 8202 3.250000 100 0 0 0 8 0 95 0 235 0 265 529
+ itm_germanlongspeart2_alt Saxon_Long_Spear Saxon_Long_Spear 1  langr_svia 0  138805252 4222131026005760 500 8202 3.250000 100 0 0 0 8 0 85 0 190 0 528 530
  0
 0
 
@@ -4176,30 +4176,30 @@ itemsfile version 3
  61 58 60 68 69 70 71 72
 0
 
- itm_medium_speaript3 Elite_Gael_Med_Spear Elite_Gael_Med_Spear 1  02bryntvari 0  675610628 22236529535487232 580 8202 2.250000 20 0 0 0 9 0 93 0 140 0 288 528
+ itm_medium_speaript3 Elite_Gael_Med_Spear Elite_Gael_Med_Spear 1  02bryntvari 0  675610628 22236529535487232 580 8202 2.250000 20 0 0 0 9 0 93 0 140 0 291 528
  8
  61 58 60 68 69 70 71 72
 0
 
- itm_medium_speaript3_alt Medium_Spear Medium_Spear 1  02bryntvari 0  138805252 4222131026005760 580 8202 2.250000 100 0 0 0 6 0 93 0 140 0 265 529
+ itm_medium_speaript3_alt Medium_Spear Medium_Spear 1  02bryntvari 0  138805252 4222131026005760 580 8202 2.250000 100 0 0 0 6 0 93 0 140 0 525 529
  0
 0
 
- itm_pictish_boar_speart2 Pictish_Boar_Spear Pictish_Boar_Spear 1  02svia2 0  138739716 22236529535487232 425 8202 3.000000 50 0 0 0 8 0 88 0 135 0 283 530
+ itm_pictish_boar_speart2 Pictish_Boar_Spear Pictish_Boar_Spear 1  02svia2 0  138739716 22236529535487232 425 8202 3.000000 50 0 0 0 8 0 88 0 135 0 286 530
  8
  61 58 60 68 69 70 71 72
 0
 
- itm_warspear_godelict3 Godelic_Elite_Spear Godelic_Elite_Spear 1  03bryntvari 0  675545092 22236529535487232 580 8202 2.750000 100 0 0 0 6 0 95 0 152 0 288 528
+ itm_warspear_godelict3 Godelic_Elite_Spear Godelic_Elite_Spear 1  03bryntvari 0  675545092 22236529535487232 580 8202 2.750000 100 0 0 0 6 0 95 0 152 0 291 528
  8
  61 58 60 68 69 70 71 72
 0
 
- itm_warspear_godelict3_alt Godelic_Elite_Spear Godelic_Elite_Spear 1  03bryntvari 0  138805252 4222131026005760 180 8202 2.250000 100 0 0 0 6 0 95 0 152 0 265 529
+ itm_warspear_godelict3_alt Godelic_Elite_Spear Godelic_Elite_Spear 1  03bryntvari 0  138805252 4222131026005760 180 8202 2.250000 100 0 0 0 6 0 95 0 152 0 525 528
  0
 0
 
- itm_spear_lightgael Godelic_Light_Spear Godelic_Light_Spear 1  05hoggkesja 0  675545091 22236529535487232 160 8202 1.500000 60 0 0 0 6 0 115 0 117 0 284 524
+ itm_spear_lightgael Godelic_Light_Spear Godelic_Light_Spear 1  05hoggkesja 0  675545091 22236529535487232 160 8202 1.500000 60 0 0 0 6 0 115 0 117 0 283 524
  8
  61 58 60 68 69 70 71 72
 0
@@ -4208,7 +4208,7 @@ itemsfile version 3
  0
 0
 
- itm_long_speaript2 Godelic_Pike Godelic_Pike 1  fjadraspjot 0  138739716 22236529535487232 440 8202 4.000000 60 0 0 0 9 0 92 0 225 0 286 527
+ itm_long_speaript2 Godelic_Pike Godelic_Pike 1  fjadraspjot 0  138739716 22236529535487232 440 8202 4.000000 60 0 0 0 9 0 92 0 225 0 290 527
  8
  61 58 60 68 69 70 71 72
 0
@@ -4221,19 +4221,19 @@ itemsfile version 3
  0
 0
 
- itm_spear_cavalrylance1 Dawn_Ray_Cav Dawn_Ray_Cav 1  krokaspjott1 0  675610628 22236529535487232 580 8192 2.500000 20 0 0 0 0 0 96 0 185 0 288 525
+ itm_spear_cavalrylance1 Dawn_Ray_Cav Dawn_Ray_Cav 1  krokaspjott1 0  675610628 22236529535487232 580 8192 2.500000 20 0 0 0 0 0 89 0 185 0 290 525
  0
 0
 
- itm_spear_cavalrylance1_alt Dawn_Ray_Cav Dawn_Ray_Cav 1  krokaspjott1 0  138805252 4222131026005760 260 8192 2.500000 20 0 0 0 0 0 96 0 185 0 269 526
+ itm_spear_cavalrylance1_alt Dawn_Ray_Cav Dawn_Ray_Cav 1  krokaspjott1 0  138805252 4222131026005760 260 8192 2.500000 20 0 0 0 0 0 89 0 185 0 525 526
  0
 0
 
- itm_spear_elitequest1 rHope_LongWarrior rHope_LongWarrior 1  02krokaspjott1 0  675610628 22236529535487232 360 8192 2.500000 100 0 0 0 5 0 90 0 185 0 286 525
+ itm_spear_elitequest1 rHope_LongWarrior rHope_LongWarrior 1  02krokaspjott1 0  675610628 22236529535487232 360 8192 2.500000 100 0 0 0 5 0 90 0 185 0 293 525
  0
 0
 
- itm_spear_elitequest1_alt rHopelong3 rHopelong3 1  ped_heavy_spear_long 0  138805252 4222131026005760 360 8192 2.500000 100 0 0 0 8 0 90 0 185 0 287 529
+ itm_spear_elitequest1_alt rHopelong3 rHopelong3 1  ped_heavy_spear_long 0  138805252 4222131026005760 360 8192 2.500000 100 0 0 0 8 0 90 0 185 0 531 531
  0
 0
 
@@ -4241,7 +4241,7 @@ itemsfile version 3
  0
 0
 
- itm_spear_elitequest2_alt s8reBreath_of_Dragon s8reBreath_of_Dragon 1  05bryntvari2 0  138805252 4222131026005760 360 8192 2.500000 100 0 0 0 6 0 90 0 200 0 290 537
+ itm_spear_elitequest2_alt s8reBreath_of_Dragon s8reBreath_of_Dragon 1  05bryntvari2 0  138805252 4222131026005760 360 8192 2.500000 100 0 0 0 6 0 90 0 200 0 537 535
  0
 0
 
@@ -4249,15 +4249,15 @@ itemsfile version 3
  0
 0
 
- itm_spear_elitequest3_alt s10roman s10roman 1  roman_spear_2 0  138805252 4222131026005760 360 8192 2.500000 100 0 0 0 6 0 115 0 144 0 256 543
+ itm_spear_elitequest3_alt s10roman s10roman 1  roman_spear_2 0  138805252 4222131026005760 360 8192 2.500000 100 0 0 0 6 0 115 0 144 0 517 542
  0
 0
 
- itm_spear_elitequest4 Neko's_Spear Neko's_Spear 1  krokaspjott1 0  675545092 22236529535487232 1060 8192 2.500000 100 0 0 0 6 0 90 0 180 0 288 526
+ itm_spear_elitequest4 Neko's_Spear Neko's_Spear 1  krokaspjott1 0  675545092 22236529535487232 1060 8192 2.500000 100 0 0 0 6 0 90 0 180 0 292 525
  0
 0
 
- itm_spear_elitequest4_alt Neko's_Spear Neko's_Spear 1  krokaspjott1 0  138805252 4222131026005760 1060 8192 2.500000 100 0 0 0 6 0 90 0 180 0 288 526
+ itm_spear_elitequest4_alt Neko's_Spear Neko's_Spear 1  krokaspjott1 0  138805252 4222131026005760 1060 8192 2.500000 100 0 0 0 6 0 90 0 180 0 541 525
  0
 0
 
