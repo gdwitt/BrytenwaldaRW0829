@@ -38,7 +38,10 @@ import multiplayer
 pilgrim_disguise = ["itm_pilgrim_hood","itm_pilgrim_disguise","itm_quarter_staff"]
 af_castle_lord = af_override_horse | af_override_weapons| af_require_civilian
 prisoner_gear = ["itm_gaelic_jacketgrn","itm_club_stick","itm_clubcudgel","itm_clubsmooth","itm_staff1","itm_mineral"]
+# battle_mode_triggers = [common_ai_order_toggle,AI_triggers,heridas_chel,common_weapon_check,dplmc_battle_mode_triggers,formations_triggers,order_volley_triggers,rider_damage, warcry_chel, flail_triggers,
+# #AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel + flail_triggers + common_wpn_swapping,
 
+# ]
 mission_templates = [
   (
     "town_default",0,-1,
@@ -1216,7 +1219,9 @@ mission_templates = [
      (0,mtef_defenders|mtef_team_0,0,aif_start_alarmed,0,[]),
      (4,mtef_attackers|mtef_team_1,0,aif_start_alarmed,12,[]),
      (4,mtef_attackers|mtef_team_1,0,aif_start_alarmed,0,[]),
-     ], [
+     ],# battle_mode_triggers,
+ 		common_weapon_check + common_ai_order_toggle +
+     [
       (ti_on_agent_spawn, 0, 0, [], [
          (store_trigger_param_1, ":agent_no"),
          (call_script, "script_force_weapon", ":agent_no"), ###chief anadido para forzar jabalinas#line13here
@@ -1693,8 +1698,8 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
 
-    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel + flail_triggers + common_wpn_swapping,
-
+   ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel +flail_triggers,
+	 
 
   ),
 #chief diplomacy anadido encima
@@ -1734,7 +1739,8 @@ mission_templates = [
 	 (16,mtef_attackers|mtef_team_1,0,aif_start_alarmed,2,[]),
 	 
      ],
-    [
+     common_weapon_check + common_ai_order_toggle +
+     [
       (ti_on_agent_spawn, 0, 0, [],
        [
 #        (team_give_order, 1, grc_everyone,  mordr_use_any_weapon),
@@ -1987,7 +1993,7 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
 
-    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel + flail_triggers + common_wpn_swapping,
+    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel + flail_triggers,#+common_weapon_check + common_ai_order_toggle,
 
   ),
 
@@ -2024,7 +2030,7 @@ mission_templates = [
 	 (15,mtef_defenders|mtef_team_0,0,aif_start_alarmed,2,[]),
 	 (16,mtef_defenders|mtef_team_0,0,aif_start_alarmed,2,[]),
 	 
-     ],
+     ], common_weapon_check + common_ai_order_toggle +
     [
       (ti_on_agent_spawn, 0, 0, [],
        [
@@ -2277,7 +2283,7 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
 
-    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel + flail_triggers + common_wpn_swapping,
+    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel + flail_triggers,#+common_weapon_check + common_ai_order_toggle,
 
   ),
 ####emboscada chief acaba
@@ -10711,7 +10717,7 @@ torneo_aumenta_dano, #dunde torneo chief
       (29,mtef_visitor_source|mtef_team_1,0,aif_start_alarmed,1,[]),
       (30,mtef_visitor_source|mtef_team_1,0,aif_start_alarmed,1,[]),
       (31,mtef_visitor_source|mtef_team_1,0,aif_start_alarmed,1,[]),
-     ],
+     ], common_weapon_check + common_ai_order_toggle +
     [
       common_custom_battle_tab_press,
       common_custom_battle_question_answered,
@@ -10721,7 +10727,18 @@ torneo_aumenta_dano, #dunde torneo chief
        [
          (scene_set_day_time, 15),
          ]),
-
+      (ti_before_mission_start, 0, 0, [],
+        [
+          (scene_set_day_time, 15),
+          
+          # Reassign divisions MOTO chief
+          (try_for_range, ":troop_no", soldiers_begin, soldiers_end),
+            (call_script, "script_troop_default_division", ":troop_no", 1), # Flag to pick one of three types to match custom battle parameters
+            (troop_get_class, ":division", ":troop_no"),
+            (neq, ":division", reg0),
+            (troop_set_class, ":troop_no", reg0),
+          (try_end),
+      ]),
       common_battle_init_banner,
       
       (0, 0, ti_once, [],
@@ -10754,7 +10771,7 @@ torneo_aumenta_dano, #dunde torneo chief
 ####below new gdw 72715
       common_battle_order_panel,
       common_battle_order_panel_tick,
-    ] + AI_triggers + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel+ flail_triggers + common_wpn_swapping,
+    ] + AI_triggers + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel+ flail_triggers,#+common_weapon_check + common_ai_order_toggle,
   ),
 # Puesto encima chief diplomacy
   (
@@ -13189,7 +13206,7 @@ torneo_aumenta_dano, #dunde torneo chief
 	 (10,mtef_attackers|mtef_team_0,af_override_horse,aif_start_alarmed,0,[]), #player reinforcement spawn point MOTO place at index 10
      (46,mtef_attackers|mtef_team_0|mtef_cavalry_first,af_override_horse,aif_start_alarmed,1,[]),
 	 # (10,mtef_attackers|mtef_team_0,af_override_horse,aif_start_alarmed,0,[]), #player reinforcement spawn point
-     ],
+     ], common_weapon_check + common_ai_order_toggle +
     [
 	
 		(0, 0, ti_once,
@@ -13626,7 +13643,7 @@ torneo_aumenta_dano, #dunde torneo chief
 						(try_end),
 					]),	  
 
-    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel+ flail_triggers + common_wpn_swapping,##gdw added to get formation ability in camp scenese
+    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel+ flail_triggers,#+common_weapon_check + common_ai_order_toggle,##gdw added to get formation ability in camp scenese
   ),  
 
 #Tempered visit entrenchment

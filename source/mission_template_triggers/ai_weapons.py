@@ -243,9 +243,25 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
   (try_begin),
     (eq, ":order_no", mordr_use_blunt_weapons),
     setWeaponOrderAny(),
+    (call_script, "script_equip_best_melee_weapon", ":agent_no", 0, 0, 1),
   (try_end),
- 
-  ]
-)
- 
-common_wpn_swapping = [common_ai_order_toggle]
+ ])
+###########################from VC
+common_ai_order_toggle = [common_ai_order_toggle]
+#common_wpn_swapping = [common_ai_order_toggle]
+#from equip best need to mke array of blunts then go through it
+# (try_for_range, ":item_slot", ek_item_0, ek_head),
+#                   (agent_get_item_slot, ":item", ":agent", ":item_slot"),
+#                   (gt, ":item", "itm_no_item"),
+#                   (item_get_type, ":weapon_type", ":item"),
+#                   (eq, ":weapon_type", itp_type_one_handed_wpn),
+#                   (item_get_swing_damage, ":swing", ":item"),
+#                   (item_get_swing_damage, ":thrust", ":item"),
+#                   (val_mul, ":thrust",3),
+#                   (val_div, ":thrust",5),
+#                   (store_add, ":combdamage",":thrust",":swing"),
+#                   (lt, ":cur_score", ":combdamage"),
+#                   (assign, ":cur_score", ":combdamage"),
+#                   #(gt, ":swing", 19),
+#                   (assign, ":weapon", ":item"),
+#                 (try_end),

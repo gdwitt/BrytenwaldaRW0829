@@ -18,7 +18,8 @@ from .formations import formations_triggers, AI_triggers
 from .bodyguard import bodyguard_triggers
 from .flail import flail_triggers
 from .weapon_break import common_weapon_break
-from .ai_weapons import common_wpn_swapping
+from .ai_weapons import common_ai_order_toggle
+from .weaponcheck import common_weapon_check
 from .death_camera import common_init_deathcam, common_start_deathcam, \
     common_move_deathcam, common_rotate_deathcam
 from .shield_bash import sp_shield_bash_1, sp_shield_bash_2, sp_shield_bash_3

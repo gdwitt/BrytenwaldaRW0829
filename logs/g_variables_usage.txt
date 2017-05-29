@@ -80,6 +80,7 @@ last_training_fight_town 1
 training_fight_time 1
 g_reclutar_p_puede 1
 g_dar_tropas 1
+g_is_npc_dialog 1
 player_can_persuade_npc 1
 player_can_refuse_npc_quitting 1
 disable_sisterly_advice 1
@@ -856,7 +857,6 @@ last_lost_companion 4
 falcata_quest_got 4
 escort_merchant_caravan_mode 4
 bandit_tribute 4
-g_trainer_mastery 4
 npc_is_quitting 4
 npc_with_sisterly_advice 4
 npc_with_personality_match 4
@@ -1081,6 +1081,7 @@ cant_leave_encounter 6
 faction_requested_to_learn_more_details_about_the_war_against 6
 incriminate_quest_sacrificed_troop 6
 g_arena_training_won 6
+g_study_price 6
 npc_with_personality_clash 6
 g_tutorial_training_ground_melee_trainer_attack 6
 g_tutorial_training_ground_horseman_trainer_item_1 6
@@ -1263,10 +1264,10 @@ diplomacy_var2 9
 g_random_army_quest 9
 players_oath_renounced_against_kingdom 9
 qst_eadfrith_party 9
+current_camp_party 9
 g_tutorial_training_ground_melee_trainer_combat 9
 g_tutorial_training_ground_archer_trainer_completed_chapters 9
 g_quick_battle_game_type 9
-current_camp_party 9
 g_prisoner_recruit_size 9
 num_routed_enemies 9
 coop_skip_menu 9
@@ -1324,7 +1325,6 @@ qst_bring_back_runaway_serfs_party_3 10
 g_relation_boost 10
 holy_sword 10
 g_arena_training_kills 10
-g_trainer_price 10
 oim_count_to_deliver 10
 next_center_will_be_fired 10
 g_tutorial_training_ground_melee_trainer_parry 10
@@ -1352,13 +1352,13 @@ g_initiative_selected 11
 qst_scout_waypoints_wp_1 11
 qst_scout_waypoints_wp_2 11
 g_training_ground_melee_training_scene 11
-g_town_visit_after_rest 11
 g_tutorial_training_ground_melee_trainer_action_state 11
 g_tutorial_training_ground_horseman_trainer_completed_chapters 11
 g_quick_battle_team_1_faction 11
 g_prisoner_recruit_troop_id 11
 player_fall_in_ambush 11
 temp_presentation_shown 11
+g_town_visit_after_rest 11
 num_castle_meeting_troops 11
 num_coatbs_killed 11
 g_wedding_bride_troop 11
@@ -1388,6 +1388,7 @@ g_invite_offered_center 12
 g_player_raiding_village 12
 type_of_ambushing_success 12
 type_of_sneaking_success 12
+g_armor_penalties 12
 wind_strange 12
 g_wedding_state 12
 tutorial_2_state 12
@@ -1417,7 +1418,6 @@ g_presentation_obj_escape_menu_6 12
 g_flame_slot 12
 is_game_start 12
 g_player_constable 13
-g_armor_penalties 13
 g_constable_training_center 13
 tutorial_4_state 13
 g_multiplayer_poll_running 13
@@ -1473,8 +1473,9 @@ g_empieza_asedio 16
 marriage_candidate 16
 qst_follow_spy_spy_partners_party 16
 enterprise_production 16
-g_tutorial_training_ground_current_score 16
 g_camp_mode 16
+g_tutorial_training_ground_current_score 16
+wound_type 16
 town_nighttime 16
 love_interest_in_town 16
 ani_step 16
@@ -1488,8 +1489,8 @@ town_suggested_to_go_to 17
 qst_follow_spy_spy_party 17
 poem_selected 17
 g_starting_town 17
-g_cheat_selected_faction 17
 g_player_icon_state 17
+g_cheat_selected_faction 17
 commoner_trust 17
 last_player_trigger 17
 pop_camera_mouse_x 17
@@ -1514,7 +1515,6 @@ supported_pretender_old_faction 18
 g_concession_demanded 18
 capturer_party 18
 political_quest_target_troop 18
-wound_type 18
 coop_battle_state 18
 pin_player_fallen 18
 g_report_extra_xp 18
@@ -1612,6 +1612,7 @@ battle_phase 32
 g_presentation_obj_6 33
 g_center_taken_by_player_faction 34
 g_main_attacker_agent 34
+g_cur_npc 34
 g_battle_won 34
 pop_camera_rotx 34
 sp_alturas 35
@@ -1652,7 +1653,6 @@ g_player_court 53
 g_battle_result 53
 defender_reinforcement_stage 53
 g_mt_mode 60
-g_trainer_character 62
 freelancer_state 65
 g_player_minister 66
 g_talk_troop_faction_relation 67
@@ -1682,9 +1682,9 @@ gk_order 297
 g_cur_month 338
 g_talk_troop_faction 358
 g_multiplayer_game_type 380
-cheat_mode 472
+cheat_mode 474
 players_kingdom 680
-current_town 770
+current_town 768
 fplayer_team_no 849
 g_encountered_party 1212
 g_talk_troop 2312
