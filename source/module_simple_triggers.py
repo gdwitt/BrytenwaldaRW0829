@@ -4204,7 +4204,7 @@ simple_triggers = [
     # ]),
    
   # Taking denars from player while resting in not owned centers
-  (1,
+  (2,
    [(neg|map_free),
     (is_currently_night),
 #    (ge, "$g_last_rest_center", 0),
@@ -7434,206 +7434,234 @@ simple_triggers = [
   
 ###chief finalizado#####
 #script of moral motomataru chief
+ # (2, [    #morale impact of resting/not resting by motomataru
+ #        (neq, "$freelancer_state", 1), #+freelancer chief #brytenwalda chief
+ # (neq, "$g_morale_rest", 0),##morale rest penalties have not been disabled  ("disable_no_rest_penalties",[(eq, "$g_morale_rest", 1),],"Click to Disable realism morale and encumbrance impact of resting/not resting.",
+ # #(store_party_size_wo_prisoners, reg0, "p_main_party"),  ##TEMPorarily disabled
+ # #(gt, reg0, 2),
+ # (assign, "$g_resting_at_manor_or_walled_center", 0),
+ #     # (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", 0),
+ # (try_begin),
+ #      (neg|map_free),
+ #       (assign, reg1, 0),##from checking resting at half payment point  for display purposes
+ #      (ge, "$g_last_rest_center", 0),
+ #      (this_or_next|party_slot_eq, "$g_last_rest_center", "slot_center_has_manor", 1),
+ #      #(this_or_next|party_slot_eq, "$g_last_rest_center", "$current_town"), ##to do: make this separate section
+ #      (is_between, "$g_last_rest_center", walled_centers_begin, walled_centers_end),
+ #      #(is_between, "$g_last_rest_center", centers_begin, centers_end),
+ #      (assign, "$g_resting_at_manor_or_walled_center", 1),
+ #      (assign, reg1, "$g_resting_at_manor_or_walled_center"),
+ #  (try_end),   
+ # #(else_try),
+     
+ #     (try_begin),
+ #         (eq, "$g_last_rest_center", "$current_town"),
+ #         (assign, "$rest_up", 1),##jump to elsetry
+ #     #(try_begin),
+ #     (else_try),
+ #        (is_currently_night),#not resting
+ #        (try_begin),
+ #              (eq, "$cheat_mode", 1),
+ #              (display_message, "@g_resting_at_manor_or_walled_center ={reg1} "),
+ #            (try_end),
+ #         (neq, "$g_resting_at_manor_or_walled_center", 1),
+ #         (neq, "$g_player_icon_state", pis_camping),
+ #         (neq, "$g_player_icon_state", pis_ship),  ##??
+ #         (neq, "$g_player_besiege_town", "$g_encountered_party"),
+ #         (neq, "$g_player_is_captive", 1),
+ #         (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),##get last morale penalty
+ #         (val_sub, reg0, 4),##gdw was 1
+ #         (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+ #         (display_message, "@Your troops lose 4 morale from no night rest. morale_modifier_weariness={reg0}."),
+ #         #(assign, ":lose_morale", reg0),
+ #         #(call_script, "script_change_player_party_morale", -3),
+ #     #(try_end),
+ #            (try_begin),
+ #              (eq, "$cheat_mode", 1),
+ #              (display_message, "@morale drops to {reg0} from no rest."),
+ #            (try_end),
+ #     (else_try),
+ #        (eq, "$g_battle_weary",1),## see post battle from scripts battle wears party out
+ #        (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #       #(val_max, reg0,0),##test gdw delte this
+ #        (val_sub, reg0, 10),
+ #       # (val_max, reg0,0),
+ #        (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+ #        (assign, "$g_battle_weary",0),
+ #     (else_try),
+ #        (is_currently_night),
+ #       (eq, "$g_resting_at_manor_or_walled_center", 1),
+ #       (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #       #(try_begin),##if 4 and up, don't assign further penalty gdw
+ #       #(assign, reg1, 6),
+ #       # (try_begin),##does this apply only to state where in town or in camp
+ #       #   (ge, "$g_last_rest_center", 0),
+ #       #   (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
+ #       #   (val_add, reg1, 2),##gdw this was 1
+ #       (val_max, reg0,6),
+ #       (val_add, reg0, 6),
+       
+ #       (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+ #       #(call_script, "script_change_player_party_morale", reg1),
+ #       # (try_begin),
+ #       #        (eq, "$cheat_mode", 1),
+ #       #        (display_message, "@Your troops feel refreshed from the center rest 6. morale_modifier_weariness={reg0}"),
+ #       #      (try_end),
+ #       (display_message, "@Your troops feel refreshed from the center rest 6. morale_modifier_weariness={reg0}"),
+ #    (else_try),
+ #       # (is_currently_night),
+ #       (eq, "$g_resting_at_manor_or_walled_center", 1),
+ #       (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #       #(try_begin),##if 4 and up, don't assign further penalty gdw
+ #       #(assign, reg1, 6),
+ #       # (try_begin),##does this apply only to state where in town or in camp
+ #       #   (ge, "$g_last_rest_center", 0),
+ #       #   (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
+ #       #   (val_add, reg1, 2),##gdw this was 1
+       
+ #       (val_add, reg0, 4),
+ #       (val_max, reg0,6),
+ #       (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+ #       #(call_script, "script_change_player_party_morale", reg1),
+ #       # (try_begin),
+ #       #        (eq, "$cheat_mode", 1),
+ #       #        (display_message, "@Your troops feel refreshed from the center DAY rest 5. morale_modifier_weariness={reg0}"),
+ #       #      (try_end),
+ #       (display_message, "@Your troops feel refreshed from the center DAY rest 3. morale_modifier_weariness={reg0}"),
+
+
+
+ #    (else_try),##night camping?
+ #     (is_currently_night),
+ #     (eq, "$g_player_icon_state", pis_camping),
+ #     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #     #(val_min, reg0,-6),
+ #     (val_add, reg0, 3),#camp less restful
+ #     (val_max, reg0,6),
+ #     (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+ #     #(call_script, "script_change_player_party_morale", 4),
+ #     (display_message, "@Your troops troops gain morale from night rest. morale_modifier_weariness={reg0}."),
+ #  (else_try),##day camping
+ #     (eq, "$g_player_icon_state", pis_camping),
+ #     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #     #(val_max, reg0,0),##test gdw delte this
+ #     (val_add, reg0, 2),#camp less restful
+ #     (val_max, reg0,6),
+ #     (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+ #     (display_message, "@Your troops troops gain morale from day rest. morale_modifier_weariness={reg0}."),
+ #     #(call_script, "script_change_player_party_morale", 2),
+ #    # (try_begin),
+ #    #           (eq, "$cheat_mode", 1),
+ #    #           (display_message, "@Your troops feel refreshed from the day rest 8. morale_modifier_weariness={reg0}"),
+ #    # (try_end),
+ #  (else_try),
+ #      (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #      (try_begin),
+ #      (eq, "$cheat_mode", 1),
+ #      (display_message, "@end of script !!! morale_modifier_weariness={reg0}"),
+ #      (try_end),
+ #  (try_end),
+
+ # (try_begin),##gdw new script
+ #    (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #    (lt, reg0,-45),
+ #    (assign, "$g_encumbrance_penalty", 3),
+ #    (try_begin),
+ #      (eq, "$cheat_mode", 1),
+ #    (display_message, "@encumbrancelevel 3 from no rest."),
+ #    (try_end),
+ # (else_try),
+ #    (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #    (ge, reg0,45),
+ #    (lt, reg0,20),
+ #    (assign, "$g_encumbrance_penalty", 2),
+ #    (try_begin),
+ #      (ge, "$cheat_mode", 1),
+ #      (display_message, "@encumbrancelevel 2 from little rest."),
+ #    (try_end),
+ # (else_try),
+
+ #    (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+ #    (ge, reg0,20),
+ #    #(le, reg0,18),
+ #    (assign, "$g_encumbrance_penalty", 1),
+ #    (try_begin),
+ #      (eq, "$cheat_mode", 1),
+ #      (display_message, "@encumbrancelevel 1 fromOKrest."),
+ #    (try_end),
+ #    (try_end),
+ # ]),
+##chief finalizado#####
+#script of moral motomataru chief
  (2, [    #morale impact of resting/not resting by motomataru
          (neq, "$freelancer_state", 1), #+freelancer chief #brytenwalda chief
- (neq, "$g_morale_rest", 0),##morale rest penalties have not been disabled
+ (neq, "$g_morale_rest", 0), ##$moralep_on in VC
+
  (store_party_size_wo_prisoners, reg0, "p_main_party"),
- (gt, reg0, 2),
- (assign, "$g_resting_at_manor_or_walled_center", 0),
-     # (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", 0),
  (try_begin),
-      (neg|map_free),
-       (assign, reg1, 0),
-      (ge, "$g_last_rest_center", 0),
-      (this_or_next|party_slot_eq, "$g_last_rest_center", "slot_center_has_manor", 1),
-      #(this_or_next|party_slot_eq, "$g_last_rest_center", "$current_town"), ##to do: make this separate section
-      (is_between, "$g_last_rest_center", walled_centers_begin, walled_centers_end),
-      #(is_between, "$g_last_rest_center", centers_begin, centers_end),
-      (assign, "$g_resting_at_manor_or_walled_center", 1),
-      (assign, reg1, 1),
-  (try_end),   
- #(else_try),
-     
-     # (try_begin),
-     #     (eq, "$g_last_rest_center", "$current_town"),
-     #     (assign, "$rest_up", 1),##jump to elsetry
-     (try_begin),
-        (is_currently_night),#not resting
-        (try_begin),
-              (eq, "$cheat_mode", 1),
-              (display_message, "@g_resting_at_manor ={reg1} "),
-            (try_end),
-         (neq, "$g_resting_at_manor_or_walled_center", 1),
-         (neq, "$g_player_icon_state", pis_camping),
-         #(neq, "$g_player_icon_state", pis_ship),
-         (neq, "$g_player_besiege_town", "$g_encountered_party"),
-         #(neq, "$g_player_is_captive", 1),
-         (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),##get last morale penalty
-         (val_sub, reg0, 4),##gdw was 1
-         (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-         (display_message, "@Your troops lose 4 morale from no night rest. morale_modifier_weariness={reg0}."),
-         #(assign, ":lose_morale", reg0),
-         #(call_script, "script_change_player_party_morale", -3),
-     #(try_end),
-            (try_begin),
-              (eq, "$cheat_mode", 1),
-              (display_message, "@morale lost to {reg0} from no rest."),
-            (try_end),
-     (else_try),
-        (eq, "$g_battle_weary",1),## see post battle from scripts battle wears party out
-        (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-       #(val_max, reg0,0),##test gdw delte this
-        (val_sub, reg0, 10),
-       # (val_max, reg0,0),
-        (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-        (assign, "$g_battle_weary",0),
-     (else_try),
-        (is_currently_night),
-       (eq, "$g_resting_at_manor_or_walled_center", 1),
-       (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-       #(try_begin),##if 4 and up, don't assign further penalty gdw
-       #(assign, reg1, 6),
-       # (try_begin),##does this apply only to state where in town or in camp
-       #   (ge, "$g_last_rest_center", 0),
-       #   (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
-       #   (val_add, reg1, 2),##gdw this was 1
-       (val_max, reg0,6),
-       (val_add, reg0, 6),
-       
-       (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-       #(call_script, "script_change_player_party_morale", reg1),
-       # (try_begin),
-       #        (eq, "$cheat_mode", 1),
-       #        (display_message, "@Your troops feel refreshed from the center rest 6. morale_modifier_weariness={reg0}"),
-       #      (try_end),
-       (display_message, "@Your troops feel refreshed from the center rest 6. morale_modifier_weariness={reg0}"),
-    (else_try),
-       # (is_currently_night),
-       (eq, "$g_resting_at_manor_or_walled_center", 1),
-       (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-       #(try_begin),##if 4 and up, don't assign further penalty gdw
-       #(assign, reg1, 6),
-       # (try_begin),##does this apply only to state where in town or in camp
-       #   (ge, "$g_last_rest_center", 0),
-       #   (party_slot_eq, "$g_last_rest_center", "slot_party_type", spt_town),
-       #   (val_add, reg1, 2),##gdw this was 1
-       
-       (val_add, reg0, 4),
-       (val_max, reg0,6),
-       (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-       #(call_script, "script_change_player_party_morale", reg1),
-       # (try_begin),
-       #        (eq, "$cheat_mode", 1),
-       #        (display_message, "@Your troops feel refreshed from the center DAY rest 5. morale_modifier_weariness={reg0}"),
-       #      (try_end),
-       (display_message, "@Your troops feel refreshed from the center DAY rest 3. morale_modifier_weariness={reg0}"),
-
-
-
-    (else_try),##night camping?
+ #     (lt, reg0, 2),
+ #     (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", 0),
+ # (else_try),
      (is_currently_night),
-     (eq, "$g_player_icon_state", pis_camping),
-     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-     #(val_min, reg0,-6),
-     (val_add, reg0, 3),#camp less restful
-     (val_max, reg0,6),
-     (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-     #(call_script, "script_change_player_party_morale", 4),
-     (display_message, "@Your troops troops gain morale from night rest. morale_modifier_weariness={reg0}."),
-  (else_try),##day camping
-     (eq, "$g_player_icon_state", pis_camping),
-     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-     #(val_max, reg0,0),##test gdw delte this
-     (val_add, reg0, 2),#camp less restful
-     (val_max, reg0,6),
-     (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
-     (display_message, "@Your troops troops gain morale from day rest. morale_modifier_weariness={reg0}."),
-     #(call_script, "script_change_player_party_morale", 2),
-    # (try_begin),
-    #           (eq, "$cheat_mode", 1),
-    #           (display_message, "@Your troops feel refreshed from the day rest 8. morale_modifier_weariness={reg0}"),
-    # (try_end),
-  (else_try),
-      (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-      (try_begin),
-      (eq, "$cheat_mode", 1),
-      (display_message, "@end of script !!! morale_modifier_weariness={reg0}"),
-      (try_end),
-  (try_end),
+     (try_begin),
+         (eq, "$g_last_rest_center", "$current_town"),
+         (assign, "$rest_up", 1),
+     (else_try),
 
- (try_begin),##gdw new script
-    (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-    (lt, reg0,-45),
-    (assign, "$g_encumbrance_penalty", 3),
-    (try_begin),
-      (eq, "$cheat_mode", 1),
-    (display_message, "@encumbrancelevel 3 from no rest."),
-    (try_end),
+         (neq, "$g_player_icon_state", pis_camping),
+         (neq, "$g_player_icon_state", pis_ship),
+         (neq, "$g_player_besiege_town", "$g_encountered_party"),
+         (neq, "$g_player_is_captive", 1),
+         (neg|key_is_down, key_space),
+         (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+         (val_add, reg0, 2),
+         (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+         #minor recovery from not marching or fighting
+      (else_try),
+            (val_sub, reg0, 1),
+            (val_max, reg0, 0),
+            (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+     (try_end),
  (else_try),
-    (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-    (ge, reg0,45),
-    (lt, reg0,20),
-    (assign, "$g_encumbrance_penalty", 2),
-    (try_begin),
-      (ge, "$cheat_mode", 1),
-      (display_message, "@encumbrancelevel 2 from little rest."),
-    (try_end),
- (else_try),
+     (neq, "$rest_up", 0),##if resting in town
+     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
+     (try_begin),
+         (lt, reg0, 3),##if 2 or less, don't get a bonus remember positive is unrested morale
+         (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", 0),
+     (else_try),
+         (val_div, reg0, 2),  ##then cut unrested morale penalty in half
+         (party_set_slot, "p_main_party", "slot_party_unrested_morale_penalty", reg0),
+     (try_end),
+     (assign, ":add_morale", reg0),
+     #add small bonus to current morale for "diversions" available in towns
+     (try_begin),
+         (ge, "$g_last_rest_center", 0),
+        (this_or_next|party_slot_eq, "$g_last_rest_center", slot_party_type, spt_town),
+        (this_or_next|party_slot_eq, "$g_last_rest_center", slot_party_type, spt_castle),
+        (party_slot_eq, "$g_last_rest_center", slot_party_type, spt_village),
+        (val_add, ":add_morale", 1),
+     (try_end),
+     (display_message, "@Your troops feel refreshed from the night's rest."),
+     (call_script, "script_change_player_party_morale", ":add_morale"),
+     (assign, "$rest_up", 0),
 
+  (else_try),##if not resting in town
+    (store_time_of_day, reg0),
+    (is_between, reg0, 6, 8),
     (party_get_slot, reg0, "p_main_party", "slot_party_unrested_morale_penalty"),
-    (ge, reg0,20),
-    #(le, reg0,18),
-    (assign, "$g_encumbrance_penalty", 1),
+    
     (try_begin),
-      (eq, "$cheat_mode", 1),
-      (display_message, "@encumbrancelevel 1 fromOKrest."),
+      (gt, reg0, 4),  #more than 1 night without rest?
+      (lt, reg0, 6),  #more than 1 night without rest?
+      (display_message, "@Your men need rest or their morale will suffer.", color_bad_news),
     (try_end),
+    (try_begin),
+      (ge, reg0, 10),  #more than 1 night without rest?
+      (display_message, "@Your men need rest or their morale will suffer.", color_bad_news),
     (try_end),
+  #(try_end),
+ (try_end),
  ]),
-##temporary code from original moto
-# (neq, "$g_morale_rest", 1),
-
-#  (store_party_size_wo_prisoners, reg0, "p_main_party"),
-#  (try_begin),
-#      (lt, reg0, 2),
-#      (party_set_slot, "p_main_party", slot_party_unrested_morale_penalty, 0),
-#  (else_try),
-#      (is_currently_night),
-#      (try_begin),
-#          (eq, "$g_last_rest_center", "$current_town"),
-#          (assign, "$rest_up", 1),
-#      (else_try),
-#          (neq, "$g_player_icon_state", pis_camping),
-#          (neq, "$g_player_icon_state", pis_ship),
-#          (neq, "$g_player_besiege_town", "$g_encountered_party"),
-#          (neq, "$g_player_is_captive", 1),
-#          (party_get_slot, reg0, "p_main_party", slot_party_unrested_morale_penalty),
-#          (val_add, reg0, 1),
-#          (party_set_slot, "p_main_party", slot_party_unrested_morale_penalty, reg0),
-#      (try_end),
-#  (else_try),
-#      (neq, "$rest_up", 0),
-#      (party_get_slot, reg0, "p_main_party", slot_party_unrested_morale_penalty),
-#      (try_begin),
-#          (lt, reg0, 3),
-#          (party_set_slot, "p_main_party", slot_party_unrested_morale_penalty, 0),
-#      (else_try),
-#          (val_div, reg0, 2),
-#          (party_set_slot, "p_main_party", slot_party_unrested_morale_penalty, reg0),
-#      (try_end),
-#      (assign, ":add_morale", reg0),
-#      #add small bonus to current morale for "diversions" available in towns
-#      (try_begin),
-#          (ge, "$g_last_rest_center", 0),
-#          (party_slot_eq, "$g_last_rest_center", slot_party_type, spt_town),
-#          (val_add, ":add_morale", 1),
-#      (try_end),
-#      (display_message, "@Your troops feel refreshed from the night's rest."),
-#      (call_script, "script_change_player_party_morale", ":add_morale"),
-#      (assign, "$rest_up", 0),
-#  (try_end),
-#  ]),
-  
 ##mejor IA chief para seguir al marshal o player y que los lores no se largen a la primera de Rubik
     (1,
     [

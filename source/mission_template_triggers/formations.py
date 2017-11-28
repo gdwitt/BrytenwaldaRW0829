@@ -928,7 +928,7 @@ formations_triggers = [
             (eq, reg0, grc_infantry),    #set up for possible shield wall
             (agent_get_division, ":division", ":agent"),
             (team_get_hold_fire_order, ":fire_order", ":team", ":division"),
-            (call_script, "script_equip_best_melee_weapon", ":agent", 1, 0, ":fire_order"),    #best weapon, force shield
+            (call_script, "script_equip_best_melee_weapon", ":agent", 1, 1, ":fire_order"),    #best weapon, force shield, gdw forcing spears here
         (try_end),
     ]),
 

@@ -63,7 +63,7 @@
                 (neq, ":force_length", 0),
                 (item_get_weapon_length, ":item_length", ":item"),
                 (try_begin),
-                  (lt, ":cur_score", ":item_length"),
+                  (lt, ":cur_score", ":item_length"),## curscore starts 0
                   (assign, ":cur_score", ":item_length"),
                   (assign, ":weapon", ":item"),
                 (try_end),
@@ -81,6 +81,26 @@
                   (gt, ":swing", 19),
                   (assign, ":weapon", ":item"),
                 (try_end),
+##my innovation 528 528 528
+
+(try_for_range, ":item_slot", ek_item_0, ek_head),
+                  (agent_get_item_slot, ":item", ":agent", ":item_slot"),
+                  (gt, ":item", "itm_no_item"),
+                  (item_get_type, ":weapon_type", ":item"),
+                  (eq, ":weapon_type", itp_type_one_handed_wpn),
+                  (item_get_swing_damage, ":swing", ":item"),
+                  (item_get_thrust_damage, ":thrust", ":item"),
+                  (val_mul, ":thrust",3),
+                  (val_div, ":thrust",5),
+                  (store_add, ":combdamage",":thrust",":swing"),
+                  (lt, ":cur_score", ":combdamage"),
+                  (assign, ":cur_score", ":combdamage"),
+                  #(gt, ":swing", 19),
+                  (assign, ":weapon", ":item"),
+                (try_end),
+##my innovation 528 528 528
+
+
               (else_try),
                 (agent_get_troop_id, ":troop_id", ":agent"),
                 (assign, ":imod", imod_plain),

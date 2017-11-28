@@ -4009,10 +4009,12 @@ mission_templates = [
       common_battle_order_panel,
       common_battle_order_panel_tick,
       
-    ]+ dplmc_battle_mode_triggers2 + order_skirmish_triggers + formations_triggers + rider_damage + order_volley_triggers + warcry_chel + heridas_chel,
+    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers2 + formations_triggers + order_volley_triggers + rider_damage + warcry_chel +flail_triggers,
+
+    # dplmc_battle_mode_triggers2 + order_skirmish_triggers + formations_triggers + rider_damage + order_volley_triggers + warcry_chel + heridas_chel,
   ),
 #diplomacy chief cambios en + encima
-
+ 
 
   (
     "village_raid",mtf_battle_mode|mtf_synch_inventory,charge,
@@ -4137,6 +4139,7 @@ mission_templates = [
 ##          (call_script, "script_battle_tactic_apply"),
 ##          ], []),
     ]+ dplmc_battle_mode_triggers2 + order_skirmish_triggers + formations_triggers + order_volley_triggers + warcry_chel + heridas_chel,
+
   ),
 #anadido chief encima diplomacy
 
@@ -13643,7 +13646,8 @@ torneo_aumenta_dano, #dunde torneo chief
 						(try_end),
 					]),	  
 
-    ]+ AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel+ flail_triggers,#+common_weapon_check + common_ai_order_toggle,##gdw added to get formation ability in camp scenese
+
+    ]+     AI_triggers + heridas_chel + dplmc_battle_mode_triggers + formations_triggers + order_volley_triggers + rider_damage + warcry_chel+ flail_triggers,#+common_weapon_check + common_ai_order_toggle,##gdw added to get formation ability in camp scenese
   ),  
 
 #Tempered visit entrenchment

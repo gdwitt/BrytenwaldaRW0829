@@ -17808,6 +17808,7 @@ scripts = [
  ("get_player_party_morale_values",[
    (assign, ":new_morale", 50),
    (assign, ":num_men", 0),
+   (assign, "$g_player_party_morale_modifier_religion", 0),
    # (assign, ":num_companions",0), #Tempered chief added for companions positive adjustment to morale MOTO effect now comes through companion LD for party size
 
    (party_get_num_companion_stacks, ":num_stacks","p_main_party"),
@@ -17817,9 +17818,22 @@ scripts = [
            (troop_is_hero, ":stack_troop"),
            (val_add, ":num_men", 1), #it was 3 in "Mount&Blade", now it is 1 in Warband
            # (val_add, ":num_companions",1), #Tempered chief added for companions positive adjustment to morale
-       (else_try),
-           (party_stack_get_size, ":stack_size","p_main_party",":i_stack"),
-           (val_add, ":num_men", ":stack_size"),
+       # (try_begin),
+       #      (call_script, "script_cf_troop_religion_matches_players", ":stack_troop"),
+       #    (else_try),
+       #      (val_add, "$g_player_party_morale_modifier_religion", 1),
+       #    (try_end),
+
+		(else_try),
+          (party_stack_get_size, ":stack_size","p_main_party",":i_stack"),
+          (val_add, ":num_men", ":stack_size"),
+          
+          # (try_begin),
+          #   (call_script, "script_cf_troop_religion_matches_players", ":stack_troop"),
+          # (else_try),
+          #   (val_add, "$g_player_party_morale_modifier_religion", ":stack_size"),
+          # (try_end),
+        #(try_end),
        (try_end),
    (try_end),
    (call_script, "script_game_get_party_companion_limit"),
@@ -17872,7 +17886,14 @@ scripts = [
        (val_sub, ":new_morale", "$g_player_party_morale_modifier_debt"),
    (try_end),
 
-   #(assign, reg3,"$g_player_party_morale_modifier_weariness"),this has opcode errors
+   ##religion
+  #religion opuesta tropas chief
+ # (val_add, ":num_men", 1), #consider player for this
+  #(val_mul, "$g_player_party_morale_modifier_religion" ,10),  #max penalty 10
+ # (val_div, "$g_player_party_morale_modifier_religion" ,":num_men"),
+  #(val_sub, ":new_morale", "$g_player_party_morale_modifier_religion"),
+  #religion chief acaba
+   #(assign, reg3,"$g_player_party_morale_modifier_weariness"),this has opcode errors bc it is also assigned in morale_report
    #(party_get_slot, "$g_player_party_morale_modifier_weariness", "p_main_party", "slot_party_unrested_morale_penalty"),
    (party_get_slot, reg3, "p_main_party", "slot_party_unrested_morale_penalty"),
 	#(assign, reg3,"$g_player_party_morale_modifier_weariness"),
@@ -17882,10 +17903,11 @@ scripts = [
 	(try_end),
 
 
-   (val_max, reg3,0),
+   (val_max, reg3,0),  ##gdw per vc code
+
    (val_sub, ":new_morale", reg3),
 
-   (val_clamp, ":new_morale", 0, 100),
+   (val_clamp, ":new_morale", 0, 101),
    (assign, reg0, ":new_morale"),
    ]),
  #moral motomataru chief acaba
@@ -53269,17 +53291,17 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(this_or_next|ge, ":rank", ":square_dimension"),
 					(this_or_next|eq, ":column", 1),
 					(ge, ":column", ":square_dimension"),
-					(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),## if in front of formation, use any weapon and don't force length
+					(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),## if in front of formation, use any weapon and don't force length, gdw changed it to use spears
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 0),
 				(else_try),
 					(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 					(try_begin),
-					# 	(neq, ":closest_enemy", -1),
-					# 	(agent_get_position, pos0, ":closest_enemy"),
-					# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-					# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-					# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),#gdw
-					# (else_try),
+						(neq, ":closest_enemy", -1),
+						(agent_get_position, pos0, ":closest_enemy"),
+						(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+						(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),#gdw
+					(else_try),
 						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),##forcing length
 					(try_end),
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -53369,12 +53391,12 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(else_try),
 						(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 						(try_begin),
-						# 	(neq, ":closest_enemy", -1),
-						# 	(agent_get_position, pos0, ":closest_enemy"),
-						# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-						# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-						# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
-						# (else_try),
+							(neq, ":closest_enemy", -1),
+							(agent_get_position, pos0, ":closest_enemy"),
+							(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+							(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
+						(else_try),
 							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 						(try_end),
 						(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -53463,12 +53485,12 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(else_try),
 						(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 						(try_begin),
-						# 	(neq, ":closest_enemy", -1),
-						# 	(agent_get_position, pos0, ":closest_enemy"),
-						# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-						# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-						# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
-						# (else_try),
+							(neq, ":closest_enemy", -1),
+							(agent_get_position, pos0, ":closest_enemy"),
+							(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+							(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
+						(else_try),
 							(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 						(try_end),
 						(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -53564,12 +53586,12 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 					(eq, ":min_len_non_shielded", -1),	#haven't looped through agents at least once since rank 2
 					(agent_get_slot, ":closest_enemy", ":agent", "slot_agent_nearest_enemy_agent"),
 					(try_begin),
-					# 	(neq, ":closest_enemy", -1),
-					# 	(agent_get_position, pos0, ":closest_enemy"),
-					# 	(get_distance_between_positions, ":enemy_distance", pos0, pos1),
-					# 	(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
-					# 	(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
-					# (else_try),
+						(neq, ":closest_enemy", -1),
+						(agent_get_position, pos0, ":closest_enemy"),
+						(get_distance_between_positions, ":enemy_distance", pos0, pos1),
+						(le, ":enemy_distance", ":distance"),	#enemy closer than friends?
+						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 0, ":fire_order"),
+					(else_try),
 						(call_script, "script_equip_best_melee_weapon", ":agent", 0, 1, ":fire_order"),
 					(try_end),
 					(agent_set_slot, ":agent", "slot_agent_inside_formation", 1),
@@ -54039,6 +54061,8 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	                  # (eq, ":weapon_type", itp_type_one_handed_wpn),
 	                  (item_get_swing_damage, ":swing", ":item"),
 	                  (item_get_thrust_damage, ":thrust", ":item"),
+	                 #  (val_mul, ":thrust",3),  ##my idea 528
+                  # (val_div, ":thrust",5),
 	                  (item_get_weapon_length, ":item_length", ":item"),
 	                  (val_div, ":item_length",2),
 	                  (val_add, ":thrust",":swing"),
@@ -54049,7 +54073,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	                  #(gt, ":swing", 19),
 	                  (assign, ":weapon", ":item"),
                 	(try_end),
-              (else_try),##dehorsed cavalry
+              (else_try),##dehorsed cavalry only
               	#(assign, ":cur_score", 0),
                 (agent_get_troop_id, ":troop_id", ":agent"),
                 (troop_is_guarantee_horse, ":troop_id"),
@@ -54064,18 +54088,20 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
                   (gt, ":swing",18),
                   (assign, ":weapon", ":item"),
                 (try_end),
-			 (else_try),
+			 (else_try),  ##this is the meat
                 (agent_get_troop_id, ":troop_id", ":agent"),
                 (assign, ":imod", imod_plain),
-                (try_begin),    #only heroes have item modifications
-                  #(troop_is_hero, ":troop_id"),
+               #####
+                (try_begin),  #only heroes have item modifications  here just getting the imods for best weapon
+                  (troop_is_hero, ":troop_id"),
                   (try_for_range, ":troop_item_slot",  ek_item_0, ek_head),    # heroes have only 4 possible weapons (equipped)
                     (troop_get_inventory_slot, reg0, ":troop_id", ":troop_item_slot"),  #Find Item Slot with same item ID as Equipped Weapon
                     (eq, reg0, ":item"),
                     (troop_get_inventory_slot_modifier, ":imod", ":troop_id", ":troop_item_slot"),
                   (try_end),
                 (try_end),
-                (call_script, "script_evaluate_item", ":item", ":imod"),
+                ######
+                (call_script, "script_evaluate_item", ":item", ":imod"),###HERE is the choosing best
                 (lt, ":cur_score", reg0),
                 (assign, ":cur_score", reg0),
                 (assign, ":weapon", ":item"),

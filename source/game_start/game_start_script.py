@@ -35,7 +35,7 @@ scripts = [
         (assign, "$g_realistic_casualties", 0),
         (assign, "$g_weapon_breaking", 1),
         (assign, "$g_armor_penalties", 1),#on is 1 off is 0
-        (assign, "$g_morale_rest", 1),
+        (assign, "$g_morale_rest", 1),##1 is on
         (assign, "$g_encumbrance_penalty", 1),
         (assign, "$g_siege_realism", 1),
         (assign, "$g_avdificultad", 0),

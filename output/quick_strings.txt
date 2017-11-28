@@ -1,4 +1,4 @@
-2505
+2497
 qstr_{reg65?my_Lady:my_Lo {reg65?my_Lady:my_Lord}
 qstr_{reg65?My_Lady:My_Lo {reg65?My_Lady:My_Lord}
 qstr_{reg65?madame:sir} {reg65?madame:sir}
@@ -324,8 +324,9 @@ qstr_No_companions_in_par No_companions_in_party!
 qstr_Back_to_the_beginnin Back_to_the_beginning...
 qstr_View_next_segment... View_next_segment...
 qstr_{!}__ {!}_-
-qstr_{!}_+ {!}_+
+qstr_gamemenus=moralerepo gamemenus=moralereportwearinesss={reg2}
 qstr_^No_food:___{reg7} ^No_food:__-{reg7}
+qstr_{!}_+ {!}_+
 qstr_^Wage_debt:___{reg7} ^Wage_debt:__-{reg7}
 qstr_Current_party_morale Current_party_morale_is_{reg5}.^Current_party_morale_modifiers_are:^^Base_morale:__+{reg6}^Party_size_unmanageable:_{s2}{reg1}^Lack_of_rest:_{s3}{reg2}^Food_variety:_{s4}{reg3}{s5}{s6}^Recent_events:_{s7}{reg4}^TOTAL:__{reg5}^^^
 qstr__summodifierrs=_Curr _summodifierrs=_Current_party_morale_is_{reg5}.^Current_party_morale_modifiers_are:^^Base_morale:__+{reg6}^Party_size_unmanageable:_{s2}{reg1}^Lack_of_rest:_{s3}{reg2}^Food_variety:_{s4}{reg3}{s5}{s6}^Recent_events:_{s7}{reg4}^TOTAL:__{reg5}^^^
@@ -2442,17 +2443,8 @@ qstr_Loyalist_supporters_ Loyalist_supporters_from_a_nearby_village_have_gathere
 qstr_Bounty_of_food. Bounty_of_food.
 qstr_You_have_found_lefto You_have_found_leftovers_of_a_recent_battle._Searching_the_bodies,_you_managed_to_find_200_scillingas.
 qstr_Minor_accident: Minor_accident:
-qstr_g_resting_at_manor_= g_resting_at_manor_={reg1}_
-qstr_Your_troops_lose_4_m Your_troops_lose_4_morale_from_no_night_rest._morale_modifier_weariness={reg0}.
-qstr_morale_lost_to_{reg0 morale_lost_to_{reg0}_from_no_rest.
-qstr_Your_troops_feel_ref Your_troops_feel_refreshed_from_the_center_rest_6._morale_modifier_weariness={reg0}
-qstr_Your_troops_feel_refr Your_troops_feel_refreshed_from_the_center_DAY_rest_3._morale_modifier_weariness={reg0}
-qstr_Your_troops_troops_g Your_troops_troops_gain_morale_from_night_rest._morale_modifier_weariness={reg0}.
-qstr_Your_troops_troops_ga Your_troops_troops_gain_morale_from_day_rest._morale_modifier_weariness={reg0}.
-qstr_end_of_script_!!!_mo end_of_script_!!!_morale_modifier_weariness={reg0}
-qstr_encumbrancelevel_3_f encumbrancelevel_3_from_no_rest.
-qstr_encumbrancelevel_2_f encumbrancelevel_2_from_little_rest.
-qstr_encumbrancelevel_1_f encumbrancelevel_1_fromOKrest.
+qstr_Your_troops_feel_ref Your_troops_feel_refreshed_from_the_night's_rest.
+qstr_Your_men_need_rest_o Your_men_need_rest_or_their_morale_will_suffer.
 qstr__The_defeated_kingdo _The_defeated_kingdoms_seem_calm,_and_your_reports_confirm_that_there_are_no_rebellion_plots.
 qstr__Possible_Rebellion_ (Possible_Rebellion)_Rumors_say_that_{s14}_is_still_alive.
 qstr__Possible_Rebellion__ (Possible_Rebellion)_Rumors_say_that_{s14}_meets_in_secret_with_his_faithful.

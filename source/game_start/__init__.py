@@ -21,7 +21,7 @@ start_menu_0 = \
          ("continue", [], "Character Creation",
           [(jump_to_menu, "mnu_start_game_1st")]),
 
-         ("start_mod", [], "Quick Character (mod testing - go to CHARACTER screen first)", [
+         ("start_mod", [], "Quick Character (mod testing - go to CHARACTER screen as soon as start)", [
               (assign, "$debug_game_mode", 1),
               (troop_set_type, "trp_player", 0),
               (assign, "$character_gender", tf_male),
@@ -118,10 +118,19 @@ start_menu_0 = \
               (assign,"$cheat_mode",1),
               (change_screen_map),
           ]),
-
-         ("go_back", [], "Go back", [(jump_to_menu, "mnu_start_game_0")])
-     ])
-
+      ("go_back",[],"Go back",
+        [
+          (jump_to_menu,"mnu_start_game_0")])
+     #     ("go_back", [], "Go back", [(jump_to_menu, "mnu_start_game_0")])
+     # ])
+  # [
+      
+  #     ("go_back",[],"Go back",
+  #       [
+  #         (jump_to_menu,"mnu_start_game_0"),
+  #     ]),
+  #   ]
+   ])
 custom_game_menu = (
     "start_game_3", mnf_disable_all_keys,
     "Choose your scenario:",

@@ -57,7 +57,7 @@ dialogs = [
         (else_try),
             (str_store_string, s11, "str_you_need_more_men_sir_my_lady"),
         (try_end),
-    ], "{!}{s11}", "close_window", []],
+    ], "My brother maybe dead for all I know! {!}{s11}. Here is some gold and my personal axe. Find the men now!", "close_window", [(troop_add_item, "trp_player","itm_axe3",1),(troop_add_gold, "trp_player", 350)]],
 
     # Merchant tells player it has enough men: qst_collect_men completed
     [anyone, "start_up_quest_2_next", [

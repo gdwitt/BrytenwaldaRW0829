@@ -243,7 +243,7 @@ common_ai_order_toggle = (ti_on_order_issued, 0, 0, [
   (try_begin),
     (eq, ":order_no", mordr_use_blunt_weapons),
     setWeaponOrderAny(),
-    (call_script, "script_equip_best_melee_weapon", ":agent_no", 0, 1, 1),
+    (call_script, "script_equip_best_melee_weapon", ":agent_no", 0, 0, 1),
   (try_end),
  ])
 ###########################from VC
